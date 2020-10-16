@@ -1,0 +1,52 @@
+
+.components-body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 1fr 3em;
+  grid-gap: 3em;
+  min-height: 100%;
+}
+
+.components-preview {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: hsl(0, 0%, 85%);
+  margin-left: -3em;
+  margin-right: -6em;
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-top: 6em;
+}
+.components-preview::before {
+  content: "preview";
+  background-color: hsl(0, 0%, 85%);
+  padding: 0.375em;
+  line-height: 1;
+  margin-bottom: 3em;
+  display: inline-block;
+  margin-left: -3em;
+  opacity: 0.5;
+}
+
+.components-navigation {
+  background-color: hsl(0, 0%, 90%);
+  padding: 1.5em 1.5em 1.5em 0;
+}
+
+.components-navigation > ul {
+  margin: 0;
+}
+
+code {
+  background: hsl(0, 0%, 95%);
+  padding: 0.75em;
+}
+
+pre code {
+  padding: 0.7em;
+  margin: 2.8em 0;
+  max-width: 100%;
+  overflow: auto;
+  display: block;
+}
