@@ -1,0 +1,144 @@
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 100%;
+  line-height: 1.875;
+  margin: 0;
+  padding: 0;
+  color: #252525;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.components-body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 1fr 3em;
+  grid-gap: 3em;
+  min-height: 100%;
+}
+
+.components-preview {
+  border: 1px solid hsl(0, 0%, 85%);
+  padding: 1.5em;
+}
+
+.components-navigation {
+  background-color: hsl(0, 0%, 90%);
+  padding: 1.5em 1.5em 1.5em 0;
+}
+.components-navigation > ul {
+  margin: 0;
+}
+
+code {
+   background: hsl(0, 0%, 95%);
+   padding: 0.75em;
+ }
+ pre code {
+   padding: 0.7em;
+   margin: 2.8em 0;
+   max-width: 100%;
+   overflow: auto;
+   display: block;
+ }
+
+.logotype {
+  font-size: inherit;
+  font-weight: bold;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+
+.navigation,
+.navigation > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation > li + li {
+  margin-left: 3em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+body > .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 48px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto 1fr;
+}
+.hero > img {
+  display: block;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+.hero > h1 {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  font-size: 60px;
+  line-height: 63px;
+  text-align: center;
+  margin: 0;
+}
+.hero > h1 + p {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  max-width: 28em;
+  margin: 0.75em auto 0;
+}
