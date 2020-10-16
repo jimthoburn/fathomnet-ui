@@ -4,8 +4,26 @@
   padding: 0;
   display: grid;
   grid-template-columns: auto 1fr 3em;
+  grid-template-rows: auto;
   grid-gap: 3em;
   min-height: 100%;
+}
+
+.components-body > main {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.components-body > footer {
+  grid-column: -3/-2;
+  grid-row: 1/2;
+  justify-self: end;
+  padding: 0.75em 0;
+}
+.components-body > footer a {
+  background-color: hsl(0, 0%, 85%);
+  padding: 0.375em 1.5em;
+  display: inline-block;
+  border-radius: 1.5em;
 }
 
 .components-preview {
@@ -30,12 +48,19 @@
 }
 
 .components-navigation {
+  grid-row: 1/-1;
   background-color: hsl(0, 0%, 90%);
-  padding: 1.5em 1.5em 1.5em 0;
+  padding: 1.5em;
+}
+.components-navigation > h2 {
+  font-size: inherit;
+  margin-bottom: 0;
 }
 
-.components-navigation > ul {
+.components-navigation > ul,
+.components-navigation > li {
   margin: 0;
+  padding: 0;
 }
 
 code {
