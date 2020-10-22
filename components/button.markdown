@@ -7,7 +7,7 @@ layout: default
 <div class="components-preview">
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button"
   >
   Sign in
@@ -19,7 +19,7 @@ layout: default
 
 ```html
 <a
-  href="/sign-in/"
+  href="/"
   class="button"
   >
   Sign in
@@ -31,7 +31,7 @@ layout: default
 <div class="components-preview">
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--primary"
   >
   Sign in
@@ -43,7 +43,7 @@ layout: default
 
 ```html
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--primary"
   >
   Sign in
@@ -55,10 +55,10 @@ layout: default
 <div class="components-preview">
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button"
   >
-  <svg class="icon" viewBox="0 0 12.8299999 12.8299999" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#001252" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m6.415 1.7479925v9.3340149"/><path d="m1.7480078 6.415h9.3339844"/></g></svg>
+  <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
   Add
 </a>
 
@@ -68,10 +68,11 @@ layout: default
 
 ```html
 <a
-  href="/sign-in/"
+  href="/"
   class="button"
   >
-  Sign in
+  <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
+  Add
 </a>
 ```
 
@@ -80,21 +81,47 @@ layout: default
 <div class="components-preview">
 
 <a
-  href="/sign-in/"
+  href="/"
+  class="button"
+  >
+  Options
+  <svg class="icon"><use xlink:href="#icon-chevron-down"></use></svg>
+</a>
+
+</div>
+
+<div class="components-code" markdown="1">
+
+```html
+<a
+  href="/"
+  class="button"
+  >
+  Options
+  <svg class="icon"><use xlink:href="#icon-chevron-down"></use></svg>
+</a>
+```
+
+</div>
+
+<div class="components-preview">
+
+<a
+  href="/"
   class="button button--small"
   >
   Sign in
 </a>
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--medium"
   >
   Sign in
 </a>
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--large"
   >
   Sign in
@@ -106,21 +133,21 @@ layout: default
 
 ```html
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--small"
   >
   Sign in
 </a>
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--medium"
   >
   Sign in
 </a>
 
 <a
-  href="/sign-in/"
+  href="/"
   class="button button--large"
   >
   Sign in

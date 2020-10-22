@@ -1,5 +1,5 @@
 
-@font-face {
+/* @font-face {
   font-family: 'Gilroy';
   src: url('/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -10,10 +10,66 @@
   src: url('/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-Book.otf') format('opentype');
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-BookOblique.otf') format('opentype');
+  font-weight: normal; /* 400 */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-Regular.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-RegularOblique.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-Medium.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-MediumOblique.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-Bold.otf') format('opentype');
+  font-weight: bold; /* 700 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regola Pro Trial';
+  src: url('/fonts/ttd-regola-pro otf-trials/RegolaProTrial-BoldOblique.otf') format('opentype');
+  font-weight: bold; /* 700 */
+  font-style: italic;
 }
 
 body {
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Regola Pro Trial', sans-serif;
   font-size: 100%;
   line-height: 1.875;
 }
