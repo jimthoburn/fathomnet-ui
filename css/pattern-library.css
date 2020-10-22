@@ -20,6 +20,7 @@
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  margin-bottom: 3em !important;
 }
 
 .components-body {
@@ -128,7 +129,7 @@ body {
 .components-nav > ol > li {
   margin: 0;
   padding: 0;
-  /* list-style: none; */
+  list-style: none;
 }
 .components-nav > ol > li > a {
   /* color: inherit; */
