@@ -59,7 +59,7 @@ body {
   margin: 0;
 }
 .components-body > footer a {
-  color: inherit;
+  /* color: inherit; */
   /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15); */
   
 }
@@ -97,6 +97,15 @@ body {
 .components-code {
   padding: 1.5em;
 }
+.components-code::before {
+  content: "code";
+  /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15)); */
+  /* background-color: var(--salt-marsh-gray); */
+  padding: 0;
+  line-height: 1;
+  align-self: start;
+  color: var(--text-color-subtle);
+}
 
 .components-nav {
   grid-row: 1/-1;
@@ -122,7 +131,7 @@ body {
   /* list-style: none; */
 }
 .components-nav > ol > li > a {
-  color: inherit;
+  /* color: inherit; */
 }
 
 /* .components-nav > ol {

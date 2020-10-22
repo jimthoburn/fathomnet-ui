@@ -9,3 +9,7 @@ a:active,
 a:focus {
   text-decoration: underline;
 } */
+
+a {
+  color: var(--ultramarine-blue);
+}
