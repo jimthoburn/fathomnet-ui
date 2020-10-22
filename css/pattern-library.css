@@ -1,13 +1,17 @@
 
 :root {
+  --text-color-subtle: var(--salt-marsh-gray);
+  --border-color: var(--salt-marsh-gray);
   --background-color: white;
-  --text-color: black;
+  --text-color: var(--benthos-blue);
   --color-brightness: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: black;
+    --text-color-color: var(--temporary-name--dark-blue);
+    --border-color: var(--temporary-name--dark-blue);
+    --background-color: var(--abyss-gray);
     --text-color: white;
     --color-brightness: 1;
   }
@@ -40,7 +44,10 @@ body {
   padding: 1.5em 0;
 }
 .components-body > footer a {
-  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15);
+  /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15); */
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color);
   padding: 0.375em 1.5em;
   display: inline-block;
   border-radius: 1.5em;
@@ -49,7 +56,8 @@ body {
 .components-preview {
   border-width: 1px 0 0 0;
   border-style: solid;
-  border-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15);
+  /* border-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15); */
+  border-color: var(--border-color);
   margin-left: -3em;
   margin-right: -6em;
   padding-right: 3em;
@@ -58,18 +66,22 @@ body {
 }
 .components-preview::before {
   content: "preview";
-  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15));
+  /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15)); */
+  /* background-color: var(--salt-marsh-gray); */
   padding: 0.375em;
   line-height: 1;
   margin-bottom: 3em;
   display: inline-block;
   margin-left: -3em;
-  opacity: 0.5;
+  color: var(--text-color-subtle);
 }
 
 .components-navigation {
   grid-row: 1/-1;
-  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.1);
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  /* border-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.1); */
+  border-color: var(--border-color);
   padding: 1.5em;
 }
 .components-navigation > h2 {
@@ -83,7 +95,11 @@ body {
   padding: 0;
 }
 
-code {
+code, pre {
+  background-color: transparent !important;
+}
+
+/* code {
   background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.05);
   padding: 0.75em;
 }
@@ -94,4 +110,4 @@ pre code {
   max-width: 100%;
   overflow: auto;
   display: block;
-}
+} */
