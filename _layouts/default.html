@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/components.css" />
     <link rel="stylesheet" href="/css/pattern-library.css" />
     <link rel="stylesheet" href="/css/highlight-code/jwarby-jekyll-pygments-themes/github.css" />
-    <link rel="stylesheet" href="/css/highlight-code/jwarby-jekyll-pygments-themes/native.css" media="(prefers-color-scheme: dark)" />
+    <!-- <link rel="stylesheet" href="/css/highlight-code/jwarby-jekyll-pygments-themes/native.css" media="(prefers-color-scheme: dark)" /> -->
     <meta name="robots" content="noindex" />
     <!-- <script>
       window.addEventListener("DOMContentLoaded", function() {
@@ -24,17 +24,22 @@
     </script> -->
   </head>
   <body class="components-body">
-    <nav class="components-navigation">
+    <nav class="components-nav">
       <h2>Components</h2>
-      <ul>
+      <ol>
+        <li><a href="/components/button/">Button</a></li>
+        <li><a href="/components/nav/">Navigation</a></li>
         <li><a href="/components/logotype/">Logotype</a></li>
-        <li><a href="/components/navigation/">Navigation</a></li>
         <li><a href="/components/header/">Header</a></li>
-      </ul>
+      </ol>
+      <h2>Styles</h2>
+      <ol>
+        <li><a href="/styles/color/">Color</a></li>
+      </ol>
       <h2>Pages</h2>
-      <ul>
-        <li><a href="/pages/">Home page</a></li>
-      </ul>
+      <ol>
+        <li><a href="/pages/home/">Home page</a></li>
+      </ol>
     </nav>
     <main>
       {{ content }}

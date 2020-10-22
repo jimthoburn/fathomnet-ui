@@ -1,0 +1,56 @@
+
+.button {
+  border-width: 1px;
+  border-style: solid;
+  color: var(--benthos-blue);
+  border-color: var(--ultramarine-blue);
+  padding: 0.375em 1.5em;
+  display: inline-block;
+  border-radius: 1.5em;
+  text-align: center;
+  font-weight: bold;
+
+  /* For icons */
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 0.5em;
+  align-items: center;
+
+  /* Reset <a /> */
+  text-decoration: none;
+
+  /* Reset <button /> */
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.2s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: var(--benthos-blue);
+  border-color: transparent;
+  color: white;
+}
+
+.button--primary {
+  background-color: var(--benthos-blue);
+  border-color: transparent;
+  color: white;
+}
+
+.button--large {
+  font-size: 1.25em;
+}
+
+.button--medium {
+  font-size: 1em;
+}
+
+.button--small {
+  font-size: 0.75em;
+}

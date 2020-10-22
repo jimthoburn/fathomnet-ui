@@ -4,13 +4,14 @@
 
 @import url("/css/link.css");
 
+@import url("/components/button.css");
 @import url("/components/logotype.css");
-@import url("/components/navigation.css");
+@import url("/components/nav.css");
 @import url("/components/header.css");
 
-@import url("/css/hero.css");
+@import url("/components/scratch-pad.css");
 
-@import url("/css/pattern-library.css");
+@import url("/css/hero.css");
 
 body {
   margin: 0;
@@ -33,3 +34,12 @@ body > .header {
   z-index: 1;
 }
 
+
+.icon {
+  width: 0.75em;
+  height: 0.75em;
+}
+.icon * {
+  fill: currentColor;
+  stroke: currentColor
+}

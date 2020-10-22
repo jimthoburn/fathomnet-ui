@@ -5,6 +5,3 @@
   padding: 35px 48px;
   box-sizing: border-box;
 }
-.header > * + * {
-  margin-left: 3em;
-}

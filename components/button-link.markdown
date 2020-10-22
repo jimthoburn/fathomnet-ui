@@ -6,18 +6,24 @@ layout: default
 
 <div class="components-preview">
 
-<h2 class="logotype">
-  <a href="/">FathomNet</a>
-</h2>
+<a
+  href="/sign-in/"
+  class="button"
+  >
+  Sign in
+</a>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h2 class="logotype">
-  <a href="/">FathomNet</a>
-</h2>
+<a
+  href="/sign-in/"
+  class="button"
+  >
+  Sign in
+</a>
 ```
 
 </div>
