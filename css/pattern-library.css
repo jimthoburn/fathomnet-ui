@@ -1,4 +1,23 @@
 
+:root {
+  --background-color: white;
+  --text-color: black;
+  --color-brightness: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --text-color: white;
+    --color-brightness: 1;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .components-body {
   margin: 0;
   padding: 0;
@@ -21,7 +40,7 @@
   padding: 1.5em 0;
 }
 .components-body > footer a {
-  background-color: hsl(0, 0%, 85%);
+  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15);
   padding: 0.375em 1.5em;
   display: inline-block;
   border-radius: 1.5em;
@@ -30,7 +49,7 @@
 .components-preview {
   border-width: 1px 0 0 0;
   border-style: solid;
-  border-color: hsl(0, 0%, 85%);
+  border-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15);
   margin-left: -3em;
   margin-right: -6em;
   padding-right: 3em;
@@ -39,7 +58,7 @@
 }
 .components-preview::before {
   content: "preview";
-  background-color: hsl(0, 0%, 85%);
+  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15));
   padding: 0.375em;
   line-height: 1;
   margin-bottom: 3em;
@@ -50,7 +69,7 @@
 
 .components-navigation {
   grid-row: 1/-1;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.1);
   padding: 1.5em;
 }
 .components-navigation > h2 {
@@ -65,7 +84,7 @@
 }
 
 code {
-  background: hsl(0, 0%, 95%);
+  background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.05);
   padding: 0.75em;
 }
 
