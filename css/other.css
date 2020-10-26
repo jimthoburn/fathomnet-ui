@@ -1,0 +1,26 @@
+
+/* Dark Drop Shadow */
+
+.dropshadow-dark {
+  box-shadow: 0px 4px 32px rgba(4, 4, 27, 0.24);
+}
+
+/* Soft Drop Shadow */
+
+.dropshadow-soft {
+  border: 1px solid var(--sea-salt-gray);
+  box-shadow: 0px 4px 32px rgba(109, 108, 144, 0.12);
+}
+
+/* Extra Soft Drop Shadow */
+
+.dropshadow-extra-soft {
+  border: 1px solid var(--sea-salt-gray);
+  box-shadow: 0px 4px 20px rgba(109, 108, 144, 0.08);
+}
+
+/* Overlay */
+
+.overlay {
+  background: rgba(21, 25, 40, 0.88);
+}
