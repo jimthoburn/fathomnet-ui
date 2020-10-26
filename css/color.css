@@ -4,56 +4,56 @@
 /* LIGHT */
 
 /* Demersal Gray */
---demersal-gray: #6D6C90;
+--color-demersal-gray: #6D6C90;
 
 /* Pelagic Gray */
---pelagic-gray: #AEAEC2;
+--color-pelagic-gray: #AEAEC2;
 
 /* Salt Marsh Gray */
---salt-marsh-gray: #E8E8ED;
+--color-salt-marsh-gray: #E8E8ED;
 
 /* Sea Salt Gray */
---sea-salt-gray: #F7F7F9;
+--color-sea-salt-gray: #F7F7F9;
 
 /* White */
---white: #FFFFFF;
+--color-white: #FFFFFF;
 
 /* Benthos Blue */
---benthos-blue: #001252;
+--color-benthos-blue: #001252;
 
 /* Ultramarine Blue */
---ultramarine-blue: #557AFF;
+--color-ultramarine-blue: #557AFF;
 
 /* Bay Blue */
---bay-blue: #88A2FF;
+--color-bay-blue: #88A2FF;
 
 /* Lagoon Blue */
---lagoon-blue: #BBCAFF;
+--color-lagoon-blue: #BBCAFF;
 
 /* Littoral Blue */
---littoral-blue: #F0F3FF;
+--color-littoral-blue: #F0F3FF;
 
 /* Photic Green */
---photic-green: #26BF9B;
+--color-photic-green: #26BF9B;
 
 /* Seafoam Green */
---seafoam-green: #E4FFF8;
+--color-seafoam-green: #E4FFF8;
 
 /* Snapper Red */
---snapper-red: #FF6464;
+--color-snapper-red: #FF6464;
 
 /* Coral Red */
---coral-red: #FEE9E9;
+--color-coral-red: #FEE9E9;
 
 /* DARK */
 
 /* Hado Gray */
---hado-gray: #151928;
+--color-hado-gray: #151928;
 
 /* Abyss Gray */
---abyss-gray: #212841;
+--color-abyss-gray: #212841;
 
 /* Aphotic Blue */
---aphotic-blue: #5264A3;
+--color-aphotic-blue: #5264A3;
 
 }
