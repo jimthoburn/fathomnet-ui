@@ -1,0 +1,26 @@
+.avatar {
+  display: grid;
+}
+
+.avatar__image {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 2em;
+  height: 2em;
+  object-fit: cover;
+  border-radius: 100%;
+  display: block;
+}
+
+.avatar--alert::after {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  align-self: start;
+  justify-self: end;
+  content: "";
+  display: block;
+  width: 0.375em;
+  height: 0.375em;
+  border-radius: 100%;
+  background-color: var(--snapper-red);
+}
