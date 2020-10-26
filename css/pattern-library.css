@@ -2,7 +2,7 @@
 :root {
   --text-color-subtle: var(--salt-marsh-gray);
   --border-color: var(--salt-marsh-gray);
-  --background-color: white;
+  --background-color: #E5E5E5;
   --text-color: var(--benthos-blue);
   --color-brightness: 0;
 }
@@ -21,6 +21,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin-bottom: 3em !important;
+  font-size: 1.125em;
 }
 
 .components-body {
@@ -96,16 +97,16 @@ body {
 }
 
 .components-code {
-  padding: 1.5em;
+  padding: 1.5em 1.5em 4.5em;
 }
 .components-code::before {
-  content: "code";
+  /* content: "code"; */
   /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15)); */
   /* background-color: var(--salt-marsh-gray); */
   padding: 0;
   line-height: 1;
   align-self: start;
-  color: var(--text-color-subtle);
+  color: var(--text-color);
 }
 
 .components-nav {
