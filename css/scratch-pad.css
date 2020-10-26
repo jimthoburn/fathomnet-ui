@@ -12,7 +12,7 @@ a:focus {
 
 
 a {
-  color: var(--ultramarine-blue);
+  color: var(--color-ultramarine-blue);
 }
 
 
@@ -41,8 +41,8 @@ body > .header {
 .loading {
   border-width: 1px;
   border-style: solid;
-  color: var(--benthos-blue);
-  border-color: var(--ultramarine-blue);
+  color: var(--color-benthos-blue);
+  border-color: var(--color-ultramarine-blue);
   padding: 1em 2em;
   border-radius: 1.5em;
   display: inline-block;
@@ -77,16 +77,16 @@ body > .header {
   width: 0.375em;
   height: 0.375em;
   border-radius: 100%;
-  background-color: var(--pelagic-gray);
+  background-color: var(--color-pelagic-gray);
 }
 .loading__dots::before {
   position: absolute;
   transform: translateX(-200%);
-  background-color: var(--salt-marsh-gray);
+  background-color: var(--color-salt-marsh-gray);
 }
 .loading__dots::after {
   position: absolute;
   transform: translateX(200%);
-  background-color: var(--demersal-gray);
+  background-color: var(--color-pelagic-gray);
 }
 

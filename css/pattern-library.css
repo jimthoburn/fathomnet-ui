@@ -1,17 +1,17 @@
 
 :root {
-  --text-color-subtle: var(--salt-marsh-gray);
-  --border-color: var(--salt-marsh-gray);
+  --text-color-subtle: var(--color-salt-marsh-gray);
+  --border-color: var(--color-salt-marsh-gray);
   --background-color: #E5E5E5;
-  --text-color: var(--benthos-blue);
+  --text-color: var(--color-benthos-blue);
   --color-brightness: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --text-color-color: var(--aphotic-blue);
-    --border-color: var(--aphotic-blue);
-    --background-color: var(--abyss-gray);
+    --text-color-color: var(--color-aphotic-blue);
+    --border-color: var(--color-aphotic-blue);
+    --background-color: var(--color-abyss-gray);
     --text-color: white;
     --color-brightness: 1;
   }
@@ -81,7 +81,7 @@ body {
   grid-gap: 3em;
   padding: 1.5em 1.5em 6em;
   background: white;
-  color: var(--benthos-blue);
+  color: var(--color-benthos-blue);
 }
 .components-preview > * {
   align-self: center;
@@ -90,7 +90,7 @@ body {
 .components-preview::before {
   content: "preview";
   /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15)); */
-  /* background-color: var(--salt-marsh-gray); */
+  /* background-color: var(--color-salt-marsh-gray); */
   padding: 0;
   line-height: 1;
   align-self: start;
@@ -103,7 +103,7 @@ body {
 .components-code::before {
   /* content: "code"; */
   /* background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15)); */
-  /* background-color: var(--salt-marsh-gray); */
+  /* background-color: var(--color-salt-marsh-gray); */
   padding: 0;
   line-height: 1;
   align-self: start;

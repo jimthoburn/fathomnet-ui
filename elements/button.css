@@ -2,8 +2,8 @@
 .button {
   border-width: 1px;
   border-style: solid;
-  color: var(--benthos-blue);
-  border-color: var(--ultramarine-blue);
+  color: var(--color-benthos-blue);
+  border-color: var(--color-ultramarine-blue);
   padding: 0.375em 1.5em;
   display: inline-block;
   border-radius: 1.5em;
@@ -32,13 +32,13 @@
 .button:hover,
 .button:active,
 .button:focus {
-  background-color: var(--benthos-blue);
+  background-color: var(--color-benthos-blue);
   border-color: transparent;
   color: white;
 }
 
 .button--primary {
-  background-color: var(--benthos-blue);
+  background-color: var(--color-benthos-blue);
   border-color: transparent;
   color: white;
 }
