@@ -60,10 +60,11 @@ icons:
 
 <h1>Icon</h1>
 
+
 <div class="components-preview">
 
   <svg class="icon" width="24" height="24">
-    <use xlink:href="#icon-plus"></use>
+    <use xlink:href="#icon-map"></use>
   </svg>
 
 </div>
@@ -72,34 +73,9 @@ icons:
 
 ```html
 <svg class="icon" width="24" height="24">
-  <use xlink:href="#icon-plus"></use>
+  <use xlink:href="#icon-map"></use>
 </svg>
 ```
-
-</div>
-
-<div class="components-preview">
-
-  <a href="/">
-    <svg aria-label="Add" class="icon" width="24" height="24">
-      <use xlink:href="#icon-plus"></use>
-    </svg>
-  </a>
-
-</div>
-
-<div class="components-code" markdown="1">
-
-```html
-<a href="/">
-  <svg aria-label="Add" class="icon" width="24" height="24">
-    <use xlink:href="#icon-plus"></use>
-  </svg>
-</a>
-```
-
-If an icon is used in place of text content, you can use an `aria-label` attribute to make the text available for software–such as screen readers and search engines.
-<br /><small>(Similar to an `alt` attribute for an `<img />` element)</small>
 
 </div>
 
@@ -122,6 +98,7 @@ If an icon is used in place of text content, you can use an `aria-label` attribu
 <div class="components-code" markdown="1">
 </div>
 
+
 <div class="components-preview">
 
 <svg
@@ -171,6 +148,31 @@ If an icon is used in place of text content, you can use an `aria-label` attribu
   <use xlink:href="#icon-check"></use>
 </svg>
 ```
+
+</div>
+
+<div class="components-preview">
+
+  <a href="/">
+    <svg aria-label="Show map" class="icon" width="24" height="24">
+      <use xlink:href="#icon-map"></use>
+    </svg>
+  </a>
+
+</div>
+
+<div class="components-code" markdown="1">
+
+```html
+<a href="/">
+  <svg aria-label="Show map" class="icon" width="24" height="24">
+    <use xlink:href="#icon-map"></use>
+  </svg>
+</a>
+```
+
+If an icon is used in place of text content, you can use an `aria-label` attribute to make the text available for software–such as screen readers and search engines.
+<small>(Similar to an `alt` attribute for an `<img />` element)</small>
 
 </div>
 

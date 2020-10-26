@@ -1,0 +1,39 @@
+
+/* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+} */
+
+
+a {
+  color: var(--ultramarine-blue);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+body > .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+

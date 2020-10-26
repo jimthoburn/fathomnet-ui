@@ -16,7 +16,6 @@ layout: default
         href="/explore/"
         class="
           nav__link
-          nav__link--active
         "
       >
         Explore
