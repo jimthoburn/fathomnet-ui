@@ -9,8 +9,8 @@
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --text-color-color: var(--temporary-name--dark-blue);
-    --border-color: var(--temporary-name--dark-blue);
+    --text-color-color: var(--aphotic-blue);
+    --border-color: var(--aphotic-blue);
     --background-color: var(--abyss-gray);
     --text-color: white;
     --color-brightness: 1;
@@ -167,13 +167,20 @@ pre code {
   display: block;
 } */
 
+.components-preview--grid {
+  grid-template-columns: repeat( auto-fill, minmax(10em, 1fr) );
+}
+.components-preview--grid::before {
+  content: none;
+}
 .components-swatch {
   justify-self: start;
 }
 .components-swatch::before {
   content: "";
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 4em;
+  height: 4em;
   background-color: var(--color);
+  border-radius: 0.5em;
 }
