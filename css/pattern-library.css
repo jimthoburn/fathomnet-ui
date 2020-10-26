@@ -186,3 +186,7 @@ pre code {
   background-color: var(--color);
   border-radius: 0.5em;
 }
+
+.components-icon {
+  justify-self: start;
+}

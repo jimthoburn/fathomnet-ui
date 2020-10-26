@@ -38,10 +38,25 @@ body > .header {
 
 
 .icon {
-  width: 0.75em;
-  height: 0.75em;
+  width: 1em;
+  height: 1em;
 }
 .icon * {
   fill: currentColor;
-  stroke: currentColor
+  stroke: currentColor;
+}
+
+.icon--large {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon--medium {
+  width: 1em;
+  height: 1em;
+}
+
+.icon--small {
+  width: 0.75em;
+  height: 0.75em;
 }
