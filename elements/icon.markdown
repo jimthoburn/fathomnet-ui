@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Icon
 
 icons:
   - label: Alert

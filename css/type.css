@@ -11,6 +11,7 @@
   --font-size-16: calc(16 * var(--font-size-basis));
   --font-size-14: calc(14 * var(--font-size-basis));
   --font-size-12: calc(12 * var(--font-size-basis));
+  --font-size-10: calc(10 * var(--font-size-basis));
 
   --font-weight-bold: bold; /* 700 */
   --font-weight-medium: 600;

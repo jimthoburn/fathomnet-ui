@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Typography
 ---
 
 <h1>Typography</h1>

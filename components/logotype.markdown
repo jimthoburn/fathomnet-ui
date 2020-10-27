@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Logotype
 ---
 
 <h1>Logotype</h1>

@@ -109,6 +109,19 @@ body > .header {
   padding-left: 0;
 }
 
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.card:hover,
+.card:active,
+.card:focus {
+  opacity: 0.8;
+}
+
 .card__image {
   display: block;
   position: relative;
@@ -137,6 +150,7 @@ body > .header {
 .card__name {
   display: flex;
 }
+
 .card__name + br {
   display: none;
 }

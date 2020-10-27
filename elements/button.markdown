@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Button
 ---
 
 <h1>Button</h1>

@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Navigation
 ---
 
 <h1>Navigation</h1>

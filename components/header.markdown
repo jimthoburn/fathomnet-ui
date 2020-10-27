@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Header
 ---
 
 <h1>Header</h1>

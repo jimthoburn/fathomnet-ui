@@ -1,5 +1,6 @@
 ---
 layout: pattern
+title: Avatar
 ---
 
 <h1>Avatar</h1>
