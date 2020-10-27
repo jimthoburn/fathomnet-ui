@@ -28,7 +28,7 @@ title: Card
         <small>(+4 more)</small>
       </span>
       <br />
-      <span class="text-single-line">
+      <span class="card__meta text-single-line">
         Contributor name, collection name, other meta data about this item
       </span>
     </span>
@@ -54,7 +54,7 @@ title: Card
         <small>(+4 more)</small>
       </span>
       <br />
-      <span class="text-single-line">
+      <span class="card__meta text-single-line">
         Contributor name, collection name, other meta data about this item
       </span>
     </span>
@@ -91,7 +91,7 @@ title: Card
           <small>(+4 more)</small>
         </span>
         <br />
-        <span class="text-single-line">
+        <span class="card__meta text-single-line">
           Contributor name, collection name, other meta data about this item
         </span>
       </span>

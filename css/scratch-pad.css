@@ -96,69 +96,7 @@ body > .header {
   --card-image-height: calc(208 * var(--font-size-basis));
 }
 
-.card-list {
-  display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(var(--card-image-width), 1fr) );
-  grid-gap: calc(14 * var(--font-size-basis));
-}
 
-.card-list,
-.card-list__item {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s;
-}
-
-.card:hover,
-.card:active,
-.card:focus {
-  opacity: 0.8;
-}
-
-.card__image {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-}
-.card__image > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1px solid rgba(109, 108, 144, 0.5);
-  border-radius: calc(8 * var(--font-size-basis));
-  box-sizing: border-box;
-}
-
-.card__text {
-  margin-top: calc(8 * var(--font-size-basis));
-  display: block;
-  font-size: var(--font-size-12);
-}
-
-.card__name {
-  display: flex;
-}
-
-.card__name + br {
-  display: none;
-}
-
-.card__name > small {
-  font-size: inherit;
-  white-space: nowrap;
-}
 
 .text-single-line {
   display: block;
@@ -166,3 +104,116 @@ body > .header {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.text-meta {
+  color: var(--color-demersal-gray);
+}
+
+.explore-page {
+  padding: 3em;
+}
+
+.image-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  padding: 3rem;
+}
+
+.image-details__header {
+  grid-column: -2 / -1;
+}
+
+.image-details__header > h1 {
+  margin: 0;
+}
+
+.image-details__figure {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.image-details__meta-boxes {
+  grid-column: -2 / -1;
+}
+
+.image-details__meta-box +
+.image-details__meta-box {
+  margin-top: 3rem;
+}
+
+.image-details__figure {
+  margin: 0;
+}
+.image-details__figure img {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 3rem;
+}
+
+.image-details__meta {
+  color: var(--color-demersal-gray);
+}
+
+.meta-box {
+  border: 1px solid var(--color-lagoon-blue);
+  border-radius: calc(8 * var(--font-size-basis));
+}
+.meta-box__list,
+.meta-box__list-item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.meta-box > * {
+  margin: 0;
+  padding: calc(24 * var(--font-size-basis));
+}
+
+.meta-box__list {
+}
+
+.meta-box__summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta-box__summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.meta-box__open-icon {
+  display: unset;
+}
+.meta-box__close-icon {
+  display: none;
+}
+
+[open] .meta-box__open-icon {
+  display: none;
+}
+[open] .meta-box__close-icon {
+  display: unset;
+}
+
+/* SHIM: Make the list look nicer in browsers that don’t understand summary / details */
+/* https://github.com/whatwg/html/issues/722 */
+/* .meta-box__summary {
+  display: list-item;
+  list-style: disclosure-closed inside;
+}
+[open] > .meta-box__summary {
+  list-style: disclosure-open inside;
+} */
+
+.meta-box__heading {
+  font-size: var(--font-size-24);
+  margin: 0;
+  /* margin-top: -1.25em;
+  margin-left: 1.5rem; */
+}
+

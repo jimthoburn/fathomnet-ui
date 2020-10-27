@@ -28,37 +28,37 @@ body {
 }
 
 h1,
-.headline-1 {
+.heading-1 {
   font-size: var(--font-size-60);
   font-weight: var(--font-weight-bold);
 }
 
 h2,
-.headline-2 {
+.heading-2 {
   font-size: var(--font-size-44);
   font-weight: var(--font-weight-bold);
 }
 
 h3,
-.headline-3 {
+.heading-3 {
   font-size: var(--font-size-32);
   font-weight: var(--font-weight-bold);
 }
 
 h4,
-.headline-4 {
+.heading-4 {
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-bold);
 }
 
 h5,
-.headline-5 {
+.heading-5 {
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-bold);
 }
 
 h6,
-.headline-6 {
+.heading-6 {
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-bold);
 }

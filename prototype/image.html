@@ -1,0 +1,93 @@
+---
+layout: prototype
+title: Image
+---
+
+<main class="image-details">
+
+  <header class="image-details__header">
+
+    <h1 class="heading-3">Image title</h1>
+    <p class="image-details__meta">8 localizations</p>
+    <p class="label-1">
+      <svg class="icon" width="24" height="24">
+        <use xlink:href="#icon-check"></use>
+      </svg>
+      Verified
+    </p>
+
+  </header>
+
+  <figure class="image-details__figure">
+    <img src="/images/mbari/ee2ec6e6c08e195cde7f8542286da55ab1648249.png" alt="Amphiprion ocellaris" />
+  </figure>
+
+  <div class="image-details__meta-boxes">
+
+    <details open class="image-details__meta-box meta-box">
+      <summary class="meta-box__summary">
+        <h2 class="meta-box__heading">Concepts <em class="text-meta">8</em></h2>
+        <svg class="icon meta-box__close-icon" width="24" height="24">
+          <use xlink:href="#icon-minus"></use>
+        </svg>
+        <svg class="icon meta-box__open-icon" width="24" height="24">
+          <use xlink:href="#icon-plus"></use>
+        </svg>
+      </summary>
+      <ul class="meta-box__list">
+        {% for index in (1..8) %}
+        <li class="meta-box__list-item">
+          <strong class="body-1">Amphiprion ocellaris</strong>
+          <br />
+          <span class="text-meta label-1">Verified by Sabrina Coombes on 10/06/20</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+
+    <details open class="image-details__meta-box meta-box">
+      <summary class="meta-box__summary">
+        <h2 class="meta-box__heading">Details</h2>
+        <svg class="icon meta-box__close-icon" width="24" height="24">
+          <use xlink:href="#icon-minus"></use>
+        </svg>
+        <svg class="icon meta-box__open-icon" width="24" height="24">
+          <use xlink:href="#icon-plus"></use>
+        </svg>
+      </summary>
+      <dl class="meta-box__description-list">
+        <dt class="meta-box__description-title">Location</dt>
+        <dd class="meta-box__description-data">East Indian Ocean</dd>
+        <dd class="meta-box__description-data">-20° 00' 0.00" S, 80° 00' 0.00" E</dd>
+
+        <dt class="meta-box__description-title">Depth</dt>
+        <dd class="meta-box__description-data">-823 m</dd>
+
+        <dt class="meta-box__description-title">Date</dt>
+        <dd class="meta-box__description-data">09/30/20</dd>
+      </dl>
+    </details>
+
+    <details open class="image-details__meta-box meta-box">
+      <summary class="meta-box__summary">
+        <h2 class="meta-box__heading">Collections <em class="text-meta">2</em></h2>
+        <svg class="icon meta-box__close-icon" width="24" height="24">
+          <use xlink:href="#icon-minus"></use>
+        </svg>
+        <svg class="icon meta-box__open-icon" width="24" height="24">
+          <use xlink:href="#icon-plus"></use>
+        </svg>
+      </summary>
+      <ul class="meta-box__list">
+        <li class="meta-box__list-item">
+          <a href="/">amei_i110703_b2</a> from <a href="/">Letitia Stewart</a>
+        </li>
+        <li class="meta-box__list-item">
+          <a href="/">dkla_j34091_a8</a> from <a href="/">Courtenay Bruce</a>
+        </li>
+      </ul>
+    </details>
+
+  </div>
+
+</main>
