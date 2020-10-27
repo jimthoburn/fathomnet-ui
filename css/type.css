@@ -17,49 +17,70 @@
   --font-weight-medium: 600;
   --font-weight-regular: 500;
   --font-weight-book: normal; /* 400 */
+
+  --vertical-rhythm: calc(19 * var(--font-size-basis));
+
+  --line-height-1: calc(var(--vertical-rhythm) * 1);
+  --line-height-2: calc(var(--vertical-rhythm) * 2);
+  --line-height-3: calc(var(--vertical-rhythm) * 3);
+  --line-height-4: calc(var(--vertical-rhythm) * 4);
+
+  --space-1: calc(32 * var(--font-size-basis));
+  --space-2: calc(64 * var(--font-size-basis));
+  --space-3: calc(96 * var(--font-size-basis));
 }
 
 body {
   font-family: 'Regola Pro Trial', sans-serif;
   font-size: 100%;
   font-size: var(--font-size-16);
-  line-height: 1.5;
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-book);
+
+  /* background-size: 100vw var(--vertical-rhythm);
+  background-image: linear-gradient(to bottom, var(--color-lagoon-blue) 0, transparent 1px);
+  background-repeat: repeat; */
 }
 
 h1,
 .heading-1 {
   font-size: var(--font-size-60);
+  line-height: var(--line-height-4);
   font-weight: var(--font-weight-bold);
 }
 
 h2,
 .heading-2 {
   font-size: var(--font-size-44);
+  line-height: var(--line-height-3);
   font-weight: var(--font-weight-bold);
 }
 
 h3,
 .heading-3 {
   font-size: var(--font-size-32);
+  line-height: calc(var(--vertical-rhythm) * 1.5);
   font-weight: var(--font-weight-bold);
 }
 
 h4,
 .heading-4 {
   font-size: var(--font-size-24);
+  line-height: var(--line-height-2);
   font-weight: var(--font-weight-bold);
 }
 
 h5,
 .heading-5 {
   font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
 h6,
 .heading-6 {
   font-size: var(--font-size-14);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -67,6 +88,7 @@ h6,
 
 .body-1 {
   font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -74,6 +96,7 @@ h6,
 
 .body-2 {
   font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-book);
 }
 
@@ -81,6 +104,7 @@ h6,
 
 .link-large {
   font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -88,6 +112,7 @@ h6,
 
 .body-3 {
   font-size: var(--font-size-16);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-medium);
 }
 
@@ -95,6 +120,7 @@ h6,
 
 .body-4 {
   font-size: var(--font-size-16);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-book);
 }
 
@@ -102,6 +128,7 @@ h6,
 
 .link-small {
   font-size: var(--font-size-14);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -109,6 +136,7 @@ h6,
 
 .body-5 {
   font-size: var(--font-size-14);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -116,6 +144,7 @@ h6,
 
 .label-1 {
   font-size: var(--font-size-12);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -123,6 +152,7 @@ h6,
 
 .link-xs {
   font-size: var(--font-size-12);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 
@@ -130,6 +160,7 @@ h6,
 
 .label-2 {
   font-size: var(--font-size-12);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-regular);
 }
 
@@ -137,6 +168,7 @@ h6,
 
 .label-3 {
   font-size: var(--font-size-10);
+  line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 }
 

@@ -21,7 +21,16 @@ body {
   padding: 0;
 }
 
-html {
+footer {
+  margin-top: 18rem;
+}
+
+.standard-layout {
+}
+.standard-layout__header {
+}
+
+/* html {
   height: 100%;
 }
 
@@ -35,7 +44,7 @@ body > .header {
   left: 0;
   width: 100%;
   z-index: 1;
-}
+} */
 
 
 .loading {
@@ -110,19 +119,42 @@ body > .header {
 }
 
 .explore-page {
-  padding: 3em;
+  padding: calc(48 * var(--font-size-basis)) var(--space-3);
+}
+.explore-page__title {
+  margin-top: 0;
 }
 
 .image-details {
+  padding: calc(48 * var(--font-size-basis)) var(--space-3);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
-  padding: 3rem;
+  grid-template-columns: 16fr 9fr;
+  grid-column-gap: var(--space-2);
+  grid-row-gap: var(--space-1);
 }
 
 .image-details__header {
   grid-column: -2 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: calc(24 * var(--font-size-basis));
 }
+
+.image-details__label {
+  align-self: center;
+}
+
+/* .image-details__title {
+  grid-column: 1 / 2;
+}
+
+.image-details__label {
+  grid-column: -2 / -1;
+}
+
+.image-details__meta {
+  grid-row: 2;
+} */
 
 .image-details__header > h1 {
   margin: 0;
@@ -139,7 +171,7 @@ body > .header {
 
 .image-details__meta-box +
 .image-details__meta-box {
-  margin-top: 3rem;
+  margin-top: var(--space-1);
 }
 
 .image-details__figure {
@@ -149,7 +181,8 @@ body > .header {
   width: 100%;
   height: auto;
   position: sticky;
-  top: 3rem;
+  top: var(--space-2);
+  border-radius: calc(10 * var(--font-size-basis));
 }
 
 .image-details__meta {
@@ -171,12 +204,26 @@ body > .header {
   padding: calc(24 * var(--font-size-basis));
 }
 
-.meta-box__list {
+.meta-box__summary {
+  border-bottom: 1px solid var(--color-lagoon-blue);
+}
+
+.meta-box__heading {
+  line-height: 1;
+}
+.meta-box__heading > em {
+  font-style: inherit;
+  font-weight: normal;
+}
+
+.meta-box__list-item + .meta-box__list-item {
+  margin-top: calc(12 * var(--font-size-basis));
 }
 
 .meta-box__summary {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .meta-box__summary {

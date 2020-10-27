@@ -10,9 +10,10 @@
 .logotype > a {
   text-decoration: none;
   color: inherit;
+  border-bottom: 2px solid transparent;
 }
 .logotype > a:hover,
 .logotype > a:active,
 .logotype > a:focus {
-  text-decoration: underline;
+  border-bottom-color: initial;
 }

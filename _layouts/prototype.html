@@ -7,8 +7,65 @@
     <link rel="stylesheet" href="/css/ui.css" />
     {% include noindex.html %}
   </head>
-  <body>
+  <body class="standard-layout">
     {% include icons.svg %}
+
+    <header class="header standard-layout__header">
+      <h2 class="logotype">
+        <a href="/prototype/">FathomNet</a>
+      </h2>
+      <ul class="nav">
+        <li>
+          <a
+            href="/prototype/explore/"
+            class="
+              nav__link
+              nav__link--active
+            "
+          >
+            Explore
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contributors/"
+            class="nav__link"
+          >
+            Contributors
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about-us/"
+            class="nav__link"
+            >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+            class="nav__link"
+            >
+            <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="/sign-in/"
+            class="button"
+            >
+            Sign in
+          </a>
+        </li>
+      </ul>
+    </header>
+
     {{ content }}
+
+    <footer></footer>
+
   </body>
 </html>
