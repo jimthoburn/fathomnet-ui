@@ -25,6 +25,11 @@
   --line-height-3: calc(var(--vertical-rhythm) * 3);
   --line-height-4: calc(var(--vertical-rhythm) * 4); */
 
+  --line-height-1: 1.5;
+  --line-height-2: 1.5;
+  --line-height-3: 1.5;
+  --line-height-4: 1.5;
+
   --space-1: calc(32 * var(--font-size-basis));
   --space-2: calc(64 * var(--font-size-basis));
   --space-3: calc(96 * var(--font-size-basis));

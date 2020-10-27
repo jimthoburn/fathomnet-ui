@@ -12,16 +12,19 @@
 }
 
 .card {
+  color: inherit;
+
+  /* .link-hit-area */
   display: block;
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s;
 }
+:hover > .card__text > .card__name,
+:active > .card__text > .card__name,
+:focus > .card__text > .card__name {
+  color: var(--link-color);
 
-.card:hover,
-.card:active,
-.card:focus {
-  opacity: 0.8;
+  /* .link-hit-area__active-indicator */
+  text-decoration: underline;
 }
 
 .card__image {
