@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: pattern
 ---
 
 <h1>Navigation</h1>

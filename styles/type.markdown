@@ -1,89 +1,89 @@
 ---
-layout: default
+layout: pattern
 ---
 
 <h1>Typography</h1>
 
 <div class="components-preview">
 
-  <h1 class="h1">Regola Pro Bold - 60</h1>
+  <h1 class="headline-1">Regola Pro Bold - 60</h1>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h1 class="h1">Regola Pro Bold - 60</h1>
+<h1 class="headline-1">Regola Pro Bold - 60</h1>
 ```
 
 </div>
 
 <div class="components-preview">
 
-  <h2 class="h2">Regola Pro Bold - 44</h2>
+  <h2 class="headline-2">Regola Pro Bold - 44</h2>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h2 class="h2">Regola Pro Bold - 44</h2>
+<h2 class="headline-2">Regola Pro Bold - 44</h2>
 ```
 
 </div>
 
 <div class="components-preview">
 
-  <h3 class="h3">Regola Pro Bold - 32</h3>
+  <h3 class="headline-3">Regola Pro Bold - 32</h3>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h3 class="h3">Regola Pro Bold - 32</h3>
+<h3 class="headline-3">Regola Pro Bold - 32</h3>
 ```
 
 </div>
 
 <div class="components-preview">
 
-  <h4 class="h4">Regola Pro Bold - 24</h4>
+  <h4 class="headline-4">Regola Pro Bold - 24</h4>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h4 class="h4">Regola Pro Bold - 24</h4>
+<h4 class="headline-4">Regola Pro Bold - 24</h4>
 ```
 
 </div>
 
 <div class="components-preview">
 
-  <h5 class="h5">Regola Pro Bold - 18</h5>
+  <h5 class="headline-5">Regola Pro Bold - 18</h5>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h5 class="h5">Regola Pro Bold - 18</h5>
+<h5 class="headline-5">Regola Pro Bold - 18</h5>
 ```
 
 </div>
 
 <div class="components-preview">
 
-  <h6 class="h6">Regola Pro Bold - 14</h6>
+  <h6 class="headline-6">Regola Pro Bold - 14</h6>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h6 class="h6">Regola Pro Bold - 14</h6>
+<h6 class="headline-6">Regola Pro Bold - 14</h6>
 ```
 
 </div>

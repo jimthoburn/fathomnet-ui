@@ -1,6 +1,17 @@
 
 :root {
   --font-size-basis: 0.1vw;
+  --font-size-basis: calc(1/16 * 1em);
+  /* --font-size-basis: calc(1/16 * 1vw); */
+  
+  --font-size-60: calc(60 * var(--font-size-basis));
+  --font-size-44: calc(44 * var(--font-size-basis));
+  --font-size-32: calc(32 * var(--font-size-basis));
+  --font-size-24: calc(24 * var(--font-size-basis));
+  --font-size-16: calc(16 * var(--font-size-basis));
+  --font-size-14: calc(14 * var(--font-size-basis));
+  --font-size-12: calc(12 * var(--font-size-basis));
+
   --font-weight-bold: bold; /* 700 */
   --font-weight-medium: 600;
   --font-weight-regular: 500;
@@ -10,120 +21,121 @@
 body {
   font-family: 'Regola Pro Trial', sans-serif;
   font-size: 100%;
-  line-height: 1.875;
+  font-size: var(--font-size-16);
+  line-height: 1.5;
   font-weight: var(--font-weight-book);
 }
 
 h1,
-.h1 {
-  font-size: calc(60 * var(--font-size-basis));
+.headline-1 {
+  font-size: var(--font-size-60);
   font-weight: var(--font-weight-bold);
 }
 
 h2,
-.h2 {
-  font-size: calc(44 * var(--font-size-basis));
+.headline-2 {
+  font-size: var(--font-size-44);
   font-weight: var(--font-weight-bold);
 }
 
 h3,
-.h3 {
-  font-size: calc(32 * var(--font-size-basis));
+.headline-3 {
+  font-size: var(--font-size-32);
   font-weight: var(--font-weight-bold);
 }
 
 h4,
-.h4 {
-  font-size: calc(24 * var(--font-size-basis));
+.headline-4 {
+  font-size: var(--font-size-24);
   font-weight: var(--font-weight-bold);
 }
 
 h5,
-.h5 {
-  font-size: calc(18 * var(--font-size-basis));
+.headline-5 {
+  font-size: var(--font-size-18);
   font-weight: var(--font-weight-bold);
 }
 
 h6,
-.h6 {
-  font-size: calc(14 * var(--font-size-basis));
+.headline-6 {
+  font-size: var(--font-size-14);
   font-weight: var(--font-weight-bold);
 }
 
 /* Body 1 */
 
 .body-1 {
-  font-size: calc(18 * var(--font-size-basis));
+  font-size: var(--font-size-18);
   font-weight: var(--font-weight-bold);
 }
 
 /* Body 2 */
 
 .body-2 {
-  font-size: calc(18 * var(--font-size-basis));
+  font-size: var(--font-size-18);
   font-weight: var(--font-weight-book);
 }
 
 /* Large link */
 
 .link-large {
-  font-size: calc(18 * var(--font-size-basis));
+  font-size: var(--font-size-18);
   font-weight: var(--font-weight-bold);
 }
 
 /* Body 3 */
 
 .body-3 {
-  font-size: calc(16 * var(--font-size-basis));
+  font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
 }
 
 /* Body 4 */
 
 .body-4 {
-  font-size: calc(16 * var(--font-size-basis));
+  font-size: var(--font-size-16);
   font-weight: var(--font-weight-book);
 }
 
 /* Small link */
 
 .link-small {
-  font-size: calc(14 * var(--font-size-basis));
+  font-size: var(--font-size-14);
   font-weight: var(--font-weight-bold);
 }
 
 /* Body 5 */
 
 .body-5 {
-  font-size: calc(14 * var(--font-size-basis));
+  font-size: var(--font-size-14);
   font-weight: var(--font-weight-bold);
 }
 
 /* Label 1 */
 
 .label-1 {
-  font-size: calc(12 * var(--font-size-basis));
+  font-size: var(--font-size-12);
   font-weight: var(--font-weight-bold);
 }
 
 /* XS link */
 
 .link-xs {
-  font-size: calc(12 * var(--font-size-basis));
+  font-size: var(--font-size-12);
   font-weight: var(--font-weight-bold);
 }
 
 /* Label 2 */
 
 .label-2 {
-  font-size: calc(12 * var(--font-size-basis));
+  font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular);
 }
 
 /* Label 3 */
 
 .label-3 {
-  font-size: calc(10 * var(--font-size-basis));
+  font-size: var(--font-size-10);
   font-weight: var(--font-weight-bold);
 }
 
