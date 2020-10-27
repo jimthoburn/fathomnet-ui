@@ -20,10 +20,10 @@
 
   --vertical-rhythm: calc(19 * var(--font-size-basis));
 
-  --line-height-1: calc(var(--vertical-rhythm) * 1);
+  /* --line-height-1: calc(var(--vertical-rhythm) * 1);
   --line-height-2: calc(var(--vertical-rhythm) * 2);
   --line-height-3: calc(var(--vertical-rhythm) * 3);
-  --line-height-4: calc(var(--vertical-rhythm) * 4);
+  --line-height-4: calc(var(--vertical-rhythm) * 4); */
 
   --space-1: calc(32 * var(--font-size-basis));
   --space-2: calc(64 * var(--font-size-basis));
@@ -35,6 +35,7 @@ body {
   font-size: 100%;
   font-size: var(--font-size-16);
   line-height: var(--line-height-1);
+  line-height: 1.5;
   font-weight: var(--font-weight-book);
 
   /* background-size: 100vw var(--vertical-rhythm);
