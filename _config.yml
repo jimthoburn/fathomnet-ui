@@ -5,3 +5,5 @@ defaults:
       path: ""
     values:
       layout: pattern
+
+version: v0.0.3-alpha
