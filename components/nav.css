@@ -23,6 +23,12 @@
   color: inherit;
   display: flex;
   border-bottom: 2px solid transparent;
+
+  /* For icons */
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 0.5em;
+  align-items: center;
 }
 
 .nav__link:hover,
@@ -40,3 +46,4 @@
   border-radius: 100%;
   background-color: var(--color-snapper-red);
 }
+

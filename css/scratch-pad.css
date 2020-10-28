@@ -231,3 +231,8 @@ body > .header {
 :focus > .link-hit-area__active-indicator {
   text-decoration: underline;
 }
+
+
+.main {
+  padding: calc(48 * var(--font-size-basis)) var(--space-3);
+}
