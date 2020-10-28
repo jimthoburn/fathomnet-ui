@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /starter-kit-v0.0.3-alpha/fathomnet-ui.js
+permalink: /fathomnet-ui-v0.0.4-alpha/fathomnet-ui.js
 ---
 export const svgIcons = `
 
