@@ -1,70 +1,128 @@
 ---
-layout: prototype
+layout: explore
 title: Explore
 ---
 
-<main class="explore-page">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 
-  <h2 class="explore-page__title heading-4">486 results</h2>
+<main class="explore-page explore-page--map-active">
 
-  <ul class="card-list">
+  <section class="explore-page__map">
+    <div class="map-box" id="mapbox"></div>
+    <script>
+    const MAP_ACCESS_TOKEN = ""
 
-  {% for index in (1..15) %}
+    mapboxgl.accessToken = MAP_ACCESS_TOKEN; // replace this with your access token
+    var map = new mapboxgl.Map({
+      container: 'mapbox',
+      style: 'mapbox://styles/mapbox/basic-v9', // replace this with your style URL
+      center: [-122.846343, 37.8185472],
+      zoom: 8.75
+    });
+    // code from the next step will go here
+    </script>
+  </section>
 
-  <li class="card-list__item">
+  <section class="explore-page__filters">
+    <ul class="button-list">
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          Dates
+        </button>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          Time
+        </button>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          Contributor
+        </button>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          Contributor Type
+        </button>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          Verification Status
+        </button>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          More…
+        </button>
+      </li>
+    </ul>
+  </section>
 
-    <a href="/prototype/image/" class="card">
+  <section class="explore-page__results">
 
-      <span class="card__image">
-        <img src="/images/mbari/827b8c03a21bebd5ac8cef5ad169ebfab9aafbc9.png" alt="Amphiprion ocellaris" />
-      </span>
+    <h2 class="explore-page__title heading-4">486 results</h2>
 
-      <span class="card__text">
-        <span class="card__name">
-          <strong class="text-single-line">
-            Amphiprion ocellaris, also known as the false percula clownfish
-            or common clownfish, is a marine fish belonging to the family Pomacentridae
-          </strong>
-          <small>(+4 more)</small>
+    <ul class="card-list">
+
+    {% for index in (1..15) %}
+
+    <li class="card-list__item">
+
+      <a href="/prototype/image/" class="card">
+
+        <span class="card__image">
+          <img src="/images/mbari/827b8c03a21bebd5ac8cef5ad169ebfab9aafbc9.png" alt="Amphiprion ocellaris" />
         </span>
-        <br />
-        <span class="card__meta text-single-line">
-          Contributor name, collection name, other meta data about this item
+
+        <span class="card__text">
+          <span class="card__name">
+            <strong class="text-single-line">
+              Amphiprion ocellaris, also known as the false percula clownfish
+              or common clownfish, is a marine fish belonging to the family Pomacentridae
+            </strong>
+            <small>(+4 more)</small>
+          </span>
+          <br />
+          <span class="card__meta text-single-line">
+            Contributor name, collection name, other meta data about this item
+          </span>
         </span>
-      </span>
 
-    </a>
+      </a>
 
-  </li>
+    </li>
 
-  <li class="card-list__item">
+    <li class="card-list__item">
 
-    <a href="/prototype/image/" class="card">
+      <a href="/prototype/image/" class="card">
 
-      <span class="card__image">
-        <img src="/images/mbari/ee2ec6e6c08e195cde7f8542286da55ab1648249.png" alt="Amphiprion ocellaris" />
-      </span>
-
-      <span class="card__text">
-        <span class="card__name">
-          <strong class="text-single-line">
-            Amphiprion ocellaris, also known as the false percula clownfish
-            or common clownfish, is a marine fish belonging to the family Pomacentridae
-          </strong>
-          <small>(+4 more)</small>
+        <span class="card__image">
+          <img src="/images/mbari/ee2ec6e6c08e195cde7f8542286da55ab1648249.png" alt="Amphiprion ocellaris" />
         </span>
-        <br />
-        <span class="card__meta text-single-line">
-          Contributor name, collection name, other meta data about this item
+
+        <span class="card__text">
+          <span class="card__name">
+            <strong class="text-single-line">
+              Amphiprion ocellaris, also known as the false percula clownfish
+              or common clownfish, is a marine fish belonging to the family Pomacentridae
+            </strong>
+            <small>(+4 more)</small>
+          </span>
+          <br />
+          <span class="card__meta text-single-line">
+            Contributor name, collection name, other meta data about this item
+          </span>
         </span>
-      </span>
 
-    </a>
+      </a>
 
-  </li>
+    </li>
 
-  {% endfor %}
+    {% endfor %}
 
-  </ul>
+    </ul>
+
+  </section>
 
 </main>

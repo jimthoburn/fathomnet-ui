@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}{% unless page.title contains "FathomNet" %} / FathomNet{% endunless %}</title>
+    <link rel="stylesheet" href="/css/ui.css" />
+    {% include noindex.html %}
+  </head>
+  <body class="standard-layout">
+    {% include icons.svg %}
+
+    <header class="header standard-layout__header">
+      <div class="header__title-group">
+        <h2 class="logotype">
+          <a href="/prototype/">FathomNet</a>
+        </h2>
+        <h1 class="body-2">Explore</h1>
+      </div>
+
+      <div class="header__search-box">
+        <form class="search-box">
+          <ul class="search-box__list">
+            <li class="search-box__item">
+              <label class="search-box__label">
+                <span class="search-box__label-text">What</span>
+                <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" />
+              </label>
+            </li>
+            <li class="search-box__item">
+              <label class="search-box__label">
+                <span class="search-box__label-text">Where</span>
+                <input type="text" class="search-box__field text-field" placeholder="Longitude & latitude, basin, etc" />
+              </label>
+            </li>
+            <li class="search-box__item">
+              <label class="search-box__label">
+                <span class="search-box__label-text">Concept tree</span>
+                <select><option>All</option><option>Coming soon…</option></select>
+              </label>
+            </li>
+          </ul>
+          <p class="search-box__submit">
+            <button type="submit" class="button search-box__button">
+              <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button>
+          </p>
+        </form>
+      </div>
+
+      <ul class="nav">
+        <li>
+          <a
+            href="/sign-in/"
+            class="nav__link"
+            >
+            Sign in
+          </a>
+        </li>
+      </ul>
+
+    </header>
+
+    {{ content }}
+
+    <footer></footer>
+
+  </body>
+</html>

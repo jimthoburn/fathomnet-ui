@@ -1,10 +1,10 @@
 
 :root {
   --font-size-basis: 0.1vw;
-  --font-size-basis: calc(1/16 * 1em);
+  --font-size-basis: calc(1/16 * 1rem);
   /* --font-size-basis: calc(1/16 * 1vw); */
   
-  --font-size-60: calc(60 * var(--font-size-basis));
+  --font-size-80: calc(80 * var(--font-size-basis));
   --font-size-44: calc(44 * var(--font-size-basis));
   --font-size-32: calc(32 * var(--font-size-basis));
   --font-size-24: calc(24 * var(--font-size-basis));
@@ -29,6 +29,7 @@
   --line-height-2: 1.5;
   --line-height-3: 1.5;
   --line-height-4: 1.5;
+  --line-height-5: 1.5;
 
   --space-1: calc(32 * var(--font-size-basis));
   --space-2: calc(64 * var(--font-size-basis));
@@ -50,8 +51,8 @@ body {
 
 h1,
 .heading-1 {
-  font-size: var(--font-size-60);
-  line-height: var(--line-height-4);
+  font-size: var(--font-size-80);
+  line-height: var(--line-height-5);
   font-weight: var(--font-weight-bold);
 }
 

@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /fathomnet-ui-v0.0.4-alpha/fathomnet-ui.css
+permalink: /fathomnet-ui-v0.0.5-alpha/fathomnet-ui.css
 ---
 {% include_relative css/fonts.css %}
 {% include_relative css/type.css %}
@@ -13,6 +13,7 @@ permalink: /fathomnet-ui-v0.0.4-alpha/fathomnet-ui.css
 
 {% include_relative components/card.css %}
 {% include_relative components/meta-box.css %}
+{% include_relative components/search-box.css %}
 {% include_relative components/logotype.css %}
 {% include_relative components/nav.css %}
 {% include_relative components/header.css %}
