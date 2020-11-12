@@ -12,6 +12,39 @@ a:focus {
 
 :root {
   --link-color: var(--color-ultramarine-blue);
+
+  --background-color: var(--color-white);
+  --text-color: var(--color-abyss-gray);
+}
+
+.dark-mode {
+  --background-color: var(--color-abyss-gray);
+  --text-color: var(--color-white);
+  
+  --button-background-color: var(--color-abyss-gray);
+  --button-text-color: var(--color-ultramarine-blue);
+
+  --button-background-color--primary: var(--color-white);
+  --button-text-color--primary: var(--color-benthos-blue);
+
+  --link-color: var(--color-white);
+}
+
+.dark-mode .button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}
+
+.dark-mode .button:hover,
+.dark-mode .button:active,
+.dark-mode .button:focus {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.dark-mode .button--primary {
+  background-color: var(--button-background-color--primary);
+  color: var(--button-text-color--primary);
 }
 
 a {
@@ -28,9 +61,9 @@ body {
   padding: 0;
 }
 
-footer {
+/* footer {
   margin-top: 18rem;
-}
+} */
 
 .standard-layout {
 }

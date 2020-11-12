@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}{% unless page.title contains "FathomNet" %} / FathomNet{% endunless %}</title>
+    <link rel="stylesheet" href="/css/ui.css" />
+    {% include noindex.html %}
+  </head>
+  <body>
+    {% include icons.svg %}
+
+    {{ content }}
+
+  </body>
+</html>
