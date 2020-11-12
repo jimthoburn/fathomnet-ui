@@ -5,6 +5,10 @@
   align-items: center;
   padding: var(--space-1) var(--space-3);
   box-sizing: border-box;
+  /* position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  text-color: var(--text-color); */
 }
 .header > * + * {
   margin-left: 3em;

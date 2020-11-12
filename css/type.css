@@ -31,7 +31,9 @@
   --line-height-4: 1.5;
   --line-height-5: 1.5;
   
+  --space-one-half: calc(16 * var(--font-size-basis));
   --space-two-thirds: calc(24 * var(--font-size-basis));
+  --space-one-and-a-half: calc(48 * var(--font-size-basis));
 
   --space-1: calc(32 * var(--font-size-basis));
   --space-2: calc(64 * var(--font-size-basis));

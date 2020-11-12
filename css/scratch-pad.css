@@ -59,6 +59,8 @@ a, button {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
+  text-color: var(--text-color);
 }
 
 /* footer {
@@ -248,6 +250,7 @@ body > .header {
   border-radius: calc(4 * var(--font-size-basis));
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .image-details__icon {
@@ -307,6 +310,11 @@ body > .header {
 
 .image-details__meta {
   color: var(--color-demersal-gray);
+}
+
+
+.image-details__footer {
+  grid-column: 1 / -1;
 }
 
 
