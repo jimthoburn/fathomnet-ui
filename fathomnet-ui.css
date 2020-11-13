@@ -10,6 +10,7 @@ permalink: /fathomnet-ui-v0.0.5-alpha/fathomnet-ui.css
 {% include_relative elements/icon.css %}
 {% include_relative elements/avatar.css %}
 {% include_relative elements/button.css %}
+{% include_relative elements/field.css %}
 
 {% include_relative components/card.css %}
 {% include_relative components/meta-box.css %}
