@@ -1,9 +1,9 @@
 ---
 layout: pattern
-title: Search Box
+title: Search box
 ---
 
-<h1>Search Box</h1>
+<h1>Search box</h1>
 
 <div class="components-preview">
   <form class="search-box">
@@ -81,7 +81,7 @@ title: Search Box
   <header class="header standard-layout__header">
     <div class="header__title-group">
       <h2 class="logotype">
-        <a href="/prototype/">FathomNet</a>
+        <a href="/pages/">FathomNet</a>
       </h2>
       <h1 class="body-2">Explore</h1>
     </div>
@@ -138,7 +138,7 @@ title: Search Box
 <header class="header standard-layout__header">
   <div class="header__title-group">
     <h2 class="logotype">
-      <a href="/prototype/">FathomNet</a>
+      <a href="/pages/">FathomNet</a>
     </h2>
     <h1 class="body-2">Explore</h1>
   </div>

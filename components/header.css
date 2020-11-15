@@ -13,3 +13,15 @@
 .header > * + * {
   margin-left: 3em;
 }
+
+.header__title-group {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-20);
+}
+.header__title-group > * {
+  font-size: inherit;
+}
+.header__title-group > :not(:first-child) {
+  margin-left: 0.5em;
+}

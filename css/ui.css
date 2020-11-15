@@ -1,17 +1,17 @@
-
-
 @import url("/css/scratch-pad.css");
 
 @import url("/css/fonts.css");
-@import url("/css/type.css");
-@import url("/css/color.css");
-@import url("/css/other.css");
+
+@import url("/styles/type.css");
+@import url("/styles/color.css");
+@import url("/styles/other.css");
 
 @import url("/elements/icon.css");
 @import url("/elements/avatar.css");
 @import url("/elements/button.css");
 @import url("/elements/chip.css");
 @import url("/elements/link.css");
+@import url("/elements/loading.css");
 @import url("/elements/field.css");
 @import url("/elements/meta-text.css");
 @import url("/elements/data-list.css");
@@ -24,8 +24,9 @@
 @import url("/components/logotype.css");
 @import url("/components/nav.css");
 @import url("/components/header.css");
+@import url("/components/hero.css");
 @import url("/components/tabs.css");
 
-@import url("/css/annotations.css");
-
-@import url("/css/hero.css");
+@import url("/pages/image-details.css");
+@import url("/pages/annotations.css");
+@import url("/pages/explore.css");

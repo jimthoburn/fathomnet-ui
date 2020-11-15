@@ -20,6 +20,8 @@
 
 .modal--data-list {
   padding: 0;
+  max-height: calc(var(--line-height-1) * 8.5);
+  overflow-y: auto;
 }
 
 .modal--dialog {

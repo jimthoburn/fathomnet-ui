@@ -1,9 +1,9 @@
 ---
 layout: pattern
-title: Meta Text
+title: Meta text
 ---
 
-<h1>Meta Text</h1>
+<h1>Meta text</h1>
 
 <div class="components-preview">
 

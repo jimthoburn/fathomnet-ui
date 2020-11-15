@@ -1,9 +1,9 @@
 ---
 layout: pattern
-title: Data List
+title: Data list
 ---
 
-<h1>Data List</h1>
+<h1>Data list</h1>
 
 
 <div class="components-preview">

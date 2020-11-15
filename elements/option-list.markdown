@@ -1,9 +1,9 @@
 ---
 layout: pattern
-title: Option List
+title: Option list
 ---
 
-<h1>Option List</h1>
+<h1>Option list</h1>
 
 <div class="components-preview">
 

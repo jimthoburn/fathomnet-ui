@@ -10,6 +10,7 @@ title: Modal
 
 <dialog open class="modal modal--data-list dropshadow--dark">
   <ul class="data-list">
+    {% for index in (1..20) %}
     <li class="data-list__item">
       <button type="button" class="data-list__button">
         Ampeliscidae
@@ -30,6 +31,7 @@ title: Modal
         Ampheraster
       </button>
     </li>
+    {% endfor %}
   </ul>
 </dialog>
 
@@ -82,11 +84,11 @@ title: Modal
     Are you sure you want to proceed? You haven’t saved your annotations yet.
   </p>
 
-  <ul class="option-list modal__option-list">
-    <li class="option-list__item">
+  <ul class="button-list modal__option-list">
+    <li class="button-list__item">
       <button type="button" class="link link--large">Cancel</button>
     </li>
-    <li class="option-list__item">
+    <li class="button-list__item">
       <button type="button" class="button button--primary">Continue</button>
     </li>
   </ul>
@@ -110,11 +112,11 @@ title: Modal
     Are you sure you want to proceed? You<br />haven’t saved your annotations yet.
   </p>
 
-  <ul class="option-list modal__option-list">
-    <li class="option-list__item">
+  <ul class="button-list modal__option-list">
+    <li class="button-list__item">
       <button type="button" class="link link--large">Cancel</button>
     </li>
-    <li class="option-list__item">
+    <li class="button-list__item">
       <button type="button" class="button button--primary">Continue</button>
     </li>
   </ul>

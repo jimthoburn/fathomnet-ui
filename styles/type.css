@@ -8,6 +8,7 @@
   --font-size-44: calc(44 * var(--font-size-basis));
   --font-size-32: calc(32 * var(--font-size-basis));
   --font-size-24: calc(24 * var(--font-size-basis));
+  --font-size-20: calc(20 * var(--font-size-basis));
   --font-size-16: calc(16 * var(--font-size-basis));
   --font-size-14: calc(14 * var(--font-size-basis));
   --font-size-12: calc(12 * var(--font-size-basis));
