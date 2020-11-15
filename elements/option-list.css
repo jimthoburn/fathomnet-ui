@@ -1,0 +1,16 @@
+
+.option-list,
+.option-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.option-list {
+  display: flex;
+  align-items: center;
+}
+
+.option-list > * + * {
+  margin-left: 1.5em;
+}

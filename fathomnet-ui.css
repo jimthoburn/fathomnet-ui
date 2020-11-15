@@ -10,14 +10,21 @@ permalink: /fathomnet-ui-v0.0.5-alpha/fathomnet-ui.css
 {% include_relative elements/icon.css %}
 {% include_relative elements/avatar.css %}
 {% include_relative elements/button.css %}
+{% include_relative elements/chip.css %}
+{% include_relative elements/link.css %}
 {% include_relative elements/field.css %}
+{% include_relative elements/meta-text.css %}
+{% include_relative elements/data-list.css %}
+{% include_relative elements/option-list.css %}
 
 {% include_relative components/card.css %}
+{% include_relative components/modal.css %}
 {% include_relative components/meta-box.css %}
 {% include_relative components/search-box.css %}
 {% include_relative components/logotype.css %}
 {% include_relative components/nav.css %}
 {% include_relative components/header.css %}
+{% include_relative components/tabs.css %}
 
 {% include_relative css/hero.css %}
 

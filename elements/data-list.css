@@ -1,0 +1,45 @@
+
+.data-list,
+.data-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.data-list__button {
+  /* Reset <a /> */
+  text-decoration: none;
+
+  /* Reset <button /> */
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border-width: 0;
+  display: block;
+  width: 100%;
+
+  min-width: calc(240 * var(--font-size-basis));
+
+  /* .body-1 */
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
+  font-weight: var(--font-weight-bold);
+
+  padding: calc(16 * var(--font-size-basis)) calc(20 * var(--font-size-basis));
+
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.2s, 0.2s, 0.2s;
+}
+
+.data-list__button:hover,
+.data-list__button:active,
+.data-list__button:focus {
+  background-color: var(--color-sea-salt-gray);
+}
+
+.data-list__item + .data-list__item {
+  margin-top: calc(calc(calc(20 - 6) * var(--font-size-basis)) * -1);
+}

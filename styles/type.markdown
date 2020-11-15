@@ -7,14 +7,14 @@ title: Typography
 
 <div class="components-preview">
 
-  <h1 class="heading-1">Regola Pro Bold - 60</h1>
+  <h1 class="heading-1">Regola Pro Bold - 80</h1>
 
 </div>
 
 <div class="components-code" markdown="1">
 
 ```html
-<h1 class="heading-1">Regola Pro Bold - 60</h1>
+<h1 class="heading-1">Regola Pro Bold - 80</h1>
 ```
 
 </div>

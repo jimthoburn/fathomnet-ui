@@ -1,24 +1,5 @@
 
-.nav,
-.nav > li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.nav > li + li {
-  margin-left: 3em;
-}
-
-.nav__link {
+.link {
   /* Reset <a /> */
   text-decoration: none;
   color: inherit;
@@ -35,9 +16,6 @@
   display: flex;
   border-bottom: 2px solid transparent;
 
-  /* SHIM: Avoid wrapping the “Sign in” link in the search header */
-  white-space: nowrap;
-
   /* For icons */
   display: grid;
   grid-auto-flow: column;
@@ -45,14 +23,14 @@
   align-items: center;
 }
 
-.nav__link:hover,
-.nav__link:active,
-.nav__link:focus,
-.nav__link--active {
+.link:hover,
+.link:active,
+.link:focus,
+.link--active {
   border-bottom-color: initial;
 }
 
-.nav__link--alert::after {
+.link--alert::after {
   content: "";
   display: block;
   width: 0.375em;

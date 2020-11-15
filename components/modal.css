@@ -1,0 +1,43 @@
+
+.modal {
+  border-width: 0;
+  padding: calc(48 * var(--font-size-basis)) calc(24 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+  border-radius: calc(8 * var(--font-size-basis));
+
+  /* SHIM: For border-radius */
+  overflow: hidden;
+}
+
+.modal__title {
+  margin-bottom: calc(24 * var(--font-size-basis));
+}
+
+.modal__text {
+  margin: 0 0 calc(24 * var(--font-size-basis));
+  line-height: calc(24 * var(--font-size-basis));
+  max-width: 20em;
+}
+
+.modal--data-list {
+  padding: 0;
+}
+
+.modal--dialog {
+  text-align: center;
+}
+
+.modal__option-list {
+  margin-top: calc(64 * var(--font-size-basis));
+}
+
+.modal--dialog > .modal__option-list {
+  justify-content: center;
+}
+
+.modal > :first-child {
+  margin-top: 0;
+}
+
+.modal > :last-child {
+  margin-bottom: 0;
+}

@@ -2,8 +2,8 @@
 :root {
   --text-color-subtle: var(--color-salt-marsh-gray);
   --border-color: var(--color-salt-marsh-gray);
-  --background-color: #E5E5E5;
-  --text-color: var(--color-benthos-blue);
+  --pattern-library-background-color: #E5E5E5;
+  --pattern-library-text-color: var(--color-benthos-blue);
   --color-brightness: 0;
 }
 
@@ -12,14 +12,14 @@
     --text-color-color: var(--color-aphotic-blue);
     --border-color: var(--color-aphotic-blue);
     --background-color: var(--color-abyss-gray);
-    --text-color: white;
+    --text-color: var(--color-white);
     --color-brightness: 1;
   }
 } */
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--pattern-library-background-color);
+  color: var(--pattern-library-text-color);
   margin-bottom: 3em !important;
   font-size: 1.125em;
 }
@@ -37,7 +37,7 @@ body {
   background-color: hsla(0, calc(var(--color-brightness) * 100%), calc(var(--color-brightness) * 100%), 0.15);
 }
 .components-preview {
-  background-color: white;
+  background-color: var(--color-white);
 } */
 
 .components-body > main {
@@ -50,6 +50,7 @@ body {
   margin: 0;
   font-size: inherit;
   padding: 1.5rem;
+  line-height: inherit;
 }
 .components-body > footer {
   grid-column: -3/-2;
@@ -80,8 +81,7 @@ body {
   display: grid;
   grid-gap: 3em;
   padding: 1.5em 1.5em 6em;
-  background: white;
-  color: var(--color-benthos-blue);
+  background: hsla(360, 0%, 100%, 1);
 }
 .components-preview > * {
   align-self: center;

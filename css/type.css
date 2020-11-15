@@ -2,7 +2,7 @@
 :root {
   --font-size-basis: 0.1vw;
   --font-size-basis: calc(1/16 * 1rem);
-  /* --font-size-basis: calc(1/16 * 1vw); */
+  /* --font-size-basis: calc(1/16 * 2vw); */
   
   --font-size-80: calc(80 * var(--font-size-basis));
   --font-size-44: calc(44 * var(--font-size-basis));
@@ -28,9 +28,20 @@
   --line-height-1: 1.5;
   --line-height-2: 1.5;
   --line-height-3: 1.5;
-  --line-height-4: 1.5;
+  /* --line-height-4: 1.5; */
   --line-height-5: 1.5;
   
+  --line-height-base-12: calc(14 * var(--font-size-basis));
+  --line-height-base-14: calc(14 * var(--font-size-basis));
+  --line-height-base-17: calc(17 * var(--font-size-basis));
+  --line-height-base: calc(19 * var(--font-size-basis));
+  --line-height-1: calc(22 * var(--font-size-basis));
+  --line-height-1-point-5: calc(29 * var(--font-size-basis));
+  --line-height-2: calc(38 * var(--font-size-basis));
+  --line-height-3: calc(53 * var(--font-size-basis));
+  /* --line-height-4: calc(75 * var(--font-size-basis)); */
+  --line-height-5: calc(96 * var(--font-size-basis));
+
   --space-one-half: calc(16 * var(--font-size-basis));
   --space-two-thirds: calc(24 * var(--font-size-basis));
   --space-one-and-a-half: calc(48 * var(--font-size-basis));
@@ -44,7 +55,7 @@ body {
   font-family: 'Regola Pro Trial', sans-serif;
   font-size: 100%;
   font-size: var(--font-size-16);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base);
   line-height: 1.5;
   font-weight: var(--font-weight-book);
 
@@ -70,15 +81,16 @@ h2,
 h3,
 .heading-3 {
   font-size: var(--font-size-32);
-  line-height: calc(var(--vertical-rhythm) * 1.5);
+  line-height: var(--line-height-2);
   font-weight: var(--font-weight-bold);
 }
 
 h4,
 .heading-4 {
   font-size: var(--font-size-24);
-  line-height: var(--line-height-2);
+  line-height: var(--line-height-1-point-5);
   font-weight: var(--font-weight-bold);
+  margin-bottom: calc(24 * var(--font-size-basis));
 }
 
 h5,
@@ -91,7 +103,7 @@ h5,
 h6,
 .heading-6 {
   font-size: var(--font-size-14);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-17);
   font-weight: var(--font-weight-bold);
 }
 
@@ -113,7 +125,8 @@ h6,
 
 /* Large link */
 
-.link-large {
+.link-large,
+.link--large {
   font-size: var(--font-size-18);
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
@@ -123,7 +136,7 @@ h6,
 
 .body-3 {
   font-size: var(--font-size-16);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base);
   font-weight: var(--font-weight-medium);
 }
 
@@ -131,7 +144,7 @@ h6,
 
 .body-4 {
   font-size: var(--font-size-16);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base);
   font-weight: var(--font-weight-book);
 }
 
@@ -139,7 +152,7 @@ h6,
 
 .link-small {
   font-size: var(--font-size-14);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-17);
   font-weight: var(--font-weight-bold);
 }
 
@@ -147,7 +160,7 @@ h6,
 
 .body-5 {
   font-size: var(--font-size-14);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-17);
   font-weight: var(--font-weight-bold);
 }
 
@@ -155,7 +168,7 @@ h6,
 
 .label-1 {
   font-size: var(--font-size-12);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-14);
   font-weight: var(--font-weight-bold);
 }
 
@@ -163,7 +176,7 @@ h6,
 
 .link-xs {
   font-size: var(--font-size-12);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-14);
   font-weight: var(--font-weight-bold);
 }
 
@@ -171,7 +184,7 @@ h6,
 
 .label-2 {
   font-size: var(--font-size-12);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-14);
   font-weight: var(--font-weight-regular);
 }
 
@@ -179,7 +192,7 @@ h6,
 
 .label-3 {
   font-size: var(--font-size-10);
-  line-height: var(--line-height-1);
+  line-height: var(--line-height-base-12);
   font-weight: var(--font-weight-bold);
 }
 
