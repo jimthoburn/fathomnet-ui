@@ -36,7 +36,7 @@ title: Chip
         <div class="search-box__label">
           <label>
             <span class="search-box__label-text">What</span>
-            <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" />
+            <!-- <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" /> -->
           </label>
           <button type="button" class="chip">
             Chip
@@ -76,7 +76,10 @@ title: Chip
       <div class="search-box__label">
         <label>
           <span class="search-box__label-text">What</span>
+          <!--
+          @TODO Hidden until “Chip” is pressed?
           <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" />
+          -->
         </label>
         <button type="button" class="chip">
           Chip
