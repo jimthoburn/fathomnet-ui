@@ -119,18 +119,6 @@ body {
   top: 0;
 }
 
-/* Search box */
-.text-field {
-  font-family: inherit;
-
-  /* .label-2 */
-  font-size: var(--font-size-12);
-  line-height: var(--line-height-base-14);
-  font-weight: var(--font-weight-regular);
-
-  width: 100%;
-}
-
 .dropdown-button {
   display: flex;
 }
