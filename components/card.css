@@ -1,11 +1,12 @@
 
 
 .card-list {
-  --card-image-width: calc(200 * var(--font-size-basis));
-  /* --card-image-height: calc(208 * var(--font-size-basis)); */
+  --card-image-width: 208;
+  --card-image-height: 202;
   display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(var(--card-image-width), 1fr) );
-  grid-gap: calc(14 * var(--font-size-basis));
+  grid-template-columns: repeat( auto-fill, minmax(calc(var(--card-image-width) * var(--font-size-basis)), 1fr) );
+  grid-column-gap: calc(16 * var(--font-size-basis));
+  grid-row-gap: calc(24 * var(--font-size-basis));
 }
 
 .card-list,
@@ -35,7 +36,7 @@
   display: block;
   position: relative;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: calc((var(--card-image-height) / var(--card-image-width)) * 100%);
 }
 .card__image > img {
   display: block;
@@ -53,7 +54,11 @@
 .card__text {
   margin-top: calc(8 * var(--font-size-basis));
   display: block;
+
+  /* .label-1 */
   font-size: var(--font-size-12);
+  line-height: var(--line-height-base-14);
+  /* font-weight: var(--font-weight-bold); */
 }
 
 .card__name {
@@ -70,5 +75,7 @@
 }
 
 .card__meta {
+  margin-top: calc(4 * var(--font-size-basis));
+  display: block;
   color: var(--color-demersal-gray);
 }

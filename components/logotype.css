@@ -1,9 +1,11 @@
 
 .logotype {
-  font-weight: bold;
   margin: 0;
-  --font-size-20: calc(20 * var(--font-size-basis));
-  font-size: var(--font-size-20);
+
+  /* .body-1 */
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
+  font-weight: var(--font-weight-bold);
 }
 
 .logotype > a {

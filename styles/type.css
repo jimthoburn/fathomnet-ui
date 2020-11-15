@@ -1,7 +1,7 @@
 
 :root {
-  --font-preference-basis: calc(1/16 * 0.825rem);
-  --screen-size-basis: calc(100 / 1440 * 0.825vw);
+  --font-preference-basis: calc((1/16) * (16/16) * 1rem);
+  --screen-size-basis: calc((100/1440) * (16/16) * 1vw);
 
   --font-size-basis: var(--font-preference-basis);
   --font-size-basis: max(
@@ -25,7 +25,7 @@
   --font-size-44: calc(44 * var(--font-size-basis));
   --font-size-32: calc(32 * var(--font-size-basis));
   --font-size-24: calc(24 * var(--font-size-basis));
-  --font-size-20: calc(20 * var(--font-size-basis));
+  --font-size-18: calc(18 * var(--font-size-basis));
   --font-size-16: calc(16 * var(--font-size-basis));
   --font-size-14: calc(14 * var(--font-size-basis));
   --font-size-12: calc(12 * var(--font-size-basis));

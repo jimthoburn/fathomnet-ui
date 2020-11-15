@@ -103,14 +103,14 @@ icons:
 <div class="components-preview">
 
 <svg
-  class="icon icon--small"
+  class="icon icon--extra-small"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>
 </svg>
 
 <svg
-  class="icon icon--medium"
+  class="icon icon--small"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>
@@ -129,14 +129,14 @@ icons:
 
 ```html
 <svg
-  class="icon icon--small"
+  class="icon icon--extra-small"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>
 </svg>
 
 <svg
-  class="icon icon--medium"
+  class="icon icon--small"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>

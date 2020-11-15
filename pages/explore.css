@@ -6,7 +6,7 @@
   box-shadow: inset 0px 4px 32px rgba(109, 108, 144, 0.12);
 }
 .explore-page__title {
-  margin: 0 0 calc(16 * var(--font-size-basis));
+  margin: 0 0 calc(24 * var(--font-size-basis));
 }
 
 
@@ -22,6 +22,7 @@
   grid-row: 1 / 2;
   grid-column: -2 / -1;
   padding: var(--space-1);
+  padding: calc(22 * var(--font-size-basis)) var(--space-1);
   border-bottom: 1px solid var(--color-sea-salt-gray);
 }
 
@@ -34,5 +35,5 @@
 .explore-page__results {
   grid-row: 2 / 3;
   grid-column: -2 / -1;
-  padding: var(--space-1);
+  padding: calc(40 * var(--font-size-basis)) var(--space-1);
 }

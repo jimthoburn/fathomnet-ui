@@ -1,23 +1,47 @@
 .icon {
-  width: 1em;
-  height: 1em;
+  fill: currentColor;
+  stroke: currentColor;
+
+  /* Default size */
+  /* .icon--large */
+  width: calc(24 * var(--font-size-basis));
+  height: calc(24 * var(--font-size-basis));
+  stroke-width: 2;
 }
+
 .icon * {
   fill: currentColor;
   stroke: currentColor;
+  
+  /* Default size */
+  /* .icon--large */
+  stroke-width: 2;
 }
 
 .icon--large {
-  width: 1.5em;
-  height: 1.5em;
+  /* Default */
 }
 
-.icon--medium {
-  width: 1em;
-  height: 1em;
+.icon--large * {
+  /* Default */
 }
 
 .icon--small {
-  width: 0.75em;
-  height: 0.75em;
+  width: calc(16 * var(--font-size-basis));
+  height: calc(16 * var(--font-size-basis));
+  stroke-width: 1.5;
+}
+
+.icon--small * {
+  stroke-width: 1.5;
+}
+
+.icon--extra-small {
+  width: calc(12 * var(--font-size-basis));
+  height: calc(12 * var(--font-size-basis));
+  stroke-width: 1.25;
+}
+
+.icon--extra-small * {
+  stroke-width: 1.25;
 }

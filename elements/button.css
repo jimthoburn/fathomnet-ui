@@ -20,8 +20,6 @@
   background-color: var(--color-white);
   color: var(--color-benthos-blue);
   border-color: var(--color-ultramarine-blue);
-  padding: 0.75em 1.875em;
-  border-radius: 1.5em;
   text-align: center;
 
   /* .button--large */
@@ -29,6 +27,11 @@
   font-size: var(--font-size-18);
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
+
+  padding: calc(16 * var(--font-size-basis)) calc(31 * var(--font-size-basis));
+  --button-height: calc(56 * var(--font-size-basis));
+
+  border-radius: calc(var(--button-height) / 2);
 
   transition-property: color, background-color, border-color;
   transition-duration: 0.2s, 0.2s, 0.2s;
@@ -141,6 +144,9 @@
   font-size: var(--font-size-16);
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-bold);
+
+  padding: calc(14 * var(--font-size-basis)) calc(23 * var(--font-size-basis));
+  --button-height: calc(48 * var(--font-size-basis));
 }
 
 .button--small {
@@ -148,6 +154,9 @@
   font-size: var(--font-size-14);
   line-height: var(--line-height-base-17);
   font-weight: var(--font-weight-bold);
+
+  padding: calc(8 * var(--font-size-basis)) calc(14 * var(--font-size-basis));
+  --button-height: calc(35 * var(--font-size-basis));
 }
 
 
