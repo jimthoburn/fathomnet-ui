@@ -131,6 +131,10 @@ body {
   width: 100%;
 }
 
+.dropdown-button {
+  display: flex;
+}
+
 /* body::after {
   content: "";
   background-image: url("/figma.png");

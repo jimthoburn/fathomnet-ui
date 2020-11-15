@@ -6,6 +6,12 @@
 
   /* SHIM: For border-radius */
   overflow: hidden;
+
+  background: var(--background-color);
+  color: var(--text-color);
+
+  position: absolute;
+  z-index: 1;
 }
 
 .modal__title {

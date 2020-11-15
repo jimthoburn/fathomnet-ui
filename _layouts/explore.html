@@ -36,7 +36,38 @@
             <li class="search-box__item">
               <label class="search-box__label">
                 <span class="search-box__label-text">Concept tree</span>
-                <select><option>All</option><option>Coming soon…</option></select>
+                <details>
+                  <summary class="search-box__dropdown-button dropdown-button">
+                    WoRMS
+                    <svg aria-label="Search" class="icon icon--small" width="24" height="24">
+                      <use xlink:href="#icon-chevron-down"></use>
+                    </svg>
+                  </summary>
+                  <div class="modal modal--data-list dropshadow--dark">
+                    <ul class="data-list">
+                      <li class="data-list__item">
+                        <button type="button" class="data-list__button">
+                          Ampeliscidae
+                        </button>
+                      </li>
+                      <li class="data-list__item">
+                        <button type="button" class="data-list__button">
+                          Ampharetidae
+                        </button>
+                      </li>
+                      <li class="data-list__item">
+                        <button type="button" class="data-list__button">
+                          Amphascandria
+                        </button>
+                      </li>
+                      <li class="data-list__item">
+                        <button type="button" class="data-list__button">
+                          Ampheraster
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
               </label>
             </li>
           </ul>

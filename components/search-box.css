@@ -57,9 +57,25 @@
   padding: calc(8 * var(--font-size-basis)) calc(32 * var(--font-size-basis));
 }
 
+.search-box__dropdown-button,
+.search-box__field {
+
+  width: 100%;
+  margin: calc(8 * var(--font-size-basis)) 0 0 0;
+
+  /* .label-2 */
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-base-14);
+  font-weight: var(--font-weight-regular);
+}
+
 .search-box__field {
   border-width: 0;
-  width: 100%;;
+  display: block;
+  font-family: inherit;
+}
+
+.search-box__dropdown-button {
 }
 
 /* .text-single-line */
