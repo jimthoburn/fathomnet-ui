@@ -19,6 +19,7 @@
 
   max-width: 100%;
   width: calc(915 * var(--font-size-basis));
+  box-sizing: border-box;
 }
 
 .search-box__list {
@@ -34,10 +35,16 @@
 
 .search-box__item:nth-of-type(1) {
   flex-basis: calc(435 * var(--font-size-basis));
+  flex-grow: 1;
 }
 
 .search-box__item:nth-of-type(2) {
   flex-basis: calc(250 * var(--font-size-basis));
+  flex-grow: 1;
+}
+
+.search-box__item:nth-of-type(3) {
+  flex-grow: 1;
 }
 
 .search-box__label {
