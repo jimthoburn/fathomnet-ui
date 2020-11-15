@@ -25,3 +25,7 @@
 .header__title-group > :not(:first-child) {
   margin-left: 0.5em;
 }
+
+.header__nav--explore {
+  flex-grow: 1;
+}
