@@ -9,7 +9,7 @@ title: Chip
 
 <button type="button" class="chip">
   Chip
-  <svg class="icon" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+  <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
 </button>
 
 </div>
@@ -19,7 +19,7 @@ title: Chip
 ```html
 <button type="button" class="chip">
   Chip
-  <svg class="icon" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+  <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
 </button>
 ```
 
@@ -39,31 +39,24 @@ title: Chip
             <!-- <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" /> -->
           </label>
           <button type="button" class="chip">
-            Chip
-            <svg class="icon" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+            Ampeliscidae
+            <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+          </button>
+          <button type="button" class="chip">
+            Ampharetidae
+            <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+          </button>
+          <button type="button" class="chip">
+            Amphascandria
+            <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+          </button>
+          <button type="button" class="chip">
+            Ampheraster
+            <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
           </button>
         </div>
       </li>
-      <li class="search-box__item">
-        <label class="search-box__label">
-          <span class="search-box__label-text">Where</span>
-          <input type="text" class="search-box__field text-field" placeholder="Longitude & latitude, basin, etc" />
-        </label>
-      </li>
-      <li class="search-box__item">
-        <label class="search-box__label">
-          <span class="search-box__label-text">Concept tree</span>
-          <select><option>All</option><option>Coming soon…</option></select>
-        </label>
-      </li>
     </ul>
-    <p class="search-box__submit">
-      <button type="submit" class="button search-box__button">
-        <svg aria-label="Search" class="icon icon--large" width="24" height="24">
-          <use xlink:href="#icon-search"></use>
-        </svg>
-      </button>
-    </p>
   </form>
 </div>
 
@@ -82,8 +75,20 @@ title: Chip
           -->
         </label>
         <button type="button" class="chip">
-          Chip
-          <svg class="icon" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+          Ampeliscidae
+          <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+        </button>
+        <button type="button" class="chip">
+          Ampharetidae
+          <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+        </button>
+        <button type="button" class="chip">
+          Amphascandria
+          <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
+        </button>
+        <button type="button" class="chip">
+          Ampheraster
+          <svg class="icon icon--extra-small" aria-label="Delete"><use xlink:href="#icon-close"></use></svg>
         </button>
       </div>
     </li>

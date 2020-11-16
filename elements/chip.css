@@ -9,7 +9,7 @@
   line-height: inherit;
   cursor: pointer;
 
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   padding: calc(6 * var(--font-size-basis)) calc(10 * var(--font-size-basis));
