@@ -18,6 +18,7 @@
 @import url("/elements/option-list.css");
 
 @import url("/components/card.css");
+@import url("/components/collection-list.css");
 @import url("/components/modal.css");
 @import url("/components/meta-box.css");
 @import url("/components/search-box.css");
@@ -26,7 +27,9 @@
 @import url("/components/header.css");
 @import url("/components/hero.css");
 @import url("/components/tabs.css");
+@import url("/components/toast.css");
 
-@import url("/pages/image-details.css");
 @import url("/pages/annotations.css");
+@import url("/pages/collections.css");
 @import url("/pages/explore.css");
+@import url("/pages/image-details.css");

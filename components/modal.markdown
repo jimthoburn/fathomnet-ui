@@ -80,7 +80,7 @@ title: Modal
 <dialog open class="modal modal--dialog dropshadow--dark">
   <h4 class="h4">Unsaved changes</h4>
 
-  <p class="body-4 meta-text modal__text">
+  <p class="body-4 text-meta modal__text">
     Are you sure you want to proceed? You haven’t saved your annotations yet.
   </p>
 
@@ -108,7 +108,7 @@ title: Modal
 <dialog open class="modal modal--dialog dropshadow--dark">
   <h4 class="h4">Unsaved changes</h4>
 
-  <p class="body-4 meta-text modal__text">
+  <p class="body-4 text-meta modal__text">
     Are you sure you want to proceed? You<br />haven’t saved your annotations yet.
   </p>
 

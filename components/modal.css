@@ -24,6 +24,10 @@
   max-width: 20em;
 }
 
+.modal--justify-end {
+  transform: translateX(-100%);
+}
+
 .modal--data-list {
   padding: 0;
   max-height: calc(var(--line-height-1) * 8.5);

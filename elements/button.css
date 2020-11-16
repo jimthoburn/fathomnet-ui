@@ -12,7 +12,7 @@
   /* For icons */
   display: inline-grid;
   grid-auto-flow: column;
-  grid-column-gap: 0.5em;
+  grid-column-gap: calc(12 * var(--font-size-basis));
   align-items: center;
 
   border-width: 1px;
@@ -50,7 +50,7 @@
 .button--round {
   margin-right: 1em;
   border-radius: 50%;
-  padding: 0.75em;
+  padding: calc(7 * var(--font-size-basis));
 
   border-color: var(--color-littoral-blue);
   color: var(--color-ultramarine-blue);

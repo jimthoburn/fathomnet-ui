@@ -1,0 +1,94 @@
+.toast {
+  /* .toast--neutral */
+  --toast-background-color: var(--color-littoral-blue);
+  --toast-text-color: var(--color-ultramarine-blue);
+  --toast-icon-color: var(--color-white);
+
+  background-color: var(--toast-background-color);
+  color: var(--toast-text-color);
+
+  padding: calc(12 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+  border-radius: calc(8 * var(--font-size-basis));
+
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+}
+
+.toast > * + * {
+  margin-left: calc(12 * var(--font-size-basis));
+}
+
+.toast--neutral {
+  /* Default */
+}
+
+.toast--alert {
+  --toast-background-color: var(--color-coral-red);
+  --toast-text-color: var(--color-lobster-red);
+}
+
+.toast--success {
+  --toast-background-color: var(--color-seafoam-green);
+  --toast-text-color: var(--color-photic-green);
+}
+
+.toast__status {
+  background-color: var(--toast-text-color);
+  color: var(--toast-icon-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: calc(7 * var(--font-size-basis));
+  width: calc(24 * var(--font-size-basis));
+  height: calc(24 * var(--font-size-basis));
+}
+
+.toast--success .toast__status {
+  background-color: transparent;
+}
+
+.toast__background {
+  width: calc(24 * var(--font-size-basis));
+  height: calc(24 * var(--font-size-basis));
+  position: absolute;
+}
+
+.toast__background,
+.toast__background * {
+  fill: var(--toast-text-color);
+}
+
+.toast__glyph {
+  /* .body-5 */
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base-17);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.toast__icon {
+  display: block;
+}
+
+.toast__label {
+  /* .body-5 */
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base-17);
+  font-weight: var(--font-weight-bold);
+}
+
+.toast__link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid;
+}

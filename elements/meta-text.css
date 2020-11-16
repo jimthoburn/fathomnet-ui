@@ -1,4 +1,22 @@
 
-.meta-text {
+.text-meta {
   color: var(--color-demersal-gray);
+}
+
+.meta-list,
+.meta-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.meta-list {
+  color: var(--color-demersal-gray);
+  display: flex;
+}
+
+.meta-list > * + *::before {
+  content: "•";
+  margin-left: calc(12 * var(--font-size-basis));
+  margin-right: calc(12 * var(--font-size-basis));
 }

@@ -91,10 +91,6 @@
 
 .search-box__button {
   margin-right: calc(12 * var(--font-size-basis));
-  border-radius: 50%;
-  padding: calc(7 * var(--font-size-basis));
-  background-color: var(--color-ultramarine-blue);
-  color: var(--color-white);
 }
 
 /* .meta-box__description-title */

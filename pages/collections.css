@@ -1,0 +1,21 @@
+
+.collections-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collections-page__header > * {
+  margin: 0;
+}
+
+.collections-page__meta {
+  margin-top: calc(50 * var(--font-size-basis));
+  padding-bottom: calc(23 * var(--font-size-basis));
+  border-bottom: 1px solid var(--color-salt-marsh-gray);
+  margin-bottom: calc(36 * var(--font-size-basis));
+}
+
+.collections-page__meta > * {
+  margin: 0;
+}

@@ -23,6 +23,7 @@ permalink: /fathomnet-ui-v0.0.6-alpha/fathomnet-ui.css
 {% include_relative elements/option-list.css %}
 
 {% include_relative components/card.css %}
+{% include_relative components/collection-list.css %}
 {% include_relative components/modal.css %}
 {% include_relative components/meta-box.css %}
 {% include_relative components/search-box.css %}
@@ -31,7 +32,9 @@ permalink: /fathomnet-ui-v0.0.6-alpha/fathomnet-ui.css
 {% include_relative components/header.css %}
 {% include_relative components/hero.css %}
 {% include_relative components/tabs.css %}
+{% include_relative components/toast.css %}
 
-{% include_relative pages/image-details.css %}
 {% include_relative pages/annotations.css %}
+{% include_relative pages/collections.css %}
 {% include_relative pages/explore.css %}
+{% include_relative pages/image-details.css %}

@@ -7,7 +7,7 @@ title: Meta text
 
 <div class="components-preview">
 
-<p class="body-4 meta-text">
+<p class="body-4 text-meta">
   Are you sure you want to proceed? You haven’t saved your annotations yet.
 </p>
 
@@ -16,7 +16,7 @@ title: Meta text
 <div class="components-code" markdown="1">
 
 ```html
-<p class="body-4 meta-text">
+<p class="body-4 text-meta">
   Are you sure you want to proceed? You haven’t saved your annotations yet.
 </p>
 ```

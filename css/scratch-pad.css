@@ -77,7 +77,7 @@ body {
   text-overflow: ellipsis;
 }
 
-/* @TODO Combine .meta-text ? */
+/* @TODO Combine .text-meta ? */
 .text-meta {
   color: var(--color-demersal-gray);
 }
@@ -86,10 +86,14 @@ body {
   display: block;
   text-decoration: none;
 }
+.link-hit-area__active-indicator {
+  border-bottom: 2px solid transparent;
+  width: max-content;
+}
 :hover > .link-hit-area__active-indicator,
 :active > .link-hit-area__active-indicator,
 :focus > .link-hit-area__active-indicator {
-  text-decoration: underline;
+  border-color: initial;
 }
 
 /* @TODO Combine with .option-list ? */
