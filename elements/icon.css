@@ -29,19 +29,19 @@
 .icon--small {
   width: calc(16 * var(--font-size-basis));
   height: calc(16 * var(--font-size-basis));
-  stroke-width: 1.5;
+  stroke-width: 2.25;
 }
 
 .icon--small * {
-  stroke-width: 1.5;
+  stroke-width: 2.25;
 }
 
 .icon--extra-small {
   width: calc(12 * var(--font-size-basis));
   height: calc(12 * var(--font-size-basis));
-  stroke-width: 1.25;
+  stroke-width: 2.5;
 }
 
 .icon--extra-small * {
-  stroke-width: 1.25;
+  stroke-width: 2.5;
 }

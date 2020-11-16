@@ -64,7 +64,7 @@ icons:
 
 <div class="components-preview">
 
-  <svg class="icon" width="24" height="24">
+  <svg class="icon icon--large" width="24" height="24">
     <use xlink:href="#icon-map"></use>
   </svg>
 
@@ -102,26 +102,38 @@ icons:
 
 <div class="components-preview">
 
-<svg
-  class="icon icon--extra-small"
-  width="24" height="24"
-  >
-  <use xlink:href="#icon-check"></use>
-</svg>
+  <svg
+    class="icon icon--large"
+    width="24" height="24"
+    >
+    <use xlink:href="#icon-check"></use>
+  </svg>
 
-<svg
-  class="icon icon--small"
-  width="24" height="24"
-  >
-  <use xlink:href="#icon-check"></use>
-</svg>
+  <svg
+    class="icon icon--small"
+    width="24" height="24"
+    >
+    <use xlink:href="#icon-check"></use>
+  </svg>
 
-<svg
-  class="icon icon--large"
-  width="24" height="24"
-  >
-  <use xlink:href="#icon-check"></use>
-</svg>
+  <svg
+    class="icon icon--extra-small"
+    width="24" height="24"
+    >
+    <use xlink:href="#icon-check"></use>
+  </svg>
+
+  <svg class="icon icon--large" width="24" height="24">
+    <use xlink:href="#icon-map"></use>
+  </svg>
+
+  <svg class="icon icon--small" width="24" height="24">
+    <use xlink:href="#icon-map"></use>
+  </svg>
+
+  <svg class="icon icon--extra-small" width="24" height="24">
+    <use xlink:href="#icon-map"></use>
+  </svg>
 
 </div>
 
@@ -129,7 +141,7 @@ icons:
 
 ```html
 <svg
-  class="icon icon--extra-small"
+  class="icon icon--large"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>
@@ -143,7 +155,7 @@ icons:
 </svg>
 
 <svg
-  class="icon icon--large"
+  class="icon icon--extra-small"
   width="24" height="24"
   >
   <use xlink:href="#icon-check"></use>
