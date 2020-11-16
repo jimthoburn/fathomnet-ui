@@ -60,6 +60,10 @@ colorsLight:
     id: color-coral-red
     value: '#FEE9E9'
 
+  - label: Lobster Red
+    id: color-lobster-red
+    value: '#F33F3F'
+
 colorsDark:
 
   - label: Hado Gray
