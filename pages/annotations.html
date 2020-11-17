@@ -38,11 +38,22 @@ title: Annotations
       "
     >
     <img class="annotation-details__figure-image" src="https://fathomnet.org/static/m3/framegrabs/Doc%20Ricketts/images/0620/03_19_38_11.png" alt="Paragorgia arborea" />
-    <svg class="annotation-details__figure-svg" viewbox="0 0 1920 1080">
+    <svg class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
       <text fill="white" x="640" y="640" style="font-size: 3em" class="annotation">Paragorgia arborea</text>
-      <path fill="transparent" stroke-width="10" stroke="white"
-        d="M 640 240, L 1040 240, L 1040 640, L 640 640, Z"></path>
+      <path fill="none" stroke-width="10" stroke="white"
+        d="
+          m 640 240
+          h 500
+          v 400
+          h -500
+          z
+        ">
+      </path>
     </svg>
+    <!-- <svg class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+      <text fill="white" x="640" y="640" style="font-size: 3em" class="annotation">Paragorgia arborea</text>
+      <path d="m640 240h400v400h-400z" fill="none" stroke="#00258c" stroke-width="10"/>
+    </svg> -->
     <div class="annotation-details__figure-field-container">
       <label class="field field--has-placeholder field--has-icon annotation-field">
         <span class="field__label">Annotation</span>
