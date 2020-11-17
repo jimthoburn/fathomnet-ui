@@ -4,6 +4,8 @@
 
   --background-color: var(--color-white);
   --text-color: var(--color-abyss-gray);
+
+  --field-border-color: var(--color-salt-marsh-gray);
 }
 
 .dark-mode {
@@ -17,6 +19,8 @@
   --button-text-color--primary: var(--color-benthos-blue);
 
   --link-color: var(--color-white);
+
+  --field-border-color: var(--color-ultramarine-blue);
 }
 
 .dark-mode .button {
@@ -27,13 +31,24 @@
 .dark-mode .button:hover,
 .dark-mode .button:active,
 .dark-mode .button:focus {
-  background-color: var(--text-color);
-  color: var(--background-color);
+  /* background-color: var(--text-color);
+  color: var(--background-color); */
+  background-color: var(--color-ultramarine-blue);
+  border-color: transparent;
+  color: var(--color-white);
 }
 
 .dark-mode .button--primary {
   background-color: var(--button-background-color--primary);
   color: var(--button-text-color--primary);
+}
+
+.dark-mode .button--primary:hover,
+.dark-mode .button--primary:active,
+.dark-mode .button--primary:focus {
+  background-color: var(--color-ultramarine-blue);
+  border-color: transparent;
+  color: var(--color-white);
 }
 
 body {
@@ -130,6 +145,7 @@ body {
 /* body::after {
   content: "";
   background-image: url("/figma.png");
+  background-image: url("/figma-annotations.png");
   background-size: 100% auto;
   position: absolute;
   top: 0;

@@ -11,7 +11,9 @@
   color: var(--text-color);
 
   position: absolute;
-  z-index: 1;
+
+  /* SHIM: Just above the icon for the next item on the collections page */
+  z-index: 2;
 }
 
 .modal__title {

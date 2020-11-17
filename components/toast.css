@@ -37,6 +37,7 @@
 }
 
 .toast__status {
+  flex-shrink: 0;
   background-color: var(--toast-text-color);
   color: var(--toast-icon-color);
 

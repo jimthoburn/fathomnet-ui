@@ -14,7 +14,6 @@
   padding: 0;
 
   display: flex;
-  border-bottom: 2px solid transparent;
 
   /* For icons */
   display: grid;
@@ -23,11 +22,26 @@
   align-items: center;
 }
 
-.link:hover,
-.link:active,
-.link:focus,
-.link--active {
+.link:not(.link--has-active-indicator) {
+  border-bottom: 2px solid transparent;
+}
+
+.link:not(.link--has-active-indicator):hover,
+.link:not(.link--has-active-indicator):active,
+.link:not(.link--has-active-indicator):focus,
+.link--active:not(.link--has-active-indicator) {
   border-bottom-color: initial;
+}
+
+.link__active-indicator {
+  border-bottom: 2px solid transparent;
+  width: max-content;
+}
+.link:hover > .link__active-indicator,
+.link:active > .link__active-indicator,
+.link:focus > .link__active-indicator,
+.link--active > .link__active-indicator {
+  border-color: initial;
 }
 
 .link--alert::after {

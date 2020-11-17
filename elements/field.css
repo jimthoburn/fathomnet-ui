@@ -5,7 +5,7 @@
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-normal);
 
-  border: calc(1/16 * 1em) solid var(--color-salt-marsh-gray);
+  border: calc(1/16 * 1em) solid var(--field-border-color);
   border-radius: calc(8/16 * 1em);
 
   background-color: var(--background-color);
