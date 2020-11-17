@@ -87,9 +87,15 @@
 }
 .annotation-details__figure-svg {
   /* border: 3px solid green; */
+  --color: var(--color-seafoam-green);
+  position: relative;
+  z-index: 999;
 }
 .annotation-details__figure-svg path {
-  stroke: var(--color-seafoam-green);
+  stroke: var(--color);
+}
+.annotation-details__figure-svg g {
+  cursor: pointer;
 }
 
 /* .annotation-details__figure--active::before {
@@ -102,7 +108,6 @@
   width: 100%;
   height: 100%
 } */
-.annotation-details__figure:not(.annotation-details__figure--active) .annotation-details__figure-svg,
 .annotation-details__figure:not(.annotation-details__figure--active) .annotation-field {
   display: none;
 }
@@ -110,7 +115,7 @@
 .annotation {
   font-style: italic;
   transform: translate(0, 1.25em);
-  fill: var(--color-seafoam-green);
+  fill: var(--color);
 }
 
 .annotation-details__figure-field-container {
