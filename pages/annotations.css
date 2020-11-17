@@ -111,6 +111,9 @@
 .annotation-details__figure:not(.annotation-details__figure--active) .annotation-field {
   display: none;
 }
+.annotation-details__figure--active .annotation-field {
+  z-index: 9999;
+}
 
 .annotation {
   font-style: italic;

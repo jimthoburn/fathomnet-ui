@@ -27,35 +27,6 @@ title: Annotations
 
   </header>
 
-  <script>
-  function closest(element, tagName) {
-
-    // If the element is the target
-    if (element.nodeName.toLowerCase() === tagName) return element;
-
-    var ancestor = element;
-    while ((ancestor = ancestor.parentElement) && ancestor.nodeName && ancestor.nodeName.toLowerCase() !== tagName);
-    if (ancestor && ancestor.nodeName && ancestor.nodeName.toLowerCase() === tagName) {
-      return ancestor;
-    }
-  }
-  function onSvgClick(event) {
-    console.log(event.target);
-    const group = closest(event.target, "g");
-    const parent = group.parentNode;
-    parent.removeChild(group);
-    parent.appendChild(group);
-
-    document.querySelector("[data-annotation-field]").value = group.querySelector("text").textContent;
-
-    document.querySelector("[data-annotation-figure]").style.setProperty("--field-x", group.getAttribute("data-field-x"));
-    document.querySelector("[data-annotation-figure]").style.setProperty("--field-y", group.getAttribute("data-field-y"));
-
-    document.querySelector(`.annotation-details__figure`).classList.add(`annotation-details__figure--active`);
-    document.querySelector(`.annotation-field input`).focus();
-  }
-  </script>
-
   <figure
     class="annotation-details__figure"
     data-annotation-figure
@@ -113,12 +84,52 @@ title: Annotations
           class="field__input"
           value=""
           placeholder="Annotation"
+          list="search-concepts"
           data-annotation-field />
-          
+        {% include datalist.html %}
         <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
       </label>
     </div>
   </figure>
+
+  <script>
+  function closest(element, tagName) {
+
+    // If the element is the target
+    if (element.nodeName.toLowerCase() === tagName) return element;
+
+    var ancestor = element;
+    while ((ancestor = ancestor.parentElement) && ancestor.nodeName && ancestor.nodeName.toLowerCase() !== tagName);
+    if (ancestor && ancestor.nodeName && ancestor.nodeName.toLowerCase() === tagName) {
+      return ancestor;
+    }
+  }
+  let caption;
+  function onSvgClick(event) {
+    console.log(event.target);
+    const group = closest(event.target, "g");
+    const parent = group.parentNode;
+    parent.removeChild(group);
+    parent.appendChild(group);
+
+    document.querySelector("[data-annotation-field]").value = group.querySelector("text").textContent;
+
+    document.querySelector("[data-annotation-figure]").style.setProperty("--field-x", group.getAttribute("data-field-x"));
+    document.querySelector("[data-annotation-figure]").style.setProperty("--field-y", group.getAttribute("data-field-y"));
+
+    document.querySelector(`.annotation-details__figure`).classList.add(`annotation-details__figure--active`);
+    document.querySelector(`.annotation-field input`).focus();
+
+    caption = group.querySelector("text");
+  }
+  function updateCaption() {
+    caption.textContent = document.querySelector(`.annotation-field input`).value;
+  }
+  document.querySelector(`.annotation-field input`).addEventListener("keyup", updateCaption);
+  document.querySelector(`.annotation-field input`).addEventListener("blur", function() {
+    document.querySelector(`.annotation-details__figure`).classList.remove(`annotation-details__figure--active`);
+  });
+  </script>
 
   <footer class="details-footer annotation-details__footer">
     <div class="details-footer__action-primary">
