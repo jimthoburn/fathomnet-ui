@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr max-content;
   box-sizing: border-box;
-  width: calc(300/16 * 1em);
+  width: calc(400/16 * 1em);
   max-width: 100%;
 }
 .field > * {
