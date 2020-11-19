@@ -3,7 +3,8 @@ layout: prototype-without-header
 title: Annotations
 ---
 
-<main class="annotation-details dark-mode">
+<main>
+<form class="annotation-details dark-mode">
 
   <header class="annotation-details__header">
 
@@ -38,8 +39,8 @@ title: Annotations
       "
     >
     <img class="annotation-details__figure-image" src="https://fathomnet.org/static/m3/framegrabs/Doc%20Ricketts/images/0620/03_19_38_11.png" alt="Paragorgia arborea" />
-    <svg onClick="window.onSvgClick(event)" class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-      <g style="--color: #FEFF00;" data-field-x="1040" data-field-y="140">
+    <svg aria-label="Concepts" onClick="window.onSvgClick(event)" class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+      <g style="--color: #FEFF00;" data-field-x="1040" data-field-y="140" data-annotation-box data-annotation-id="concept-1">
         <text fill="white" x="1040" y="440" style="font-size: 3em" class="annotation">Bathochordaeus</text>
         <path fill="none" stroke-width="10" stroke="white"
           d="
@@ -51,7 +52,7 @@ title: Annotations
           ">
         </path>
       </g>
-      <g style="--color: #11AFF0;" data-field-x="640" data-field-y="240">
+      <g style="--color: #11AFF0;" data-field-x="640" data-field-y="240" data-annotation-box data-annotation-id="concept-2">
         <text fill="white" x="640" y="640" style="font-size: 3em" class="annotation">Paragorgia arborea</text>
         <path fill="none" stroke-width="10" stroke="white"
           d="
@@ -63,7 +64,7 @@ title: Annotations
           ">
         </path>
       </g>
-      <g style="--color: #EF5DA7;" data-field-x="400" data-field-y="400">
+      <g style="--color: #EF5DA7;" data-field-x="400" data-field-y="400" data-annotation-box data-annotation-id="concept-3">
         <text fill="white" x="400" y="700" style="font-size: 3em" class="annotation">Aegina</text>
         <path fill="none" stroke-width="10" stroke="white"
           d="
@@ -77,18 +78,45 @@ title: Annotations
       </g>
     </svg>
     <div class="annotation-details__figure-field-container">
-      <label class="field field--has-placeholder field--has-icon annotation-field">
-        <span class="field__label">Annotation</span>
-        <input
-          type="text"
-          class="field__input"
-          value=""
-          placeholder="Annotation"
-          list="search-concepts"
-          data-annotation-field />
-        {% include datalist.html %}
-        <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
-      </label>
+      <ul class="annotation-details__figure-field-list">
+        <li class="annotation-details__figure-field-item">
+          <label style="--field-x: 1040; --field-y: 140;" class="field field--has-placeholder field--has-icon annotation-field" data-annotation-field="hidden" data-annotation-id="concept-1">
+            <span class="field__label">Annotation</span>
+            <input
+              type="text"
+              class="field__input"
+              value="Bathochordaeus"
+              placeholder="Annotation"
+              list="search-concepts" />
+            <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
+          </label>
+        </li>
+        <li class="annotation-details__figure-field-item">
+          <label style="--field-x: 640; --field-y: 240;" class="field field--has-placeholder field--has-icon annotation-field" data-annotation-field="hidden" data-annotation-id="concept-2">
+            <span class="field__label">Annotation</span>
+            <input
+              type="text"
+              class="field__input"
+              value="Paragorgia arborea"
+              placeholder="Annotation"
+              list="search-concepts" />
+            <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
+          </label>
+        </li>
+        <li class="annotation-details__figure-field-item">
+          <label style="--field-x: 400; --field-y: 400;"  class="field field--has-placeholder field--has-icon annotation-field" data-annotation-field="hidden" data-annotation-id="concept-3">
+            <span class="field__label">Annotation</span>
+            <input
+              type="text"
+              class="field__input"
+              value="Aegina"
+              placeholder="Annotation"
+              list="search-concepts" />
+            <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
+          </label>
+        </li>
+      </ul>
+      {% include datalist.html %}
     </div>
   </figure>
 
@@ -104,47 +132,76 @@ title: Annotations
       return ancestor;
     }
   }
-  let caption;
+  let activeCaption, activateAnnotationID, activeFieldContainer, activeField;
+  function activateAnnotation() {
+    const box = document.querySelector(`[data-annotation-box][data-annotation-id=${activateAnnotationID}]`);
+    
+    const parent = box.parentNode;
+    parent.removeChild(box);
+    parent.appendChild(box);
+
+    activeCaption = box.querySelector("text");
+    activeFieldContainer = document.querySelector(`[data-annotation-field][data-annotation-id=${activateAnnotationID}]`);
+    activeField = activeFieldContainer.querySelector(`input`);
+    console.log({activeCaption, activeFieldContainer, activeField});
+
+    activeFieldContainer.setAttribute("data-annotation-field", "visible");
+    activeField.addEventListener("keyup", updateCaption);
+    activeField.addEventListener("blur", deactivateAnnotation);
+    activeField.focus();
+  }
+  function deactivateAnnotation() {
+    if (activeFieldContainer && activeField) {
+      activeFieldContainer.setAttribute("data-annotation-field", "hidden");
+      activeField.removeEventListener("keyup", updateCaption);
+      activeField.removeEventListener("blur", deactivateAnnotation);
+    }
+    activeFieldContainer = null;
+    activeField = null;
+    activeCaption = null;
+  }
   function onSvgClick(event) {
     console.log(event.target);
     const group = closest(event.target, "g");
-    const parent = group.parentNode;
-    parent.removeChild(group);
-    parent.appendChild(group);
 
-    document.querySelector("[data-annotation-field]").value = group.querySelector("text").textContent;
-
-    document.querySelector("[data-annotation-figure]").style.setProperty("--field-x", group.getAttribute("data-field-x"));
-    document.querySelector("[data-annotation-figure]").style.setProperty("--field-y", group.getAttribute("data-field-y"));
-
-    document.querySelector(`.annotation-details__figure`).classList.add(`annotation-details__figure--active`);
-    document.querySelector(`.annotation-field input`).focus();
-
-    caption = group.querySelector("text");
+    deactivateAnnotation();
+    activateAnnotationID = group.getAttribute("data-annotation-id");
+    console.log({activateAnnotationID});
+    activateAnnotation();
   }
   function updateCaption() {
-    caption.textContent = document.querySelector(`.annotation-field input`).value;
+    if (activeField && activeCaption) {
+      activeCaption.textContent = activeField.value;
+    }
   }
-  document.querySelector(`.annotation-field input`).addEventListener("keyup", updateCaption);
-  document.querySelector(`.annotation-field input`).addEventListener("blur", function() {
-    document.querySelector(`.annotation-details__figure`).classList.remove(`annotation-details__figure--active`);
-  });
+  const annotationsFields = document.querySelectorAll("[data-annotation-field] input");
+  for (const field of annotationsFields) {
+    field.addEventListener("focus", (event) => {
+      console.log(event.target);
+      const label = closest(field, "label");
+
+      deactivateAnnotation();
+      activateAnnotationID = label.getAttribute("data-annotation-id");
+      console.log({activateAnnotationID});
+      activateAnnotation();
+    });
+  }
   </script>
 
   <footer class="details-footer annotation-details__footer">
     <div class="details-footer__action-primary">
-      <a
+      <button type="submit" name="verify" value="1"
         href="/image-details/"
         class="button button--medium button--primary"
         >
         Save and verify
-      </a>
-      <a
+      </button>
+      <button type="submit"
         href="/image-details/"
         class="button button--medium"
         >
         Save
-      </a>
+      </button>
     </div>
     <div class="details-footer__nav">
       <ul class="details-footer__nav-list">
@@ -179,4 +236,5 @@ title: Annotations
     </div>
   </footer>
 
+</form>
 </main>

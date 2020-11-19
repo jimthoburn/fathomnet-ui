@@ -108,10 +108,10 @@
   width: 100%;
   height: 100%
 } */
-.annotation-details__figure:not(.annotation-details__figure--active) .annotation-field {
-  display: none;
+[data-annotation-field="hidden"] {
+  z-index: -1;
 }
-.annotation-details__figure--active .annotation-field {
+[data-annotation-field="visible"] {
   z-index: 9999;
 }
 
@@ -124,6 +124,13 @@
 .annotation-details__figure-field-container {
   /* border: 1px solid green; */
   position: relative;
+}
+
+.annotation-details__figure-field-list,
+.annotation-details__figure-field-item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .annotation-field {
