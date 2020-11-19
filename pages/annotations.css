@@ -140,6 +140,7 @@
   top: calc(calc(var(--field-y) / 1) * var(--percent-basis));
   left: calc(calc(var(--field-x) / var(--aspect-ratio)) * var(--percent-basis));
   transform: translate(calc(-100% - calc(32 * var(--font-size-basis))), calc(16 * var(--font-size-basis) * -1));
+  transform: translate(0, 100%);
 }
 
 .annotation-details__footer {
