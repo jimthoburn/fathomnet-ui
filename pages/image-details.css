@@ -14,7 +14,7 @@
 }
 
 .image-details__label {
-  align-self: center;
+  align-self: start;
   justify-self: start;
   grid-column: 2 / 3;
   grid-row: 1 / 3;

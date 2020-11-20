@@ -83,6 +83,23 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+table,
+section,
+article {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h1,
 .heading-1 {
   font-size: var(--font-size-80);
   line-height: var(--line-height-5);
