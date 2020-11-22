@@ -36,27 +36,56 @@ title: Annotations
       --image-height: 1080;
       "
     >
-    <img class="annotation-details__figure-image" src="https://fathomnet.org/static/m3/framegrabs/Doc%20Ricketts/images/0620/03_19_38_11.png" alt="Paragorgia arborea" />
-    <svg data-resizable-svg aria-label="Concepts" data-onClick="window.onSvgClick(event)" class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-      <g style="--color: #26BF9B;" data-annotation-box data-annotation-id="concept-1">
-        <text fill="white" x="1040" y="440" style="font-size: 3em" class="annotation">Bathochordaeus</text>
-        <path data-resizable data-draggable="move" fill="rgba(38, 191, 155, 0.16)" stroke-width="5" stroke="white"
+    <img
+      class="annotation-details__figure-image"
+      src="https://fathomnet.org/static/m3/framegrabs/Doc%20Ricketts/images/0620/03_19_38_11.png"
+      alt="Paragorgia arborea" />
+    <svg
+      data-resizable-svg
+      aria-label="Concepts"
+      onClick="window.onSvgClick(event)"
+      class="annotation-details__figure-svg"
+      viewBox="0 0 1920 1080"
+      xmlns="http://www.w3.org/2000/svg"
+      >
+      <g
+        transform="translate(1040,140)"
+        data-movable
+        style="--color: #FEFF00;"
+        stroke-width="10"
+        class="annotation-details__figure-svg-group"
+        data-annotation-box
+        data-annotation-id="concept-1"
+        >
+        <text
+          class="annotation-details__figure-svg-text"
+          data-resizable-text
+          stroke="none"
+          x="0"
+          y="300">
+          Bathochordaeus
+        </text>
+        <path
+          class="annotation-details__figure-svg-shape"
+          data-resizable
+          data-draggable="move"
+          fill="none"
           d="
-            m 1040 140
+            m 0 0
             h 500
             v 300
             h -500
             z
           ">
         </path>
-        <circle data-draggable="top-left" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1040" cy="140" r="20"/>
-        <circle data-draggable="top-right" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1540" cy="140" r="20"/>
-        <circle data-draggable="bottom-right" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1540" cy="440" r="20"/>
-        <circle data-draggable="bottom-left" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1040" cy="440" r="20"/>
+        <circle class="annotation-details__figure-svg-circle" data-draggable="top-left" fill="rgba(38, 191, 155, 0.3)" cx="0" cy="0" r="20"/>
+        <circle class="annotation-details__figure-svg-circle" data-draggable="top-right" fill="rgba(38, 191, 155, 0.3)" cx="500" cy="0" r="20"/>
+        <circle class="annotation-details__figure-svg-circle" data-draggable="bottom-right" fill="rgba(38, 191, 155, 0.3)" cx="500" cy="300" r="20"/>
+        <circle class="annotation-details__figure-svg-circle" data-draggable="bottom-left" fill="rgba(38, 191, 155, 0.3)" cx="0" cy="300" r="20"/>
       </g>
-      <g style="--color: #11AFF0;" data-annotation-box data-annotation-id="concept-2">
-        <text fill="white" x="640" y="640" style="font-size: 3em" class="annotation">Paragorgia arborea</text>
-        <path fill="none" stroke-width="10" stroke="white"
+      <g style="--color: #11AFF0;" class="annotation-details__figure-svg-group" data-annotation-box data-annotation-id="concept-2">
+        <text class="annotation-details__figure-svg-text" stroke="none" x="640" y="640">Paragorgia arborea</text>
+        <path class="annotation-details__figure-svg-shape" fill="none" stroke-width="10"
           d="
             m 640 240
             h 500
@@ -66,9 +95,9 @@ title: Annotations
           ">
         </path>
       </g>
-      <g style="--color: #EF5DA7;" data-annotation-box data-annotation-id="concept-3">
-        <text fill="white" x="400" y="700" style="font-size: 3em" class="annotation">Aegina</text>
-        <path fill="none" stroke-width="10" stroke="white"
+      <g style="--color: #EF5DA7;" class="annotation-details__figure-svg-group" data-annotation-box data-annotation-id="concept-3">
+        <text class="annotation-details__figure-svg-text" stroke="none" x="400" y="700">Aegina</text>
+        <path class="annotation-details__figure-svg-shape" fill="none" stroke-width="10"
           d="
             m 400 400
             h 300
@@ -134,39 +163,42 @@ title: Annotations
       return ancestor;
     }
   }
-  let activeCaption, activateAnnotationID, activeFieldContainer, activeField;
+  let activeBox, activeCaption, activateAnnotationID, activeFieldContainer, activeField;
   function activateAnnotation() {
-    const box = document.querySelector(`[data-annotation-box][data-annotation-id=${activateAnnotationID}]`);
-    
-    const parent = box.parentNode;
-    parent.removeChild(box);
-    parent.appendChild(box);
+    activeBox = document.querySelector(`[data-annotation-box][data-annotation-id=${activateAnnotationID}]`);
+    const parent = activeBox.parentNode;
+    parent.removeChild(activeBox);
+    parent.appendChild(activeBox);
 
-    activeCaption = box.querySelector("text");
+    activeCaption = activeBox.querySelector("text");
     activeFieldContainer = document.querySelector(`[data-annotation-field][data-annotation-id=${activateAnnotationID}]`);
     activeField = activeFieldContainer.querySelector(`input`);
     console.log({activeCaption, activeFieldContainer, activeField});
 
+    activeBox.setAttribute("data-state", "active");
     activeFieldContainer.setAttribute("data-annotation-field", "visible");
     activeField.addEventListener("keyup", updateCaption);
     activeField.addEventListener("blur", deactivateAnnotation);
     activeField.focus();
   }
   function deactivateAnnotation() {
-    if (activeFieldContainer && activeField) {
+    if (activeBox && activeFieldContainer && activeField) {
+      activeBox.setAttribute("data-state", "inactive");
       activeFieldContainer.setAttribute("data-annotation-field", "hidden");
       activeField.removeEventListener("keyup", updateCaption);
       activeField.removeEventListener("blur", deactivateAnnotation);
     }
+    activeBox = null;
     activeFieldContainer = null;
     activeField = null;
     activeCaption = null;
   }
   function onSvgClick(event) {
     console.log(event.target);
-    const group = closest(event.target, "g");
-
     deactivateAnnotation();
+
+    const group = closest(event.target, "g");
+    if (!group) return;
     activateAnnotationID = group.getAttribute("data-annotation-id");
     console.log({activateAnnotationID});
     activateAnnotation();
@@ -190,6 +222,9 @@ title: Annotations
   }
   </script>
   <script>
+  
+  const imageWidth = 1920;
+  const imageHeight = 1080;
 
   let initialPosition = {
     x: 1040,
@@ -354,6 +389,31 @@ title: Annotations
           }
           break;
       }
+
+      const min = {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0,
+      };
+
+      const max = {
+        x: imageWidth - transformedPosition.width,
+        y: imageHeight - transformedPosition.height,
+        width: imageWidth - transformedPosition.x,
+        height: imageHeight - transformedPosition.y,
+      };
+
+      if (transformedPosition.x < min.x) transformedPosition.x = min.x;
+      // if (transformedPosition.x > max.x) transformedPosition.x = max.x;
+      if (transformedPosition.y < min.y) transformedPosition.y = min.y;
+      //if (transformedPosition.y > max.y) transformedPosition.y = max.y;
+
+      if (transformedPosition.width < min.width) transformedPosition.width = min.width;
+      if (transformedPosition.width > max.width) transformedPosition.width = max.width;
+      if (transformedPosition.height < min.height) transformedPosition.height = min.height;
+      if (transformedPosition.height > max.height) transformedPosition.height = max.height;
+
       render();
     }
 
@@ -389,9 +449,6 @@ title: Annotations
 
       const translateX = touch.x - this.initialTouch.x;
       const translateY = touch.y - this.initialTouch.y;
-      
-      const imageWidth = 1920;
-      const imageHeight = 1080;
 
       const svgBounds = document.querySelector("[data-resizable-svg]").getBoundingClientRect();
 
@@ -460,7 +517,9 @@ title: Annotations
       console.log(`listening for events on ${this.target}`);
     }
   }
+  const moveTarget = document.querySelector(`[data-movable]`);
   const resizeTarget = document.querySelector(`[data-resizable]`);
+  const resizeTargetText = document.querySelector(`[data-resizable-text]`);
   const targets = document.querySelectorAll(`[data-draggable]`);
   console.log({targets});
 
@@ -470,31 +529,34 @@ title: Annotations
   }
 
   function render() {
+    moveTarget.setAttribute("transform", `translate(${transformedPosition.x},${transformedPosition.y})`);
     resizeTarget.setAttribute("d", `
-      m ${transformedPosition.x} ${transformedPosition.y}
+      m 0 0
       h ${transformedPosition.width}
       v ${transformedPosition.height}
       h -${transformedPosition.width }
       z
     `);
+    // resizeTargetText.setAttribute("x", 0);
+    resizeTargetText.setAttribute("y", transformedPosition.height);
     for (dragTarget of targets) {
       let x, y;
       switch (dragTarget.getAttribute("data-draggable")) {
         case "top-left":
-          x = transformedPosition.x;
-          y = transformedPosition.y;
+          x = 0;
+          y = 0;
           break;
         case "top-right":
-          x = transformedPosition.x + transformedPosition.width;
-          y = transformedPosition.y;
+          x = transformedPosition.width;
+          y = 0;
           break;
         case "bottom-right":
-          x = transformedPosition.x + transformedPosition.width;
-          y = transformedPosition.y + transformedPosition.height;
+          x = transformedPosition.width;
+          y = transformedPosition.height;
           break;
         case "bottom-left":
-          x = transformedPosition.x;
-          y = transformedPosition.y + transformedPosition.height;
+          x = 0;
+          y = transformedPosition.height;
           break;
       }
       dragTarget.setAttribute("cx", x);
