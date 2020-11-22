@@ -37,10 +37,10 @@ title: Annotations
       "
     >
     <img class="annotation-details__figure-image" src="https://fathomnet.org/static/m3/framegrabs/Doc%20Ricketts/images/0620/03_19_38_11.png" alt="Paragorgia arborea" />
-    <svg aria-label="Concepts" onClick="window.onSvgClick(event)" class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-      <g style="--color: #FEFF00;" data-annotation-box data-annotation-id="concept-1">
+    <svg data-resizable-svg aria-label="Concepts" data-onClick="window.onSvgClick(event)" class="annotation-details__figure-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+      <g style="--color: #26BF9B;" data-annotation-box data-annotation-id="concept-1">
         <text fill="white" x="1040" y="440" style="font-size: 3em" class="annotation">Bathochordaeus</text>
-        <path fill="none" stroke-width="10" stroke="white"
+        <path data-resizable data-draggable="move" fill="rgba(38, 191, 155, 0.16)" stroke-width="5" stroke="white"
           d="
             m 1040 140
             h 500
@@ -49,6 +49,10 @@ title: Annotations
             z
           ">
         </path>
+        <circle data-draggable="top-left" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1040" cy="140" r="20"/>
+        <circle data-draggable="top-right" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1540" cy="140" r="20"/>
+        <circle data-draggable="bottom-right" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1540" cy="440" r="20"/>
+        <circle data-draggable="bottom-left" fill="rgba(38, 191, 155, 0.3)" stroke-width="5" stroke="#26BF9B" cx="1040" cy="440" r="20"/>
       </g>
       <g style="--color: #11AFF0;" data-annotation-box data-annotation-id="concept-2">
         <text fill="white" x="640" y="640" style="font-size: 3em" class="annotation">Paragorgia arborea</text>
@@ -183,6 +187,277 @@ title: Annotations
       console.log({activateAnnotationID});
       activateAnnotation();
     });
+  }
+  </script>
+  <script>
+  console.log(`Draggable`);
+  class Draggable {
+    getTouchPosition(e) {
+      let point = {};
+
+      if (e.targetTouches) {
+        point.x = e.targetTouches[0].clientX;
+        point.y = e.targetTouches[0].clientY;
+      }
+
+      return point;
+    }
+    getMousePosition(e) {
+      let point = {};
+
+      if (e.clientX) {
+        point.x = e.clientX;
+        point.y = e.clientY;
+      }
+
+      return point;
+    }
+    multiTouch(e) {
+      return (e.touches && e.touches.length > 1);
+    }
+    onTouchStart(e) {
+      console.log(`onTouchStart`);
+      if (this.multiTouch(e)) return;
+      this.setInitialTouch(this.getTouchPosition(e));
+      e.preventDefault();
+    }
+    onMouseDown(e) {
+      console.log(`onMouseDown`);
+      this.setInitialTouch(this.getMousePosition(e));
+      e.preventDefault();
+    }
+    onTouchMove(e) {
+      if (this.multiTouch(e)) return;
+      // this.determineTouchDirection(this.getTouchPosition(e));
+      this.transform = this.getMoveTransform(this.getTouchPosition(e));
+      this.handleInteraction();
+      e.preventDefault();
+    }
+    onMouseMove(e) {
+      if (
+        !this.initialTouch ||
+        !this.initialTouch.y
+      ) {
+        return; // this.transform;
+      }
+      // this.determineTouchDirection(this.getTouchPosition(e));
+      this.transform = this.getMoveTransform(this.getMousePosition(e));
+      this.handleInteraction();
+      e.preventDefault();
+    }
+    onTouchEnd(e) {
+      console.log(`onTouchEnd`);
+      if (this.multiTouch(e)) return;
+      this.onTouchRelease();
+      e.preventDefault();
+    }
+    onMouseUp(e) {
+      console.log(`onTouchEnd`);
+      this.onTouchRelease();
+      e.preventDefault();
+    }
+    setInitialTouch(touch) {
+      this.initialTouch = touch;
+    }
+
+    handleInteraction() {
+      console.log({transform: this.transform});
+      switch (this.targetType) {
+        case "move":
+          // this.resizeTarget.setAttribute("d", `
+          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y + this.transform.translateY}
+          //   h ${this.initialPosition.width}
+          //   v ${this.initialPosition.height}
+          //   h -${this.initialPosition.width}
+          //   z
+          // `);
+          this.transformedPosition = {
+            x: this.initialPosition.x + this.transform.translateX,
+            y: this.initialPosition.y + this.transform.translateY,
+            width: this.initialPosition.width,
+            height: this.initialPosition.height,
+          }
+          break;
+        case "top-left":
+          // this.resizeTarget.setAttribute("d", `
+          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y + this.transform.translateY}
+          //   h ${this.initialPosition.width - this.transform.translateX}
+          //   v ${this.initialPosition.height - this.transform.translateY}
+          //   h -${this.initialPosition.width - this.transform.translateX}
+          //   z
+          // `);
+          this.transformedPosition = {
+            x: this.initialPosition.x + this.transform.translateX,
+            y: this.initialPosition.y + this.transform.translateY,
+            width: this.initialPosition.width - this.transform.translateX,
+            height: this.initialPosition.height - this.transform.translateY,
+          }
+          break;
+        case "top-right":
+          // this.resizeTarget.setAttribute("d", `
+          //   m ${this.initialPosition.x} ${this.initialPosition.y + this.transform.translateY}
+          //   h ${this.initialPosition.width + this.transform.translateX}
+          //   v ${this.initialPosition.height - this.transform.translateY}
+          //   h -${this.initialPosition.width + this.transform.translateX}
+          //   z
+          // `);
+          this.transformedPosition = {
+            x: this.initialPosition.x,
+            y: this.initialPosition.y + this.transform.translateY,
+            width: this.initialPosition.width + this.transform.translateX,
+            height: this.initialPosition.height - this.transform.translateY,
+          }
+          break;
+        case "bottom-left":
+          // this.resizeTarget.setAttribute("d", `
+          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y}
+          //   h ${this.initialPosition.width - this.transform.translateX}
+          //   v ${this.initialPosition.height + this.transform.translateY}
+          //   h -${this.initialPosition.width - this.transform.translateX}
+          //   z
+          // `);
+          this.transformedPosition = {
+            x: this.initialPosition.x + this.transform.translateX,
+            y: this.initialPosition.y,
+            width: this.initialPosition.width - this.transform.translateX,
+            height: this.initialPosition.height + this.transform.translateY,
+          }
+          break;
+        case "bottom-right":
+          // this.resizeTarget.setAttribute("d", `
+          //   m ${this.initialPosition.x} ${this.initialPosition.y}
+          //   h ${this.initialPosition.width + this.transform.translateX}
+          //   v ${this.initialPosition.height + this.transform.translateY}
+          //   h -${this.initialPosition.width + this.transform.translateX}
+          //   z
+          // `);
+          this.transformedPosition = {
+            x: this.initialPosition.x,
+            y: this.initialPosition.y,
+            width: this.initialPosition.width + this.transform.translateX,
+            height: this.initialPosition.height + this.transform.translateY,
+          }
+          break;
+      }
+      this.resizeTarget.setAttribute("d", `
+        m ${this.transformedPosition.x} ${this.transformedPosition.y}
+        h ${this.transformedPosition.width}
+        v ${this.transformedPosition.height}
+        h -${this.transformedPosition.width }
+        z
+      `);
+    }
+
+    // determineTouchDirection(touch) {
+    //   console.log(`onTouchMove`);
+    //   if (
+    //     !touch ||
+    //     !this.initialTouch ||
+    //     !touch.y ||
+    //     !this.initialTouch.y
+    //   ) {
+    //     return false;
+    //   }
+    // 
+    //   const xMovement = touch.x - this.initialTouch.x;
+    //   const yMovement = touch.y - this.initialTouch.y;
+    // 
+    //   if (Math.abs(xMovement) > Math.abs(yMovement)) {
+    //     this.touchDirection = xMovement > 0 ? `left` : `right`;
+    //   }
+    // 
+    //   console.log({direction: this.touchDirection});
+    // }
+    getMoveTransform(touch) {
+      if (
+        !touch ||
+        !this.initialTouch ||
+        !touch.y ||
+        !this.initialTouch.y
+      ) {
+        return; // this.transform;
+      }
+
+      const translateX = touch.x - this.initialTouch.x;
+      const translateY = touch.y - this.initialTouch.y;
+      
+      const imageWidth = 1920;
+      const imageHeight = 1080;
+
+      const svgBounds = document.querySelector("[data-resizable-svg]").getBoundingClientRect();
+
+      console.log({svgBounds});
+
+      const scale = {
+        x: imageWidth / svgBounds.width,
+        y: imageHeight / svgBounds.height,
+      }
+
+      console.log({scale});
+
+      return {
+        translateX: translateX * scale.x,
+        translateY: translateY * scale.y,
+      };
+    }
+    onTouchRelease() {
+      console.log(`onTouchRelease`);
+
+      // console.log({direction: this.touchDirection});
+
+      // if (!this.touchDirection) return;
+      // 
+      // switch (this.touchDirection) {
+      //   case `right`:
+      //     console.log("drag right");
+      //     break;
+      //   case `left`:
+      //     console.log("drag left");
+      //     break;
+      // }
+      
+      this.initialTouch = {
+        x: null,
+        y: null
+      };
+      this.initialPosition = this.transformedPosition;
+      // this.touchDirection = null;
+    }
+    constructor({dragTarget, resizeTarget}) {
+      this.target = dragTarget;
+      this.targetType = this.target.getAttribute("data-draggable");
+      this.resizeTarget = resizeTarget;
+      this.initialTouch = {
+        x: null,
+        y: null
+      };
+      this.initialPosition = {
+        x: 1040,
+        y: 140,
+        width: 500,
+        height: 300,
+      };
+      // this.touchDirection = null;
+
+      // Listen for touch events
+      this.target.addEventListener(`touchstart`, this.onTouchStart.bind(this));
+      this.target.addEventListener(`touchmove`, this.onTouchMove.bind(this));
+      this.target.addEventListener(`touchend`, this.onTouchEnd.bind(this));
+      this.target.addEventListener(`mousedown`, this.onMouseDown.bind(this));
+      this.target.addEventListener(`mousemove`, this.onMouseMove.bind(this));
+      this.target.addEventListener(`mouseup`, this.onMouseUp.bind(this));
+      window.addEventListener(`mousemove`, this.onMouseMove.bind(this));
+      window.addEventListener(`mouseup`, this.onMouseUp.bind(this));
+      console.log(`listening for events on ${this.target}`);
+    }
+  }
+  const resizeTarget = document.querySelector(`[data-resizable]`);
+  const targets = document.querySelectorAll(`[data-draggable]`);
+  console.log({targets});
+
+  // Listen for touch events
+  for (dragTarget of targets) {
+    new Draggable({dragTarget, resizeTarget});
   }
   </script>
 
