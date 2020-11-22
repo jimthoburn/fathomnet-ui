@@ -190,6 +190,21 @@ title: Annotations
   }
   </script>
   <script>
+
+  let initialPosition = {
+    x: 1040,
+    y: 140,
+    width: 500,
+    height: 300,
+  }
+
+  let transformedPosition = {
+    x: 1040,
+    y: 140,
+    width: 500,
+    height: 300,
+  }
+
   console.log(`Draggable`);
   class Draggable {
     getTouchPosition(e) {
@@ -265,87 +280,81 @@ title: Annotations
       switch (this.targetType) {
         case "move":
           // this.resizeTarget.setAttribute("d", `
-          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y + this.transform.translateY}
-          //   h ${this.initialPosition.width}
-          //   v ${this.initialPosition.height}
-          //   h -${this.initialPosition.width}
+          //   m ${initialPosition.x + this.transform.translateX} ${initialPosition.y + this.transform.translateY}
+          //   h ${initialPosition.width}
+          //   v ${initialPosition.height}
+          //   h -${initialPosition.width}
           //   z
           // `);
-          this.transformedPosition = {
-            x: this.initialPosition.x + this.transform.translateX,
-            y: this.initialPosition.y + this.transform.translateY,
-            width: this.initialPosition.width,
-            height: this.initialPosition.height,
+          transformedPosition = {
+            x: initialPosition.x + this.transform.translateX,
+            y: initialPosition.y + this.transform.translateY,
+            width: initialPosition.width,
+            height: initialPosition.height,
           }
           break;
         case "top-left":
           // this.resizeTarget.setAttribute("d", `
-          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y + this.transform.translateY}
-          //   h ${this.initialPosition.width - this.transform.translateX}
-          //   v ${this.initialPosition.height - this.transform.translateY}
-          //   h -${this.initialPosition.width - this.transform.translateX}
+          //   m ${initialPosition.x + this.transform.translateX} ${initialPosition.y + this.transform.translateY}
+          //   h ${initialPosition.width - this.transform.translateX}
+          //   v ${initialPosition.height - this.transform.translateY}
+          //   h -${initialPosition.width - this.transform.translateX}
           //   z
           // `);
-          this.transformedPosition = {
-            x: this.initialPosition.x + this.transform.translateX,
-            y: this.initialPosition.y + this.transform.translateY,
-            width: this.initialPosition.width - this.transform.translateX,
-            height: this.initialPosition.height - this.transform.translateY,
+          transformedPosition = {
+            x: initialPosition.x + this.transform.translateX,
+            y: initialPosition.y + this.transform.translateY,
+            width: initialPosition.width - this.transform.translateX,
+            height: initialPosition.height - this.transform.translateY,
           }
           break;
         case "top-right":
           // this.resizeTarget.setAttribute("d", `
-          //   m ${this.initialPosition.x} ${this.initialPosition.y + this.transform.translateY}
-          //   h ${this.initialPosition.width + this.transform.translateX}
-          //   v ${this.initialPosition.height - this.transform.translateY}
-          //   h -${this.initialPosition.width + this.transform.translateX}
+          //   m ${initialPosition.x} ${initialPosition.y + this.transform.translateY}
+          //   h ${initialPosition.width + this.transform.translateX}
+          //   v ${initialPosition.height - this.transform.translateY}
+          //   h -${initialPosition.width + this.transform.translateX}
           //   z
           // `);
-          this.transformedPosition = {
-            x: this.initialPosition.x,
-            y: this.initialPosition.y + this.transform.translateY,
-            width: this.initialPosition.width + this.transform.translateX,
-            height: this.initialPosition.height - this.transform.translateY,
+          transformedPosition = {
+            x: initialPosition.x,
+            y: initialPosition.y + this.transform.translateY,
+            width: initialPosition.width + this.transform.translateX,
+            height: initialPosition.height - this.transform.translateY,
           }
           break;
         case "bottom-left":
           // this.resizeTarget.setAttribute("d", `
-          //   m ${this.initialPosition.x + this.transform.translateX} ${this.initialPosition.y}
-          //   h ${this.initialPosition.width - this.transform.translateX}
-          //   v ${this.initialPosition.height + this.transform.translateY}
-          //   h -${this.initialPosition.width - this.transform.translateX}
+          //   m ${initialPosition.x + this.transform.translateX} ${initialPosition.y}
+          //   h ${initialPosition.width - this.transform.translateX}
+          //   v ${initialPosition.height + this.transform.translateY}
+          //   h -${initialPosition.width - this.transform.translateX}
           //   z
           // `);
-          this.transformedPosition = {
-            x: this.initialPosition.x + this.transform.translateX,
-            y: this.initialPosition.y,
-            width: this.initialPosition.width - this.transform.translateX,
-            height: this.initialPosition.height + this.transform.translateY,
+          transformedPosition = {
+            x: initialPosition.x + this.transform.translateX,
+            y: initialPosition.y,
+            width: initialPosition.width - this.transform.translateX,
+            height: initialPosition.height + this.transform.translateY,
           }
           break;
         case "bottom-right":
           // this.resizeTarget.setAttribute("d", `
-          //   m ${this.initialPosition.x} ${this.initialPosition.y}
-          //   h ${this.initialPosition.width + this.transform.translateX}
-          //   v ${this.initialPosition.height + this.transform.translateY}
-          //   h -${this.initialPosition.width + this.transform.translateX}
+          //   m ${initialPosition.x} ${initialPosition.y}
+          //   h ${initialPosition.width + this.transform.translateX}
+          //   v ${initialPosition.height + this.transform.translateY}
+          //   h -${initialPosition.width + this.transform.translateX}
           //   z
           // `);
-          this.transformedPosition = {
-            x: this.initialPosition.x,
-            y: this.initialPosition.y,
-            width: this.initialPosition.width + this.transform.translateX,
-            height: this.initialPosition.height + this.transform.translateY,
+          transformedPosition = {
+            x: initialPosition.x,
+            y: initialPosition.y,
+            width: initialPosition.width + this.transform.translateX,
+            height: initialPosition.height + this.transform.translateY,
           }
           break;
       }
-      this.resizeTarget.setAttribute("d", `
-        m ${this.transformedPosition.x} ${this.transformedPosition.y}
-        h ${this.transformedPosition.width}
-        v ${this.transformedPosition.height}
-        h -${this.transformedPosition.width }
-        z
-      `);
+      render();
     }
 
     // determineTouchDirection(touch) {
@@ -420,7 +429,7 @@ title: Annotations
         x: null,
         y: null
       };
-      this.initialPosition = this.transformedPosition;
+      initialPosition = transformedPosition;
       // this.touchDirection = null;
     }
     constructor({dragTarget, resizeTarget}) {
@@ -431,7 +440,7 @@ title: Annotations
         x: null,
         y: null
       };
-      this.initialPosition = {
+      initialPosition = {
         x: 1040,
         y: 140,
         width: 500,
@@ -458,6 +467,39 @@ title: Annotations
   // Listen for touch events
   for (dragTarget of targets) {
     new Draggable({dragTarget, resizeTarget});
+  }
+
+  function render() {
+    resizeTarget.setAttribute("d", `
+      m ${transformedPosition.x} ${transformedPosition.y}
+      h ${transformedPosition.width}
+      v ${transformedPosition.height}
+      h -${transformedPosition.width }
+      z
+    `);
+    for (dragTarget of targets) {
+      let x, y;
+      switch (dragTarget.getAttribute("data-draggable")) {
+        case "top-left":
+          x = transformedPosition.x;
+          y = transformedPosition.y;
+          break;
+        case "top-right":
+          x = transformedPosition.x + transformedPosition.width;
+          y = transformedPosition.y;
+          break;
+        case "bottom-right":
+          x = transformedPosition.x + transformedPosition.width;
+          y = transformedPosition.y + transformedPosition.height;
+          break;
+        case "bottom-left":
+          x = transformedPosition.x;
+          y = transformedPosition.y + transformedPosition.height;
+          break;
+      }
+      dragTarget.setAttribute("cx", x);
+      dragTarget.setAttribute("cy", y);
+    }
   }
   </script>
 
