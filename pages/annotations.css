@@ -88,18 +88,24 @@
 .annotation-details__figure-svg {
   /* border: 3px solid green; */
   --color: var(--color-seafoam-green);
+  --stroke-width: calc(var(--image-height) / 100);
   position: relative;
   z-index: 999;
 }
 .annotation-details__figure-svg-group {
   stroke: var(--color);
+  stroke-width: var(--stroke-width);
+  stroke-width: calc(var(--stroke-width) * 1/2);
 }
 .annotation-details__figure-svg-group[data-state="active"] {
   --color: #26BF9B !important;
-  stroke-width: 5 !important;
+  stroke-width: calc(var(--stroke-width) * 1/2);
 }
 .annotation-details__figure-svg-group:not([data-state="active"]) .annotation-details__figure-svg-circle {
   opacity: 0;
+}
+.annotation-details__figure-svg-circle {
+  r: calc(var(--image-height) / 50);
 }
 .annotation-details__figure-svg-group[data-state="active"] .annotation-details__figure-svg-shape {
   fill: rgba(38, 191, 155, 0.16);
@@ -150,7 +156,7 @@
 
 .annotation-details__figure-svg-text {
   font-style: italic;
-  font-size: 3em;
+  font-size: calc((var(--image-height) / 333) * 1rem);
   transform: translate(0, 1.25em);
   fill: var(--color);
 }
@@ -187,6 +193,10 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   padding: 0 var(--space-one-and-a-half);
+
+  /* SHIM: Make the footer a consistent height on annotations/image page */
+  --footer-height: calc(88 * var(--font-size-basis));
+  height: var(--footer-height);
 
   /* position: sticky;
   bottom: 0; */
