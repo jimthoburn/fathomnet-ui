@@ -16,6 +16,25 @@
   padding-left: 0;
 }
 
+.card-list__item {
+  position: relative;
+}
+
+.card-list__item-select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+.card-list__item-select-label {
+  opacity: 0;
+  font-size: 0;
+  position: absolute;
+}
+.card-list__item-checkbox {
+  font-size: inherit;
+}
+
 .card {
   color: inherit;
 

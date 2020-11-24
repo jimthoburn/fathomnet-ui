@@ -61,7 +61,26 @@ title: Explore
 
   <section class="explore-page__results">
 
-    <h2 class="explore-page__title heading-4">486 results</h2>
+    <header class="explore-page__header">
+      <h2 class="explore-page__title heading-4">486 results</h2>
+
+      <p class="explore-page__select-all">
+        <label>
+          <input type="checkbox" checked onChange="if (event.target.checked) { document.querySelector(`.explore-page__download-button`).classList.remove('explore-page__download-button--inactive') } else { document.querySelector(`.explore-page__download-button`).classList.add('explore-page__download-button--inactive') }" />
+          Select all
+        </label>
+      </p>
+
+      <p class="explore-page__download-button">
+        <a
+          href="/"
+          class="button button--tertiary"
+          >
+          <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+          Download
+        </a>
+      </p>
+    </header>
 
     <ul class="card-list">
 
@@ -91,6 +110,11 @@ title: Explore
 
       </a>
 
+      <label class="card-list__item-select">
+        <input type="checkbox" checked class="card-list__item-checkbox" />
+        <span class="card-list__item-select-label">Select</span>
+      </label>
+
     </li>
 
     <li class="card-list__item">
@@ -117,6 +141,11 @@ title: Explore
 
       </a>
 
+      <label class="card-list__item-select">
+        <input type="checkbox" class="card-list__item-checkbox" />
+        <span class="card-list__item-select-label">Select</span>
+      </label>
+
     </li>
 
     {% endfor %}
@@ -124,5 +153,8 @@ title: Explore
     </ul>
 
   </section>
+
+
+
 
 </main>

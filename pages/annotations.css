@@ -104,10 +104,18 @@
 .annotation-details__figure-svg-group[data-state="active"] .annotation-details__figure-svg-shape {
   fill: rgba(38, 191, 155, 0.16);
 }
-.annotation-details__figure-svg-group[data-state="active"] {
+.annotation-details__figure-svg-group .annotation-details__figure-svg-shape,
+.annotation-details__figure-svg-group .annotation-details__figure-svg-text {
+  cursor: pointer;
+}
+.annotation-details__figure-svg-group[data-state="active"] .annotation-details__figure-svg-text,
+.annotation-details__figure-svg-group[data-state="moving"] .annotation-details__figure-svg-text {
+  cursor: unset;
+}
+.annotation-details__figure-svg-group[data-state="active"] .annotation-details__figure-svg-shape {
   cursor: grab;
 }
-.annotation-details__figure-svg-group[data-state="moving"] {
+.annotation-details__figure-svg-group[data-state="moving"] .annotation-details__figure-svg-shape {
   cursor: grabbing;
 }
 .annotation-details__figure-svg-circle[data-draggable="top-left"] {
