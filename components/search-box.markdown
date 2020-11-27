@@ -23,13 +23,34 @@ title: Search box
       <li class="search-box__item">
         <label class="search-box__label">
           <span class="search-box__label-text">Concept tree</span>
-          <select><option>All</option><option>Coming soon…</option></select>
+          <details>
+            <summary class="search-box__dropdown-button dropdown-button">
+              WoRMS
+              <svg class="icon icon--small" width="24" height="24">
+                <use xlink:href="#icon-chevron-down"></use>
+              </svg>
+            </summary>
+            <div class="modal modal--data-list dropshadow--dark">
+              <ul class="data-list">
+                <li class="data-list__item">
+                  <button type="button" class="data-list__button">
+                    MBARI
+                  </button>
+                </li>
+                <li class="data-list__item">
+                  <button type="button" class="data-list__button">
+                    WoRMS
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </details>
         </label>
       </li>
     </ul>
     <p class="search-box__submit">
-      <button type="submit" class="button search-box__button">
-        <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+      <button type="submit" class="button button--tertiary button--round search-box__button">
+        <svg aria-label="Search" class="icon icon--small" width="24" height="24">
           <use xlink:href="#icon-search"></use>
         </svg>
       </button>
@@ -57,13 +78,34 @@ title: Search box
     <li class="search-box__item">
       <label class="search-box__label">
         <span class="search-box__label-text">Concept tree</span>
-        <select><option>All</option><option>Coming soon…</option></select>
+        <details>
+          <summary class="search-box__dropdown-button dropdown-button">
+            WoRMS
+            <svg class="icon icon--small" width="24" height="24">
+              <use xlink:href="#icon-chevron-down"></use>
+            </svg>
+          </summary>
+          <div class="modal modal--data-list dropshadow--dark">
+            <ul class="data-list">
+              <li class="data-list__item">
+                <button type="button" class="data-list__button">
+                  MBARI
+                </button>
+              </li>
+              <li class="data-list__item">
+                <button type="button" class="data-list__button">
+                  WoRMS
+                </button>
+              </li>
+            </ul>
+          </div>
+        </details>
       </label>
     </li>
   </ul>
   <p class="search-box__submit">
-    <button type="submit" class="button search-box__button">
-      <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+    <button type="submit" class="button button--tertiary button--round search-box__button">
+      <svg aria-label="Search" class="icon icon--small" width="24" height="24">
         <use xlink:href="#icon-search"></use>
       </svg>
     </button>
@@ -75,93 +117,4 @@ title: Search box
 
 
 
-
-
-<div class="components-preview">
-  <header class="header standard-layout__header">
-    <div class="header__title-group">
-      <h2 class="logotype">
-        <a href="/pages/">FathomNet</a>
-      </h2>
-      <h1 class="body-2">Explore</h1>
-    </div>
-
-    <div class="header__search-box">
-      <form class="search-box">
-        <ul class="search-box__list">
-          <li class="search-box__item">
-            <label class="search-box__label">
-              <span class="search-box__label-text">What</span>
-              <input type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" />
-            </label>
-          </li>
-          <li class="search-box__item">
-            <label class="search-box__label">
-              <span class="search-box__label-text">Where</span>
-              <input type="text" class="search-box__field text-field" placeholder="Longitude & latitude, basin, etc" />
-            </label>
-          </li>
-          <li class="search-box__item">
-            <label class="search-box__label">
-              <span class="search-box__label-text">Concept tree</span>
-              <select><option>All</option><option>Coming soon…</option></select>
-            </label>
-          </li>
-        </ul>
-        <p class="search-box__submit">
-          <button type="submit" class="button search-box__button">
-            <svg aria-label="Search" class="icon icon--large" width="24" height="24">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </button>
-        </p>
-      </form>
-    </div>
-
-    <ul class="nav">
-      <li>
-        <a
-          href="/sign-in/"
-          class="nav__link"
-          >
-          Sign in
-        </a>
-      </li>
-    </ul>
-
-  </header>
-</div>
-
-<div class="components-code" markdown="1">
-
-```html
-<header class="header standard-layout__header">
-  <div class="header__title-group">
-    <h2 class="logotype">
-      <a href="/pages/">FathomNet</a>
-    </h2>
-    <h1 class="body-2">Explore</h1>
-  </div>
-
-  <div class="header__search-box">
-    <form class="search-box">
-      …
-    </form>
-  </div>
-
-  <ul class="nav">
-    <li>
-      <a
-        href="/sign-in/"
-        class="nav__link"
-        >
-        Sign in
-      </a>
-    </li>
-  </ul>
-
-</header>
-```
-
-</div>
 

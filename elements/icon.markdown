@@ -188,24 +188,3 @@ If an icon is used in place of text content, you can use an `aria-label` attribu
 <small>(Similar to an `alt` attribute for an `<img />` element)</small>
 
 </div>
-
-<div class="components-preview">
-
-  <p class="loading">
-    <span class="loading__dots"></span>
-    <span class="loading__text">Loading</span>
-  </p>
-
-</div>
-
-<div class="components-code" markdown="1">
-
-```html
-<p class="loading">
-  <span class="loading__dots"></span>
-  <span class="loading__text">Loading</span>
-</p>
-```
-
-</div>
-

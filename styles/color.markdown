@@ -52,6 +52,10 @@ colorsLight:
     id: color-seafoam-green
     value: '#E4FFF8'
 
+  - label: Lobster Red
+    id: color-lobster-red
+    value: '#F33F3F'
+
   - label: Snapper Red
     id: color-snapper-red
     value: '#FF6464'
@@ -59,10 +63,6 @@ colorsLight:
   - label: Coral Red
     id: color-coral-red
     value: '#FEE9E9'
-
-  - label: Lobster Red
-    id: color-lobster-red
-    value: '#F33F3F'
 
 colorsDark:
 
