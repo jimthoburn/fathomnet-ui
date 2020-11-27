@@ -61,7 +61,7 @@
 .image-details__figure {
   margin: 0;
 }
-.image-details__figure img {
+.image-details__figure > * {
   width: 100%;
   height: auto;
   position: sticky;
