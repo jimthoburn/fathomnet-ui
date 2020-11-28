@@ -98,8 +98,19 @@ body {
 }
 
 .link-hit-area {
-  display: block;
+  /* Reset <a /> */
   text-decoration: none;
+
+  /* Reset <button /> */
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border-width: 0;
+  background-color: transparent;
+  padding: 0;
+
+  display: block;
 }
 .link-hit-area__active-indicator {
   border-bottom: 2px solid transparent;
@@ -107,7 +118,8 @@ body {
 }
 :hover > .link-hit-area__active-indicator,
 :active > .link-hit-area__active-indicator,
-:focus > .link-hit-area__active-indicator {
+:focus > .link-hit-area__active-indicator,
+.link-hit-area__active-indicator--active {
   border-color: initial;
 }
 

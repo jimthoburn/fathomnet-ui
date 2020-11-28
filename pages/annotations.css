@@ -92,7 +92,7 @@
   --color: var(--color-seafoam-green);
   --stroke-width: calc(var(--image-height) / 100);
   position: relative;
-  z-index: 999;
+  z-index: 1;
 }
 .concepts-figure__svg-group {
   stroke: var(--color);

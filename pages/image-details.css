@@ -61,12 +61,14 @@
 .image-details__figure {
   margin: 0;
 }
-.image-details__figure > * {
+.image-details__image {
   width: 100%;
   height: auto;
+  border-radius: calc(10 * var(--font-size-basis));
+}
+.image-details__image--sticky {
   position: sticky;
   top: var(--space-2);
-  border-radius: calc(10 * var(--font-size-basis));
 }
 
 

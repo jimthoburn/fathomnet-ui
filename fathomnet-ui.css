@@ -33,6 +33,7 @@ permalink: /fathomnet-ui-v0.0.8-alpha/fathomnet-ui.css
 {% include_relative components/hero.css %}
 {% include_relative components/tabs.css %}
 {% include_relative components/toast.css %}
+{% include_relative components/status.css %}
 
 {% include_relative pages/annotations.css %}
 {% include_relative pages/collections.css %}

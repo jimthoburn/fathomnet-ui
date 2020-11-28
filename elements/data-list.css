@@ -9,6 +9,7 @@
 .data-list__button {
   /* Reset <a /> */
   text-decoration: none;
+  color: inherit;
 
   /* Reset <button /> */
   font-size: inherit;

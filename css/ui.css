@@ -28,6 +28,7 @@
 @import url("/components/hero.css");
 @import url("/components/tabs.css");
 @import url("/components/toast.css");
+@import url("/components/status.css");
 
 @import url("/pages/annotations.css");
 @import url("/pages/collections.css");
