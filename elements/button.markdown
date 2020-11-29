@@ -143,6 +143,26 @@ title: Button
   </span>
 </a>
 
+<a
+  href="/"
+  class="button button--compound button--medium"
+  >
+  <span class="button__label">Download</span>
+  <span class="button__icon">
+    <svg class="icon"><use xlink:href="#icon-chevron-down"></use></svg>
+  </span>
+</a>
+
+<a
+  href="/"
+  class="button button--compound button--small"
+  >
+  <span class="button__label">Download</span>
+  <span class="button__icon">
+    <svg class="icon"><use xlink:href="#icon-chevron-down"></use></svg>
+  </span>
+</a>
+
 </div>
 
 <div class="components-code" markdown="1">

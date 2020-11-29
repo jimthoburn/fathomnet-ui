@@ -35,6 +35,25 @@
   transition-duration: 0.2s, 0.2s, 0.2s;
 }
 
+.data-list__field {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  min-width: calc(240 * var(--font-size-basis));
+
+  /* .body-3 */
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+
+  padding: calc(16 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+}
+
+.data-list__field-checkbox {
+  margin: 0 calc(8 * var(--font-size-basis)) 0 0;
+}
+
 .data-list__button:hover,
 .data-list__button:active,
 .data-list__button:focus {

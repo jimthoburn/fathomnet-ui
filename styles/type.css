@@ -160,8 +160,7 @@ h6,
 
 /* Large link */
 
-.link-large,
-.link--large {
+.link-large {
   font-size: var(--font-size-18);
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);

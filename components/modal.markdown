@@ -9,7 +9,7 @@ title: Modal
 <div class="components-preview">
 
 <dialog open class="modal modal--data-list dropshadow--dark">
-  <ul class="data-list">
+  <ul class="data-list modal__data-list">
     {% for index in (1..20) %}
     <li class="data-list__item">
       <button type="button" class="data-list__button">
@@ -45,7 +45,7 @@ title: Modal
 
 ```html
 <dialog open class="modal modal--data-list dropshadow--dark">
-  <ul class="data-list">
+  <ul class="data-list modal__data-list">
     <li class="data-list__item">
       <button type="button" class="data-list__button">
         Ampeliscidae
@@ -73,11 +73,183 @@ title: Modal
 </div>
 
 
+<div class="components-preview">
+
+<dialog open class="modal modal--data-list dropshadow--dark">
+  <!-- <label class="field field--has-placeholder field--has-icon">
+    <span class="field__label">Search</span>
+    <input
+      type="text"
+      value=""
+      placeholder="Search…"
+      class="field__input"
+      />
+    <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+  </label> -->
+  <ul class="data-list modal__data-list">
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Expert
+      </label>
+    </li>
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Intermediate
+      </label>
+    </li>
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Novice
+      </label>
+    </li>
+  </ul>
+  <ul class="button-list modal__mini-option-list">
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="link link--medium link--primary">Clear</button>
+    </li>
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="button button--medium button--primary">Save</button>
+    </li>
+  </ul>
+</dialog>
+
+<div></div>
+
+<div></div>
+
+</div>
+
+<div class="components-code" markdown="1">
+
+```html
+<dialog open class="modal modal--data-list dropshadow--dark">
+  <ul class="data-list modal__data-list">
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Expert
+      </label>
+    </li>
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Intermediate
+      </label>
+    </li>
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Novice
+      </label>
+    </li>
+  </ul>
+  <ul class="button-list modal__mini-option-list">
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="link link--medium link--primary">Clear</button>
+    </li>
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="button button--medium button--primary">Save</button>
+    </li>
+  </ul>
+</dialog>
+```
+
+</div>
+
 
 
 <div class="components-preview">
 
-<dialog open class="modal modal--dialog dropshadow--dark">
+<dialog open class="modal modal--data-list dropshadow--dark">
+  <label class="field field--has-placeholder field--has-icon modal__field">
+    <span class="field__label">Search</span>
+    <input
+      type="search"
+      value=""
+      placeholder="Search…"
+      class="field__input"
+      />
+    <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+  </label>
+  <ul class="data-list modal__data-list">
+    {% for index in (1..20) %}
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Contributor name
+      </label>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul class="button-list modal__mini-option-list">
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="link link--medium link--primary">Clear</button>
+    </li>
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="button button--medium button--primary">Save</button>
+    </li>
+  </ul>
+</dialog>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+</div>
+
+<div class="components-code" markdown="1">
+
+```html
+<dialog open class="modal modal--data-list dropshadow--dark">
+  <label class="field field--has-placeholder field--has-icon modal__field">
+    <span class="field__label">Search</span>
+    <input
+      type="search"
+      value=""
+      placeholder="Search…"
+      class="field__input"
+      />
+    <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+  </label>
+  <ul class="data-list modal__data-list">
+    <li class="data-list__item">
+      <label class="data-list__field">
+        <input type="checkbox" class="data-list__field-checkbox" />
+        Contributor name
+      </label>
+    </li>
+    <li class="data-list__item">…</li>
+    <li class="data-list__item">…</li>
+    <li class="data-list__item">…</li>
+    …
+  </ul>
+  <ul class="button-list modal__mini-option-list">
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="link link--medium link--primary">Clear</button>
+    </li>
+    <li class="button-list__item modal__mini-option-list-item">
+      <button type="button" class="button button--medium button--primary">Save</button>
+    </li>
+  </ul>
+</dialog>
+```
+
+</div>
+
+
+
+<div class="components-preview">
+
+<dialog open class="modal modal--dialog dropshadow--dark" style="position: absolute; top: unset; transform: unset;">
   <h4 class="h4">Unsaved changes</h4>
 
   <p class="body-4 text-meta modal__text">
@@ -85,14 +257,18 @@ title: Modal
   </p>
 
   <ul class="button-list modal__option-list">
-    <li class="button-list__item">
-      <button type="button" class="link link--large">Cancel</button>
+    <li class="button-list__item modal__option-list-item">
+      <button type="button" class="link link--primary modal__option-link">Cancel</button>
     </li>
-    <li class="button-list__item">
+    <li class="button-list__item modal__option-list-item">
       <button type="button" class="button button--primary">Continue</button>
     </li>
   </ul>
 </dialog>
+
+<div></div>
+
+<div></div>
 
 <div></div>
 
@@ -114,7 +290,7 @@ title: Modal
 
   <ul class="button-list modal__option-list">
     <li class="button-list__item">
-      <button type="button" class="link link--large">Cancel</button>
+      <button type="button" class="link link--primary modal__option-link">Cancel</button>
     </li>
     <li class="button-list__item">
       <button type="button" class="button button--primary">Continue</button>
