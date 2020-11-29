@@ -1,5 +1,18 @@
 
+.field-list,
+.field-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
 .field {
+  display: block;
+}
+
+.field:not(.field--has-container),
+.field__container {
   /* Body 3 */
   font-size: var(--font-size-16);
   line-height: var(--line-height-1);
@@ -17,6 +30,7 @@
   width: calc(400/16 * 1em);
   max-width: 100%;
 }
+
 .field > * {
   align-self: center;
 }
@@ -42,7 +56,8 @@
   color: var(--color-demersal-gray);
 }
 
-.field:focus-within {
+.field:not(.field--has-container):focus-within,
+.field__container:focus-within {
   border-color: var(--color-lagoon-blue);
   box-shadow: 0px 0px calc(2/16 * 1em) rgba(85, 122, 255, 0.88);
 }
@@ -52,6 +67,17 @@
 
 .field__input::placeholder {
   color: var(--color-demersal-gray);
+}
+
+.field__label {
+  /* .label-1 */
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-base-14);
+  font-weight: var(--font-weight-bold);
+
+  display: block;
+  color: var(--color-benthos-blue);
+  margin-bottom: calc(8 * var(--font-size-basis));
 }
 
 .field--has-placeholder .field__label {

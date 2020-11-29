@@ -1,5 +1,8 @@
 
 .tabs {
+  /* Reset <fieldset /> */
+  border-width: 0;
+  padding: 0;
 }
 
 .tabs__list,
@@ -49,17 +52,17 @@
   border-color: var(--color-salt-marsh-gray);
 }
 
-.tabs__item + .tabs__item > .tabs__button {
+.tabs__item + .tabs__item .tabs__button {
   border-left-width: 1px;
 }
 
-.tabs__item:first-child > .tabs__button {
+.tabs__item:first-child .tabs__button {
   border-left-width: 1px;
   border-top-left-radius: calc(8 * var(--font-size-basis));
   border-bottom-left-radius: calc(8 * var(--font-size-basis));
 }
 
-.tabs__item:last-child > .tabs__button {
+.tabs__item:last-child .tabs__button {
   border-right-width: 1px;
   border-top-right-radius: calc(8 * var(--font-size-basis));
   border-bottom-right-radius: calc(8 * var(--font-size-basis));
@@ -71,6 +74,19 @@
   background-color: var(--color-sea-salt-gray);
 }
 
+.tabs__item:focus-within .tabs__button {
+  border-color: var(--color-lagoon-blue);
+  box-shadow: 0px 0px calc(2/16 * 1em) rgba(85, 122, 255, 0.88);
+  background-color: var(--color-sea-salt-gray);
+}
+
+.tabs__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+:checked + .tabs__button,
+.tabs__item:focus-within :checked + .tabs__button,
 .tabs__button--active,
 .tabs__button--active:hover,
 .tabs__button--active:active,

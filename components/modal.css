@@ -55,7 +55,13 @@
   margin-top: calc(64 * var(--font-size-basis));
 }
 
+/* SHIM: Reset style from .button-list__item:not(:first-child) */
 .modal__option-list-item:not(:first-child) {
+  margin-left: unset;
+}
+
+/* SHIM: Use :last-child instead of :first-child, since the list is styled with row-reverse */
+.modal__option-list-item:not(:last-child) {
   margin-left: calc(20 * var(--font-size-basis));
 }
 
@@ -68,10 +74,12 @@
   border-top: 1px solid var(--color-salt-marsh-gray);
   padding: calc(16 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .modal--dialog > .modal__option-list {
   justify-content: center;
+  flex-direction: row-reverse;
 }
 
 .modal--dialog > :first-child {
@@ -89,6 +97,9 @@
 /* SHIM: Make the space above the field list the same to the left and right */
 .modal__data-list > :first-child > .data-list__field {
   margin-top: calc(8 * var(--font-size-basis));
+}
+.modal__data-list > :last-child > .data-list__field {
+  margin-bottom: calc(8 * var(--font-size-basis));
 }
 
 /* SHIM: Reduce space between field and data list */
