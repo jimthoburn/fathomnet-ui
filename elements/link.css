@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+.link--primary:not(.link--has-active-indicator) {
+  color: var(--color-ultramarine-blue);
+}
+
 .link:not(.link--has-active-indicator) {
   border-bottom: 2px solid transparent;
 }
@@ -29,7 +33,8 @@
 .link:not(.link--has-active-indicator):hover,
 .link:not(.link--has-active-indicator):active,
 .link:not(.link--has-active-indicator):focus,
-.link--active:not(.link--has-active-indicator) {
+.link--active:not(.link--has-active-indicator),
+.link--primary:not(.link--has-active-indicator) {
   border-bottom-color: initial;
 }
 

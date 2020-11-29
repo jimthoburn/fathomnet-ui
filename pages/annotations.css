@@ -62,9 +62,7 @@
   background-color: var(--color-hado-gray);
 }
 .concepts-figure {
-  --figure-height-basis: calc(var(--figure-height) / var(--image-height));
-  --image-width: 1920;
-  --image-height: 1080;
+  --figure-height-basis: calc(var(--figure-height) / var(--image-height, 1080));
   margin: 0;
   position: relative;
   display: grid;
@@ -81,8 +79,8 @@
   justify-self: center;
   display: block;
   /* @TODO Handle the case where the image aspect ratio is taller than the viewport (portrait) */
-  width: calc(var(--image-width) * var(--figure-height-basis));
-  height: calc(var(--image-height) * var(--figure-height-basis));
+  width: calc(var(--image-width, 1920) * var(--figure-height-basis));
+  height: calc(var(--image-height, 1080) * var(--figure-height-basis));
 }
 .concepts-figure__image {
   /* border: 2px solid blue; */
@@ -90,7 +88,7 @@
 .concepts-figure__svg {
   /* border: 3px solid green; */
   --color: var(--color-seafoam-green);
-  --stroke-width: calc(var(--image-height) / 100);
+  --stroke-width: calc(var(--image-height, 1080) / 100);
   position: relative;
   z-index: 1;
 }
@@ -106,7 +104,7 @@
   opacity: 0;
 }
 .concepts-figure__svg-circle {
-  r: calc(var(--image-height) / 50);
+  r: calc(var(--image-height, 1080) / 50);
 }
 .concepts-figure__svg-group[data-state="idle"] .concepts-figure__svg-shape,
 .concepts-figure__svg-group[data-state="idle"] .concepts-figure__svg-text {
@@ -157,7 +155,7 @@
 
 .concepts-figure__svg-text {
   font-style: italic;
-  font-size: calc((var(--image-height) / 333) * 1rem);
+  font-size: calc((var(--image-height, 1080) / 333) * 1rem);
   transform: translate(0, 1.25em);
   fill: var(--color);
 }
@@ -176,8 +174,8 @@
 
 .annotation-field {
   position: absolute;
-  --percent-basis: calc(100 / var(--image-height) * 1%);
-  --aspect-ratio: calc(var(--image-width) / var(--image-height));
+  --percent-basis: calc(100 / var(--image-height, 1080) * 1%);
+  --aspect-ratio: calc(var(--image-width, 1920) / var(--image-height, 1080));
   top: calc(calc(var(--field-y) / 1) * var(--percent-basis));
   left: calc(calc(var(--field-x) / var(--aspect-ratio)) * var(--percent-basis));
   transform: translate(calc(-100% - calc(32 * var(--font-size-basis))), calc(16 * var(--font-size-basis) * -1));
