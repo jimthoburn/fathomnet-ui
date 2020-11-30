@@ -37,6 +37,11 @@
   transition-duration: 0.2s, 0.2s, 0.2s;
 }
 
+/* SHIM: Reset <summary /> elements */
+.button::-webkit-details-marker {
+  display: none;
+}
+
 .button:hover,
 .button:active,
 .button:focus {
@@ -48,12 +53,21 @@
 
 
 .button--round {
-  margin-right: 1em;
   border-radius: 50%;
-  padding: calc(7 * var(--font-size-basis));
 
   border-color: var(--color-littoral-blue);
   color: var(--color-ultramarine-blue);
+  
+  /* .button--round.button--large */
+  padding: calc(12 * var(--font-size-basis));
+}
+
+.button--round.button--large {
+  /* Default */
+}
+
+.button--round.button--small {
+  padding: calc(7 * var(--font-size-basis));
 }
 
 

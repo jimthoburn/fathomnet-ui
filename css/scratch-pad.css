@@ -154,6 +154,10 @@ body {
   display: flex;
 }
 
+.dropdown-button::-webkit-details-marker {
+  display: none;
+}
+
 /* body::after {
   content: "";
   background-image: url("/figma.png");

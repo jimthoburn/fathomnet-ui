@@ -109,6 +109,8 @@
 
   border-radius: calc(32 * var(--font-size-basis));
   overflow: hidden;
+
+  width: max-content;
 }
 
 

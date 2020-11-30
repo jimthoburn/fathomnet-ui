@@ -35,6 +35,13 @@
   font-size: inherit;
 }
 
+.card__toast {
+  position: absolute;
+  top: calc(16 * var(--font-size-basis));;
+  left: calc(24 * var(--font-size-basis));;
+  margin: 0;
+}
+
 .card {
   color: inherit;
 

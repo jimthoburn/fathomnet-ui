@@ -55,7 +55,7 @@
 .meta-box__summary {
   list-style: none;
 }
-summary::-webkit-details-marker {
+.meta-box__summary::-webkit-details-marker {
   display: none;
 }
 

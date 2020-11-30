@@ -266,6 +266,12 @@ title: Button
 <div class="components-preview">
 
 <button type="submit" class="button button--round">
+  <svg aria-label="Close" class="icon icon--small" width="24" height="24">
+    <use xlink:href="#icon-close"></use>
+  </svg>
+</button>
+
+<button type="submit" class="button button--round button--large">
   <svg aria-label="Close" class="icon icon--large" width="24" height="24">
     <use xlink:href="#icon-close"></use>
   </svg>
@@ -276,7 +282,12 @@ title: Button
 <div class="components-code" markdown="1">
 
 ```html
-<button type="submit" class="button button--round">
+<button type="submit" class="button button--round button--small">
+  <svg aria-label="Close" class="icon icon--small" width="24" height="24">
+    <use xlink:href="#icon-close"></use>
+  </svg>
+</button>
+<button type="submit" class="button button--round button--large">
   <svg aria-label="Close" class="icon icon--large" width="24" height="24">
     <use xlink:href="#icon-close"></use>
   </svg>
@@ -291,8 +302,8 @@ title: Button
 
 <div class="components-preview">
 
-<button type="submit" class="button button--round dropshadow--soft">
-  <svg aria-label="Close" class="icon icon--large" width="24" height="24">
+<button type="submit" class="button button--round button--small dropshadow--soft">
+  <svg aria-label="Close" class="icon icon--small" width="24" height="24">
     <use xlink:href="#icon-close"></use>
   </svg>
 </button>
@@ -303,7 +314,7 @@ title: Button
 
 ```html
 <button type="submit" class="button button--round dropshadow--soft">
-  <svg aria-label="Close" class="icon icon--large" width="24" height="24">
+  <svg aria-label="Close" class="icon icon--small" width="24" height="24">
     <use xlink:href="#icon-close"></use>
   </svg>
 </button>
@@ -315,8 +326,8 @@ title: Button
 
 <div class="components-preview">
 
-<button type="submit" class="button button--round button--tertiary">
-  <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+<button type="submit" class="button button--round button--small button--tertiary">
+  <svg aria-label="Search" class="icon icon--small" width="24" height="24">
     <use xlink:href="#icon-search"></use>
   </svg>
 </button>
@@ -326,8 +337,8 @@ title: Button
 <div class="components-code" markdown="1">
 
 ```html
-<button type="submit" class="button button--round button--tertiary">
-  <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+<button type="submit" class="button button--round button--small button--tertiary">
+  <svg aria-label="Search" class="icon icon--small" width="24" height="24">
     <use xlink:href="#icon-search"></use>
   </svg>
 </button>

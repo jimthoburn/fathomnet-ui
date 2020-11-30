@@ -3,25 +3,202 @@ layout: explore
 title: Explore
 ---
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-
 <main class="explore-page explore-page--map-active">
 
-  <section class="explore-page__map">
-    <div class="map-box" id="mapbox"></div>
-    <script>
-    const MAP_ACCESS_TOKEN = ""
+  <header class="explore-page__controls">
 
-    mapboxgl.accessToken = MAP_ACCESS_TOKEN; // replace this with your access token
-    var map = new mapboxgl.Map({
-      container: 'mapbox',
-      style: 'mapbox://styles/mapbox/basic-v9', // replace this with your style URL
-      center: [-122.846343, 37.8185472],
-      zoom: 8.75
-    });
-    // code from the next step will go here
-    </script>
+    <nav
+      class="explore-tabs explore-page__controls-nav"
+      >
+      <ul class="explore-tabs__list">
+        <li class="explore-tabs__item">
+          <a href="" class="explore-tabs__button">
+            <svg class="icon explore-tabs__icon" aria-label="Map"><use xlink:href="#icon-map"></use></svg>
+          </a>
+        </li>
+        <li class="explore-tabs__item">
+          <a href="" class="explore-tabs__button explore-tabs__button--active">
+            <svg class="icon explore-tabs__icon" aria-label="Tree"><use xlink:href="#icon-label-tree"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="button button--large button--round explore-page__controls-close">
+      <svg aria-label="Close" class="icon icon--large" width="24" height="24">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <button type="button" class="button button--large button--round explore-page__controls-expand">
+      <svg aria-label="Expand" class="icon icon--large" width="24" height="24">
+        <use xlink:href="#icon-expand"></use>
+      </svg>
+    </button>
+
+  </header>
+
+  <section class="tree explore-page__tree" style="--background-image: url('/images/net.png');">
+    <ol class="tree__list">
+      <li class="tree__item">
+        <label class="tree__field">
+          <input type="checkbox" class="tree__field-checkbox" />
+          <span class="tree__field-label">Phylum Echinodermata</span>
+        </label>
+        <details class="tree__details">
+          <summary class="tree__summary">
+            <span>
+              <span class="tree__label">Phylum</span>
+              <span class="tree__heading">Echinodermata</span>
+            </span>
+            <svg class="icon icon--large tree__close-icon" width="24" height="24">
+              <use xlink:href="#icon-minus"></use>
+            </svg>
+            <svg class="icon icon--large tree__open-icon" width="24" height="24">
+              <use xlink:href="#icon-plus"></use>
+            </svg>
+          </summary>
+          <ol class="tree__list">
+            <li class="tree__item">
+              <label class="tree__field">
+                <input type="checkbox" class="tree__field-checkbox" />
+                <span class="tree__field-label">Subphylum Azterozea</span>
+              </label>
+              <details class="tree__details">
+                <summary class="tree__summary">
+                  <span>
+                    <span class="tree__label">Subphylum</span>
+                    <span class="tree__heading">Azterozea</span>
+                  </span>
+                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                    <use xlink:href="#icon-minus"></use>
+                  </svg>
+                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                </summary>
+                <ol>
+                  <li>
+                    <details>
+                      <summary>
+                        Class
+                        Asteroidea
+                      </summary>
+                      <ol>
+                        <li>
+                          <details>
+                            <summary>
+                              Super order
+                              Forcipulatacea
+                            </summary>
+                            <ol>
+                              <li>
+                                <details>
+                                  <summary>
+                                    Order
+                                    Forcipulatida
+                                  </summary>
+                                  <ol>
+                                    <li>
+                                      <details>
+                                        <summary>
+                                          Family
+                                          Pedicellasteridae
+                                        </summary>
+                                        <ol>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Allostichaster
+                                              </summary>
+                                            </details>
+                                          </li>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Anasterias
+                                              </summary>
+                                            </details>
+                                          </li>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Anteliaster
+                                              </summary>
+                                            </details>
+                                          </li>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Aphanasterias
+                                              </summary>
+                                            </details>
+                                          </li>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Asterias
+                                              </summary>
+                                            </details>
+                                          </li>
+                                          <li>
+                                            <details>
+                                              <summary>
+                                                Genus
+                                                Ampheraster
+                                              </summary>
+                                              <ol>
+                                                <li>
+                                                  <details>
+                                                    <summary>
+                                                      Species
+                                                      A. atactus
+                                                    </summary>
+                                                  </details>
+                                                </li>
+                                                <li>
+                                                  <details>
+                                                    <summary>
+                                                      Species
+                                                      A. chiroplus
+                                                    </summary>
+                                                  </details>
+                                                </li>
+                                                <li>
+                                                  <details>
+                                                    <summary>
+                                                      Species
+                                                      A. marianus
+                                                    </summary>
+                                                  </details>
+                                                </li>
+                                              </ol>
+                                            </details>
+                                          </li>
+                                        </ol>
+                                      </details>
+                                    </li>
+                                  </ol>
+                                </details>
+                              </li>
+                            </ol>
+                          </details>
+                        </li>
+                      </ol>
+                    </details>
+                  </li>
+                </ol>
+              </details>
+            </li>
+          </ol>
+        </details>
+      </li>
+    </ol>
   </section>
 
   <section class="explore-page__filters">
