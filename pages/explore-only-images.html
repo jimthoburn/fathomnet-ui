@@ -3,59 +3,18 @@ layout: explore
 title: Explore
 ---
 
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+<main class="explore-page">
 
-<main class="explore-page explore-page--map-tree-images">
+  <header class="explore-page__controls">
 
-  <header class="explore-page__controls explore-page__controls--map">
-
-    <nav
-      class="explore-tabs explore-page__controls-nav dropshadow--soft"
-      >
-      <ul class="explore-tabs__list">
-        <li class="explore-tabs__item">
-          <a href="" class="explore-tabs__button explore-tabs__button--active">
-            <svg class="icon explore-tabs__icon" aria-label="Map"><use xlink:href="#icon-map"></use></svg>
-          </a>
-        </li>
-        <li class="explore-tabs__item">
-          <a href="" class="explore-tabs__button">
-            <svg class="icon explore-tabs__icon" aria-label="Tree"><use xlink:href="#icon-label-tree"></use></svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <button type="button" class="button button--large button--round dropshadow--soft explore-page__controls-close">
-      <svg aria-label="Close" class="icon icon--large" width="24" height="24">
-        <use xlink:href="#icon-close"></use>
+    <button type="button" class="button button--medium explore-page__controls-expand">
+      <svg  class="icon icon--small" width="24" height="24">
+        <use xlink:href="#icon-map"></use>
       </svg>
-    </button>
-
-    <button type="button" class="button button--large button--round dropshadow--soft explore-page__controls-expand">
-      <svg aria-label="Expand" class="icon icon--large" width="24" height="24">
-        <use xlink:href="#icon-expand"></use>
-      </svg>
+      <span class="body-3">Show Map</span>
     </button>
 
   </header>
-
-  <section class="explore-page__map">
-    <div class="map-box" id="mapbox"></div>
-    <script>
-    const MAP_ACCESS_TOKEN = ""
-
-    mapboxgl.accessToken = MAP_ACCESS_TOKEN; // replace this with your access token
-    var map = new mapboxgl.Map({
-      container: 'mapbox',
-      style: 'mapbox://styles/mapbox/basic-v9', // replace this with your style URL
-      center: [-122.846343, 37.8185472],
-      zoom: 8.75
-    });
-    // code from the next step will go here
-    </script>
-  </section>
 
   <section class="explore-page__filters">
     <ul class="button-list">
