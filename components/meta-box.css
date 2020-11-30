@@ -135,6 +135,10 @@
   align-items: center;
 }
 
+.meta-box__status::-webkit-details-marker {
+  display: none;
+}
+
 .meta-box__status > * + * {
   margin-left: calc(6 * var(--font-size-basis));
 }
