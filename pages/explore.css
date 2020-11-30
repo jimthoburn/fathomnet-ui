@@ -54,7 +54,22 @@
   align-self: start;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr;
   padding: calc(24 * var(--font-size-basis));
+
+  position: sticky;
+  top: 0;
+
+  box-sizing: border-box;
+  height: calc(180 * var(--font-size-basis));
+
+  background-image:
+    linear-gradient(
+      180deg,
+      #26266E 0%,
+      rgba(36, 35, 105, 0.96) 49.48%,
+      rgba(33, 31, 99, 0) 100%
+    );
 }
 
 .explore-page__controls-nav {
@@ -85,14 +100,27 @@
   margin: 0;
 }
 
-.tree {
-  padding: calc(72 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+.tree-box {
   background-color:  var(--color-benthos-blue);
   color: var(--color-white);
   background-image:
     var(--background-image, linear-gradient(transparent, transparent)),
     linear-gradient(180deg, #26266E 0%, rgba(36, 35, 105, 0.96) 49.48%, rgba(33, 31, 99, 0.42) 100%)
     ;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.tree {
+  padding: calc(72 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+
+  --controls-height: 180;
+  --tree-item-margin: 32;
+  padding-top: calc((var(--controls-height) - var(--tree-item-margin)) * var(--font-size-basis));
 }
 
 .tree__summary {
@@ -147,7 +175,7 @@
 .tree__field {
   position: absolute;
   transform: translateX(-100%);
-  margin-left: -0.5em;
+  padding: calc(14 * var(--font-size-basis));
 }
 
 .tree__field-label {
@@ -157,7 +185,7 @@
 }
 
 .tree__field-checkbox {
-  margin: 0;
+  margin: calc(18 * var(--font-size-basis)) 0 0;
   vertical-align: text-top;
 }
 

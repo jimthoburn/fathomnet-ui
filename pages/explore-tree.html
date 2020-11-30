@@ -38,167 +38,372 @@ title: Explore
 
   </header>
 
-  <section class="tree explore-page__tree" style="--background-image: url('/images/net.png');">
-    <ol class="tree__list">
-      <li class="tree__item">
-        <label class="tree__field">
-          <input type="checkbox" class="tree__field-checkbox" />
-          <span class="tree__field-label">Phylum Echinodermata</span>
-        </label>
-        <details class="tree__details">
-          <summary class="tree__summary">
-            <span>
-              <span class="tree__label">Phylum</span>
-              <span class="tree__heading">Echinodermata</span>
-            </span>
-            <svg class="icon icon--large tree__close-icon" width="24" height="24">
-              <use xlink:href="#icon-minus"></use>
-            </svg>
-            <svg class="icon icon--large tree__open-icon" width="24" height="24">
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </summary>
-          <ol class="tree__list">
-            <li class="tree__item">
-              <label class="tree__field">
-                <input type="checkbox" class="tree__field-checkbox" />
-                <span class="tree__field-label">Subphylum Azterozea</span>
-              </label>
-              <details class="tree__details">
-                <summary class="tree__summary">
-                  <span>
-                    <span class="tree__label">Subphylum</span>
-                    <span class="tree__heading">Azterozea</span>
-                  </span>
-                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
-                    <use xlink:href="#icon-minus"></use>
-                  </svg>
-                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
-                    <use xlink:href="#icon-plus"></use>
-                  </svg>
-                </summary>
-                <ol>
-                  <li>
-                    <details>
-                      <summary>
-                        Class
-                        Asteroidea
-                      </summary>
-                      <ol>
-                        <li>
-                          <details>
-                            <summary>
-                              Super order
-                              Forcipulatacea
-                            </summary>
-                            <ol>
-                              <li>
-                                <details>
-                                  <summary>
-                                    Order
-                                    Forcipulatida
-                                  </summary>
-                                  <ol>
-                                    <li>
-                                      <details>
-                                        <summary>
-                                          Family
-                                          Pedicellasteridae
-                                        </summary>
-                                        <ol>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Allostichaster
-                                              </summary>
-                                            </details>
-                                          </li>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Anasterias
-                                              </summary>
-                                            </details>
-                                          </li>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Anteliaster
-                                              </summary>
-                                            </details>
-                                          </li>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Aphanasterias
-                                              </summary>
-                                            </details>
-                                          </li>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Asterias
-                                              </summary>
-                                            </details>
-                                          </li>
-                                          <li>
-                                            <details>
-                                              <summary>
-                                                Genus
-                                                Ampheraster
-                                              </summary>
-                                              <ol>
-                                                <li>
-                                                  <details>
-                                                    <summary>
-                                                      Species
-                                                      A. atactus
-                                                    </summary>
-                                                  </details>
-                                                </li>
-                                                <li>
-                                                  <details>
-                                                    <summary>
-                                                      Species
-                                                      A. chiroplus
-                                                    </summary>
-                                                  </details>
-                                                </li>
-                                                <li>
-                                                  <details>
-                                                    <summary>
-                                                      Species
-                                                      A. marianus
-                                                    </summary>
-                                                  </details>
-                                                </li>
-                                              </ol>
-                                            </details>
-                                          </li>
-                                        </ol>
-                                      </details>
-                                    </li>
-                                  </ol>
-                                </details>
-                              </li>
-                            </ol>
-                          </details>
-                        </li>
-                      </ol>
-                    </details>
-                  </li>
-                </ol>
-              </details>
-            </li>
-          </ol>
-        </details>
-      </li>
-    </ol>
+  <section class="explore-page__tree">
+    <div class="tree-box" style="--background-image: url('/images/net.png');">
+    <div class="tree">
+      <ol class="tree__list">
+        <li class="tree__item">
+          <label class="tree__field">
+            <input type="checkbox" class="tree__field-checkbox" />
+            <span class="tree__field-label">Phylum Echinodermata</span>
+          </label>
+          <details class="tree__details" open>
+            <summary class="tree__summary">
+              <span>
+                <span class="tree__label">Phylum</span>
+                <span class="tree__heading">Echinodermata</span>
+              </span>
+              <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                <use xlink:href="#icon-minus"></use>
+              </svg>
+              <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </summary>
+            <ol class="tree__list">
+              <li class="tree__item">
+                <label class="tree__field">
+                  <input type="checkbox" class="tree__field-checkbox" />
+                  <span class="tree__field-label">Subphylum Azterozea</span>
+                </label>
+                <details class="tree__details" open>
+                  <summary class="tree__summary">
+                    <span>
+                      <span class="tree__label">Subphylum</span>
+                      <span class="tree__heading">Azterozea</span>
+                    </span>
+                    <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                      <use xlink:href="#icon-minus"></use>
+                    </svg>
+                    <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                      <use xlink:href="#icon-plus"></use>
+                    </svg>
+                  </summary>
+                  <ol class="tree__list">
+                    <li class="tree__item">
+                      <label class="tree__field">
+                        <input type="checkbox" class="tree__field-checkbox" />
+                        <span class="tree__field-label">Class Asteroidea</span>
+                      </label>
+                      <details class="tree__details" open>
+                        <summary class="tree__summary">
+                          <span>
+                            <span class="tree__label">Class</span>
+                            <span class="tree__heading">Asteroidea</span>
+                          </span>
+                          <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                            <use xlink:href="#icon-minus"></use>
+                          </svg>
+                          <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                            <use xlink:href="#icon-plus"></use>
+                          </svg>
+                        </summary>
+                        <ol class="tree__list">
+                          <li class="tree__item">
+                            <label class="tree__field">
+                              <input type="checkbox" class="tree__field-checkbox" />
+                              <span class="tree__field-label">Super order Forcipulatacea</span>
+                            </label>
+                            <details class="tree__details" open>
+                              <summary class="tree__summary">
+                                <span>
+                                  <span class="tree__label">Super order</span>
+                                  <span class="tree__heading">Forcipulatacea</span>
+                                </span>
+                                <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                  <use xlink:href="#icon-minus"></use>
+                                </svg>
+                                <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                  <use xlink:href="#icon-plus"></use>
+                                </svg>
+                                
+                                
+                              </summary>
+                              <ol class="tree__list">
+                                <li class="tree__item">
+                                  <label class="tree__field">
+                                    <input type="checkbox" class="tree__field-checkbox" />
+                                    <span class="tree__field-label">Order Forcipulatida</span>
+                                  </label>
+                                  <details class="tree__details" open>
+                                    <summary class="tree__summary">
+                                      <span>
+                                        <span class="tree__label">Order</span>
+                                        <span class="tree__heading">Forcipulatida</span>
+                                      </span>
+                                      <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                        <use xlink:href="#icon-minus"></use>
+                                      </svg>
+                                      <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                        <use xlink:href="#icon-plus"></use>
+                                      </svg>
+                                      
+                                      
+                                    </summary>
+                                    <ol class="tree__list">
+                                      <li class="tree__item">
+                                        <label class="tree__field">
+                                          <input type="checkbox" class="tree__field-checkbox" />
+                                          <span class="tree__field-label">Family Pedicellasteridae</span>
+                                        </label>
+                                        <details class="tree__details" open>
+                                          <summary class="tree__summary">
+                                            <span>
+                                              <span class="tree__label">Family</span>
+                                              <span class="tree__heading">Pedicellasteridae</span>
+                                            </span>
+                                            <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                              <use xlink:href="#icon-minus"></use>
+                                            </svg>
+                                            <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                              <use xlink:href="#icon-plus"></use>
+                                            </svg>
+                                            
+                                            
+                                          </summary>
+                                          <ol class="tree__list">
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">Genus Allostichaster</span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Allostichaster</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                              </details>
+                                            </li>
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">Genus Anasterias</span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Anasterias</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                              </details>
+                                            </li>
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">
+                                                  Genus
+                                                  Anteliaster
+                                                </span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Anteliaster</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                              </details>
+                                            </li>
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">
+                                                  Genus
+                                                  Aphanasterias
+                                                </span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Aphanasterias</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                              </details>
+                                            </li>
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">
+                                                  Genus
+                                                  Asterias
+                                                </span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Asterias</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                              </details>
+                                            </li>
+                                            <li class="tree__item">
+                                              <label class="tree__field">
+                                                <input type="checkbox" class="tree__field-checkbox" />
+                                                <span class="tree__field-label">
+                                                  Genus
+                                                  Ampheraster
+                                                </span>
+                                              </label>
+                                              <details class="tree__details" open>
+                                                <summary class="tree__summary">
+                                                  <span>
+                                                    <span class="tree__label">Genus</span>
+                                                    <span class="tree__heading">Ampheraster</span>
+                                                  </span>
+                                                  <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-minus"></use>
+                                                  </svg>
+                                                  <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                    <use xlink:href="#icon-plus"></use>
+                                                  </svg>
+                                                  
+                                                  
+                                                </summary>
+                                                <ol class="tree__list">
+                                                  <li class="tree__item">
+                                                    <label class="tree__field">
+                                                      <input type="checkbox" class="tree__field-checkbox" />
+                                                      <span class="tree__field-label">
+                                                        Species
+                                                        A. atactus
+                                                      </span>
+                                                    </label>
+                                                    <details class="tree__details" open>
+                                                      <summary class="tree__summary">
+                                                        <span>
+                                                          <span class="tree__label">Species</span>
+                                                          <span class="tree__heading">A. atactus</span>
+                                                        </span>
+                                                        <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-minus"></use>
+                                                        </svg>
+                                                        <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-plus"></use>
+                                                        </svg>
+                                                        
+                                                        
+                                                      </summary>
+                                                    </details>
+                                                  </li>
+                                                  <li class="tree__item">
+                                                    <label class="tree__field">
+                                                      <input type="checkbox" class="tree__field-checkbox" />
+                                                      <span class="tree__field-label">
+                                                        Species
+                                                        A. chiroplus
+                                                      </span>
+                                                    </label>
+                                                    <details class="tree__details" open>
+                                                      <summary class="tree__summary">
+                                                        <span>
+                                                          <span class="tree__label">Species</span>
+                                                          <span class="tree__heading">  A. chiroplus</span>
+                                                        </span>
+                                                        <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-minus"></use>
+                                                        </svg>
+                                                        <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-plus"></use>
+                                                        </svg>
+                                                        
+                                                      
+                                                      </summary>
+                                                    </details>
+                                                  </li>
+                                                  <li class="tree__item">
+                                                    <label class="tree__field">
+                                                      <input type="checkbox" class="tree__field-checkbox" />
+                                                      <span class="tree__field-label">
+                                                        Species
+                                                        A. marianus
+                                                      </span>
+                                                    </label>
+                                                    <details class="tree__details" open>
+                                                      <summary class="tree__summary">
+                                                        <span>
+                                                          <span class="tree__label">Species</span>
+                                                          <span class="tree__heading">A. marianus</span>
+                                                        </span>
+                                                        <svg class="icon icon--large tree__close-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-minus"></use>
+                                                        </svg>
+                                                        <svg class="icon icon--large tree__open-icon" width="24" height="24">
+                                                          <use xlink:href="#icon-plus"></use>
+                                                        </svg>
+                                                        
+                                                        
+                                                      </summary>
+                                                    </details>
+                                                  </li>
+                                                </ol>
+                                              </details>
+                                            </li>
+                                          </ol>
+                                        </details>
+                                      </li>
+                                    </ol>
+                                  </details>
+                                </li>
+                              </ol>
+                            </details>
+                          </li>
+                        </ol>
+                      </details>
+                    </li>
+                  </ol>
+                </details>
+              </li>
+            </ol>
+          </details>
+        </li>
+      </ol>
+    </div>
+  </div>
   </section>
 
   <section class="explore-page__filters">
