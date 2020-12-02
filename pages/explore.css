@@ -1,9 +1,18 @@
 
 
+.header--explore {
+  position: sticky;
+  top: 0;
+  z-index: 402; /* Just above the .explore-page__controls */
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-sea-salt-gray);
+  box-shadow: 0px 4px 32px rgba(109, 108, 144, 0.12);
+}
+
 .explore-page {
   padding: 0;
-  border-top: 1px solid var(--color-sea-salt-gray);
-  box-shadow: inset 0px 4px 32px rgba(109, 108, 144, 0.12);
+  /* border-top: 1px solid var(--color-sea-salt-gray); */
+  /* box-shadow: inset 0px 4px 32px rgba(109, 108, 144, 0.12); */
 }
 
 .explore-page__header {
@@ -49,7 +58,7 @@
   grid-row: 1 / 2;
   grid-column: -2 / -1;
   padding: var(--space-1);
-  padding: calc(22 * var(--font-size-basis)) var(--space-1);
+  padding: calc(22 * var(--font-size-basis)) 0 calc(22 * var(--font-size-basis)) var(--space-1);
   border-bottom: 1px solid var(--color-sea-salt-gray);
   margin: 0;
 }
@@ -87,7 +96,10 @@
   padding: calc(24 * var(--font-size-basis));
 
   position: sticky;
-  top: 0;
+  z-index: 2;
+  /* top: 0; */
+  --explore-header-height: calc(83 * var(--font-size-basis));
+  top: var(--explore-header-height);
 }
 
 .explore-page__controls--tree {
@@ -132,13 +144,18 @@
 .map-box {
   background: var(--color-ultramarine-blue);
   width: 100%;
-  height: calc(100vh - calc(80 * var(--font-size-basis)));
+  --explore-header-height: calc(83 * var(--font-size-basis));
+  height: calc(100vh - var(--explore-header-height));
 }
 
 .explore-page--map-tree-images .map-box {
   position: sticky !important; /* SHIM: Override .mapboxgl-map */
-  top: 0;
-  height: 100vh;
+  z-index: 1;
+  /* top: 0; */
+  /* height: 100vh; */
+  --explore-header-height: calc(83 * var(--font-size-basis));
+  height: calc(100vh - var(--explore-header-height));
+  top: var(--explore-header-height);
 }
 
 .tree-box {
@@ -150,12 +167,16 @@
     ;
   box-sizing: border-box;
   width: 100%;
+  --explore-header-height: calc(83 * var(--font-size-basis));
+  min-height: calc(100vh - var(--explore-header-height));
 }
 
 .explore-page--map-tree-images .tree-box {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  /* top: 0; */
+  /* height: 100vh; */
+  height: calc(100vh - var(--explore-header-height));
+  top: var(--explore-header-height);
   overflow-y: auto;
 }
 
