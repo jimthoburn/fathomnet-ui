@@ -30,6 +30,16 @@
   transform: translateX(-100%);
 }
 
+.modal--align-end {
+  transform: translateY(-100%);
+}
+
+/* SHIM: Avoid covering the button */
+.button + .modal--align-end {
+  --button-height: calc(72 * var(--font-size-basis));
+  margin-top: calc(var(--button-height) * -1);
+}
+
 .modal--data-list {
   padding: 0;
 }

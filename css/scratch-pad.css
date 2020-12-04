@@ -134,12 +134,15 @@ body {
 .button-list {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-items: space-between;
+  margin-bottom: calc(-8 * var(--font-size-basis));
 }
 
-.button-list__item:not(:first-child) {
-  margin-left: calc(8 * var(--font-size-basis));
+.button-list__item {
+  margin-right: calc(8 * var(--font-size-basis));
+  margin-bottom: calc(8 * var(--font-size-basis));
 }
 
 .dropdown-button {
@@ -163,3 +166,35 @@ body {
   opacity: 25%;
   pointer-events: none;
 } */
+
+
+.has-inactive-state {
+  transition: opacity 0.4s;
+}
+
+.has-inactive-state--inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* SHIM: Make space for the dropdown button */
+.annotation-field {
+  display: flex;
+  align-items: center;
+}
+.annotation-field .field {
+  grid-template-columns: 1fr max-content 1.5em !important;
+}
+
+.dark-mode .data-list__button:hover,
+.dark-mode .data-list__button:active,
+.dark-mode .data-list__button:focus {
+  background-color: var(--color-hado-gray);
+}
+
+.annotation-field .dropdown-button {
+  padding: 1em;
+  transform: translate(-100%, 0);
+}

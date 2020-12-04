@@ -58,7 +58,7 @@
   grid-row: 1 / 2;
   grid-column: -2 / -1;
   padding: var(--space-1);
-  padding: calc(22 * var(--font-size-basis)) 0 calc(22 * var(--font-size-basis)) var(--space-1);
+  padding: calc(22 * var(--font-size-basis)) var(--space-1);
   border-bottom: 1px solid var(--color-sea-salt-gray);
   margin: 0;
 }
@@ -165,10 +165,23 @@
     var(--background-image, linear-gradient(transparent, transparent)),
     linear-gradient(180deg, #26266E 0%, rgba(36, 35, 105, 0.96) 49.48%, rgba(33, 31, 99, 0.42) 100%)
     ;
+  background-repeat: repeat;
   box-sizing: border-box;
   width: 100%;
   --explore-header-height: calc(83 * var(--font-size-basis));
   min-height: calc(100vh - var(--explore-header-height));
+
+  /* Position the “Exact match” button at bottom of available space */
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+}
+
+.tree-box__dropdown {
+  padding: calc(24 * var(--font-size-basis));
+  position: sticky;
+  bottom: 0;
+  left: 0;
 }
 
 .explore-page--map-tree-images .tree-box {
@@ -288,8 +301,8 @@
   z-index: 1;
   bottom: 0;
   right: 0;
-  margin: calc(40 * var(--font-size-basis)) var(--space-1);
-  transition: opacity 0.2s;
+  margin: calc(40 * var(--font-size-basis)) var(--space-1) calc(24 * var(--font-size-basis));
+  transition: opacity 0.4s;
 }
 
 .explore-page__download-button--inactive {

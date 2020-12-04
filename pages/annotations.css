@@ -88,23 +88,25 @@
 .concepts-figure__svg {
   /* border: 3px solid green; */
   --color: var(--color-seafoam-green);
-  --stroke-width: calc(var(--image-height, 1080) / 100);
+  --stroke-width: calc(var(--image-height, 1080) / 200);
   position: relative;
   z-index: 1;
 }
 .concepts-figure__svg-group {
   stroke: var(--color);
-  stroke-width: var(--stroke-width);
-  stroke-width: calc(var(--stroke-width) * 1/2);
+  stroke-width: calc(var(--stroke-width) * 1px);
+}
+.concepts-figure__svg-group * {
+  transition: stroke 0.6s, fill 0.6s;
 }
 .concepts-figure__svg-group[data-state="active"] {
-  stroke-width: calc(var(--stroke-width) * 1/2);
+  stroke-width: calc(var(--stroke-width) * 1px);
 }
 .concepts-figure__svg-group:not([data-state="active"]) .concepts-figure__svg-circle {
   opacity: 0;
 }
 .concepts-figure__svg-circle {
-  r: calc(var(--image-height, 1080) / 50);
+  r: calc(var(--image-height, 1080) / 50 * 1px);
 }
 .concepts-figure__svg-group[data-state="idle"] .concepts-figure__svg-shape,
 .concepts-figure__svg-group[data-state="idle"] .concepts-figure__svg-text {

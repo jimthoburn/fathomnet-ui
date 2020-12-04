@@ -56,6 +56,7 @@ title: Annotations
         class="concepts-figure__svg-group"
         data-annotation-box
         data-annotation-id="concept-1"
+        data-state="active"
         >
         <text
           class="concepts-figure__svg-text"
@@ -110,8 +111,8 @@ title: Annotations
     </svg>
     <div class="concepts-figure__field-container">
       <ul class="concepts-figure__field-list">
-        <li class="concepts-figure__field-item">
-          <label style="--field-x: 1040; --field-y: 440;" class="field field--has-placeholder field--has-icon annotation-field" data-annotation-field="hidden" data-annotation-id="concept-1">
+        <li class="concepts-figure__field-item annotation-field" style="--field-x: 1040; --field-y: 440;"  data-annotation-field="visible" data-annotation-id="concept-1">
+          <label class="field field--has-placeholder field--has-icon">
             <span class="field__label">Annotation</span>
             <input
               type="text"
@@ -121,6 +122,22 @@ title: Annotations
               list="search-concepts" />
             <svg class="icon field__icon"><use xlink:href="#icon-edit"></use></svg>
           </label>
+          <details class="ccollection-list__options">
+            <summary class="ccollection-list__options-button dropdown-button">
+              <svg aria-label="Options" width="24" height="24" class="icon icon--small">
+                <use xlink:href="#icon-menu"></use>
+              </svg>
+            </summary>
+            <div class="modal modal--justify-end modal--data-list dropshadow--dark">
+              <ul class="data-list modal__data-list">
+                <li class="data-list__item">
+                  <button type="button" class="data-list__button">
+                    Delete annotation
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </details>
         </li>
         <li class="concepts-figure__field-item">
           <label style="--field-x: 640; --field-y: 640;" class="field field--has-placeholder field--has-icon annotation-field" data-annotation-field="hidden" data-annotation-id="concept-2">
