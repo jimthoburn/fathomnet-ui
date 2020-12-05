@@ -54,3 +54,7 @@
   font-weight: bold; /* 700 */
   font-style: italic;
 }
+
+body {
+  font-family: 'Regola Pro Trial', sans-serif;
+}

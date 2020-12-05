@@ -1,0 +1,201 @@
+---
+layout: prototype-without-header
+title: Account
+---
+
+<header class="header">
+  <h2 class="logotype">
+    <a href="/pages/">FathomNet</a>
+  </h2>
+  <ul class="nav">
+    <li>
+      <a
+        href="/pages/explore/"
+        class="
+          nav__link
+        "
+      >
+        Explore
+      </a>
+    </li>
+    <li>
+      <a
+        href="/contributors/"
+        class="nav__link"
+      >
+        Contributors
+      </a>
+    </li>
+    <li>
+      <a
+        href="/collections/"
+        class="
+          nav__link
+        "
+      >
+        Collections
+      </a>
+    </li>
+    <li>
+      <a
+        href="/about-us/"
+        class="nav__link"
+        >
+        About us
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        class="nav__link"
+        >
+        <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        href="/account/"
+        class="avatar avatar--alert">
+        <img
+          class="avatar__image"
+          src="/images/unsplash/eye-for-ebony-OeXcIHFwtsM-unsplash.webp"
+          alt="Account"
+          width="24" height="24"
+          />
+      </a>
+    </li>
+  </ul>
+</header>
+
+<main class="main account-page" style="--background-image: url('/images/net.png');">
+
+  <nav>
+    <h2>Account</h2>
+    <ul class="nav">
+      <li>
+        <a
+          href="/"
+          class="
+            nav__link
+            nav__link--active
+          "
+        >
+          Profile
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="
+            nav__link
+            nav__link--alert
+          "
+        >
+          Downloads
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+          class="nav__link"
+        >
+        API key
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <form class="dropshadow--soft">
+
+    <h1>Profile</h1>
+
+    <p>
+      <span class="body-1">Avatar</span>
+      <span class="avatar">
+        <img
+          class="avatar__image"
+          src="/images/unsplash/eye-for-ebony-OeXcIHFwtsM-unsplash.webp"
+          alt="Avatar"
+          width="24" height="24"
+          />
+      </span>
+    </p>
+
+    <fieldset>
+      <legend class="body-1">Contact</legend>
+      <ol>
+        <li>
+          <label class="field field--has-placeholder">
+            <span class="field__label">Full name</span>
+            <input
+              type="text"
+              placeholder="Full name"
+              value="Danâi 祝绪丹"
+              class="field__input"
+              />
+          </label>
+        </li>
+        <li>
+          <label class="field field--has-placeholder field--has-icon field--readonly">
+            <span class="field__label">Email address</span>
+            <input
+              type="text"
+              value="danai@example.com"
+              placeholder="Email address"
+              disabled
+              class="field__input"
+              />
+            <svg class="icon field__icon"><use xlink:href="#icon-lock"></use></svg>
+          </label>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend class="body-1">Work</legend>
+      <ol>
+        <li>
+          <label class="field field--has-placeholder">
+            <span class="field__label">Organization</span>
+            <input
+              type="text"
+              placeholder="Organization"
+              class="field__input"
+              />
+          </label>
+        </li>
+        <li>
+          <label class="field field--has-placeholder">
+            <span class="field__label">Job title</span>
+            <input
+              type="text"
+              placeholder="Job title"
+              class="field__input"
+              />
+          </label>
+        </li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend class="body-1">Bio</legend>
+      <label class="field field--has-placeholder">
+        <span class="field__label">Biography</span>
+        <textarea
+          placeholder="Add brief description for your bio"
+          class="field__input"
+          >
+        </textarea>
+      </label>
+      <span class="label-1" style="color: var(--color-pelagic-gray)">1024</span>
+    </fieldset>
+
+    <p>
+      <button type="submit" class="button">Save</button>
+    </p>
+
+  </form>
+
+</main>

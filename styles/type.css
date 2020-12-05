@@ -70,7 +70,6 @@
 }
 
 body {
-  font-family: 'Regola Pro Trial', sans-serif;
   font-size: 100%;
   font-size: var(--font-size-16);
   line-height: var(--line-height-base);

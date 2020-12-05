@@ -5,8 +5,6 @@ permalink: /fathomnet-ui-v0.0.9-alpha/fathomnet-ui.css
 
 {% include_relative css/scratch-pad.css %}
 
-{% include_relative css/fonts.css %}
-
 {% include_relative styles/type.css %}
 {% include_relative styles/color.css %}
 {% include_relative styles/other.css %}

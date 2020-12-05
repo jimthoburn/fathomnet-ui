@@ -22,13 +22,17 @@
   border-radius: calc(8/16 * 1em);
 
   background-color: var(--background-color);
-  color: var(--text-color);
 
   display: grid;
   grid-template-columns: 1fr max-content;
   box-sizing: border-box;
   width: calc(400/16 * 1em);
   max-width: 100%;
+}
+
+.field:not(.field--has-container):not(.field--readonly),
+.field__container {
+  color: var(--text-color);
 }
 
 .field > * {
