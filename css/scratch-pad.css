@@ -116,9 +116,9 @@ body {
   border-bottom: 2px solid transparent;
   width: max-content;
 }
-:hover > .link-hit-area__active-indicator,
-:active > .link-hit-area__active-indicator,
-:focus > .link-hit-area__active-indicator,
+.link-hit-area:hover .link-hit-area__active-indicator,
+.link-hit-area:active .link-hit-area__active-indicator,
+.link-hit-area:focus .link-hit-area__active-indicator,
 .link-hit-area__active-indicator--active {
   border-color: initial;
 }
