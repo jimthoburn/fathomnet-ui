@@ -17,6 +17,11 @@
   height: calc(104 * var(--font-size-basis));
 }
 
+.avatar__image--medium {
+  width: calc(64 * var(--font-size-basis));
+  height: calc(64 * var(--font-size-basis));
+}
+
 .avatar--alert::after {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
