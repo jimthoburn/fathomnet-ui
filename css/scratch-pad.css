@@ -1,11 +1,26 @@
 
 :root {
   --link-color: var(--color-ultramarine-blue);
+  --focus-outline-color: rgba(85, 122, 255, 0.5);
 
   --background-color: var(--color-white);
   --text-color: var(--color-abyss-gray);
 
   --field-border-color: var(--color-salt-marsh-gray);
+}
+
+a:focus,
+button:focus,
+summary:focus {
+  outline: 4px solid var(--focus-outline-color);
+  outline-offset: 4px;
+}
+.data-list__button:focus {
+  outline-offset: -4px;
+}
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem var(--focus-outline-color);
 }
 
 .dark-mode {
@@ -19,6 +34,7 @@
   --button-text-color--primary: var(--color-benthos-blue);
 
   --link-color: var(--color-white);
+  --focus-outline-color: var(--color-lagoon-blue);
 
   --field-border-color: var(--color-ultramarine-blue);
 }
@@ -63,7 +79,7 @@ a {
 }
 
 a, button {
-  /* transition: background-color 0.2s, border-color 0.2s, color 0.2s; */
+  /* transition: background-color var(--transition-duration), border-color var(--transition-duration), color var(--transition-duration); */
 }
 
 /* @TODO Remove from HTML? */
@@ -113,8 +129,13 @@ body {
   display: block;
 }
 .link-hit-area__active-indicator {
+  padding-top: 1px;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
   width: max-content;
+
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 .link-hit-area:hover .link-hit-area__active-indicator,
 .link-hit-area:active .link-hit-area__active-indicator,

@@ -34,7 +34,7 @@
   border-radius: calc(var(--button-height) / 2);
 
   transition-property: color, background-color, border-color;
-  transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
 /* SHIM: Reset <summary /> elements */
@@ -101,7 +101,7 @@
   border-color: var(--color-ultramarine-blue);
 
   transition-property: color, background-color, border-color;
-  transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
 :hover > .button__icon,

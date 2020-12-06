@@ -11,7 +11,11 @@
 .logotype > a {
   text-decoration: none;
   color: inherit;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
+
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 .logotype > a:hover,
 .logotype > a:active,

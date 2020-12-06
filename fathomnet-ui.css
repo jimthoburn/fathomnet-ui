@@ -7,6 +7,7 @@ permalink: /fathomnet-ui-v0.0.9-alpha/fathomnet-ui.css
 
 {% include_relative styles/type.css %}
 {% include_relative styles/color.css %}
+{% include_relative styles/motion.css %}
 {% include_relative styles/other.css %}
 
 {% include_relative elements/icon.css %}

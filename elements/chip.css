@@ -26,7 +26,7 @@
   font-weight: var(--font-weight-bold);
 
   transition-property: color, background-color, border-color;
-  transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
 .chip:hover,

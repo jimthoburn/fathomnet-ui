@@ -45,6 +45,8 @@
   padding: 0;
 
   display: flex;
+  padding-top: 1px;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
 
   /* SHIM: Avoid wrapping the “Sign in” link in the search header */
@@ -55,6 +57,9 @@
   grid-auto-flow: column;
   grid-column-gap: 0.5em;
   align-items: center;
+
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
 .nav__link--vertical {
@@ -70,6 +75,9 @@
   border-bottom-color: unset;
 }
 
+.nav__link--alert {
+  position: relative;
+}
 .nav__link--alert::after {
   content: "";
   display: block;
@@ -77,5 +85,11 @@
   height: calc(8 * var(--font-size-basis));
   border-radius: 100%;
   background-color: var(--color-snapper-red);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  margin-top: calc(2 * var(--font-size-basis));
+  margin-right: calc(-5 * var(--font-size-basis));
 }
 

@@ -12,7 +12,8 @@
 }
 
 .account-page__background {
-  height: calc(513 * var(--font-size-basis));
+  /* height: calc(513 * var(--font-size-basis)); */
+  height: calc(384 * var(--font-size-basis));
   width: 100vw;
   /* filter: invert(100%); */
   opacity: 8%;

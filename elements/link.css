@@ -25,6 +25,9 @@
   font-size: var(--font-size-18);
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
+
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
 .link--large {
@@ -50,6 +53,8 @@
 }
 
 .link:not(.link--has-active-indicator) {
+  padding-top: 1px;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
 }
 
@@ -62,6 +67,8 @@
 }
 
 .link__active-indicator {
+  padding-top: 1px;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
   width: max-content;
 }
