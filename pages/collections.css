@@ -1,4 +1,20 @@
 
+
+.collections-page {
+  padding: calc(48 * var(--font-size-basis)) calc(48 * var(--font-size-basis)) calc(128 * var(--font-size-basis));
+  /* display: grid;
+  grid-template-columns: 0 52fr 1080fr 52fr 0;
+  grid-template-rows: 1fr calc(64 * var(--font-size-basis));
+  grid-column-gap: calc(64 * var(--font-size-basis)); */
+  max-width: calc(1080 * var(--font-size-basis));
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.collections-page > * {
+  grid-column: 3 / -3;
+}
+
 .collections-page__header {
   display: flex;
   align-items: center;
