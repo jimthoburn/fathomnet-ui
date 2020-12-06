@@ -1,1 +1,98 @@
 
+.account-page {
+  padding: calc(48 * var(--font-size-basis)) 0 0;
+  display: grid;
+  grid-template-columns: 0 52fr 208fr 808fr 52fr 0;
+  grid-template-rows: 1fr calc(64 * var(--font-size-basis));
+  grid-column-gap: calc(64 * var(--font-size-basis));
+  /* background-image: var(--background-image);
+  background-position: bottom;
+  background-size: auto calc(400 * var(--font-size-basis));
+  background-repeat: repeat-x; */
+}
+
+.account-page__background {
+  height: calc(513 * var(--font-size-basis));
+  width: 100vw;
+  /* filter: invert(100%); */
+  opacity: 8%;
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  align-self: end;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.account-page__nav {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  margin-top: 0;
+  padding-top: calc(12 * var(--font-size-basis));
+}
+
+.account-page__nav-heading {
+  margin-top: 0;
+}
+
+.account-page__content {
+  grid-column: -4 / -3;
+  grid-row: 1 / 2;
+  margin-top: 0;
+  padding: calc(48 * var(--font-size-basis)) calc(64 * var(--font-size-basis));
+  background-color: var(--background-color);
+}
+
+
+.account-page__content-heading {
+  margin-top: 0;
+}
+
+.profile-form__avatar {
+  margin-top: calc(48 * var(--font-size-basis));
+}
+
+
+.profile-form__fieldset {
+  margin-top: calc(48 * var(--font-size-basis));
+  padding: 0;
+  border-width: 0;
+}
+
+
+.profile-form__avatar-label {
+  display: block;
+  margin-bottom: calc(24 * var(--font-size-basis));
+}
+.profile-form__legend {
+  margin-bottom: calc(16 * var(--font-size-basis));
+}
+
+.profile-form__submit {
+  margin-top: calc(48 * var(--font-size-basis));
+}
+
+.profile-form__field-list,
+.profile-form__field-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.profile-form__field-list {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: calc(332 * var(--font-size-basis)) calc(332 * var(--font-size-basis));
+  grid-column-gap: calc(8 * var(--font-size-basis))
+}
+
+.profile-form__field-single {
+  margin-top: 0;
+}
+
+.profile-form__field-single-label:not(.field--has-container) {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+

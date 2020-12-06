@@ -69,16 +69,24 @@ title: Account
   </ul>
 </header>
 
-<main class="main account-page" style="--background-image: url('/images/net.png');">
+<main class="account-page">
+  <img
+    class="account-page__background"
+    src="/images/net-original.png"
+    width="1"
+    height="1"
+    alt=""
+    />
 
-  <nav>
-    <h2>Account</h2>
-    <ul class="nav">
+  <nav class="account-page__nav">
+    <h2 class="heading-3 account-page__nav-heading">Account</h2>
+    <ul class="nav nav--vertical">
       <li>
         <a
           href="/"
           class="
             nav__link
+            nav__link--vertical
             nav__link--active
           "
         >
@@ -90,6 +98,7 @@ title: Account
           href="/"
           class="
             nav__link
+            nav__link--vertical
             nav__link--alert
           "
         >
@@ -99,7 +108,10 @@ title: Account
       <li>
         <a
           href="/"
-          class="nav__link"
+          class="
+            nav__link
+            nav__link--vertical
+          "
         >
         API key
         </a>
@@ -107,95 +119,105 @@ title: Account
     </ul>
   </nav>
 
-  <form class="dropshadow--soft">
+  <section class="account-page__content dropshadow--soft">
+    <form>
 
-    <h1>Profile</h1>
+      <h1 class="heading-4 account-page__content-heading">Profile</h1>
 
-    <p>
-      <span class="body-1">Avatar</span>
-      <span class="avatar">
-        <img
-          class="avatar__image"
-          src="/images/unsplash/eye-for-ebony-OeXcIHFwtsM-unsplash.webp"
-          alt="Avatar"
-          width="24" height="24"
-          />
-      </span>
-    </p>
+      <p class="profile-form__avatar">
+        <span class="body-1 profile-form__avatar-label">Avatar</span>
+        <span class="avatar">
+          <img
+            class="avatar__image avatar__image--large"
+            src="/images/unsplash/eye-for-ebony-OeXcIHFwtsM-unsplash.webp"
+            alt="Avatar"
+            width="24" height="24"
+            />
+        </span>
+      </p>
 
-    <fieldset>
-      <legend class="body-1">Contact</legend>
-      <ol>
-        <li>
-          <label class="field field--has-placeholder">
-            <span class="field__label">Full name</span>
-            <input
-              type="text"
-              placeholder="Full name"
-              value="Danâi 祝绪丹"
-              class="field__input"
-              />
-          </label>
-        </li>
-        <li>
-          <label class="field field--has-placeholder field--has-icon field--readonly">
-            <span class="field__label">Email address</span>
-            <input
-              type="text"
-              value="danai@example.com"
-              placeholder="Email address"
-              disabled
-              class="field__input"
-              />
-            <svg class="icon field__icon"><use xlink:href="#icon-lock"></use></svg>
-          </label>
-        </li>
-      </ol>
-    </fieldset>
+      <fieldset class="profile-form__fieldset">
+        <legend class="body-1 profile-form__legend">Contact</legend>
+        <ol class="profile-form__field-list">
+          <li class="profile-form__field-list__item">
+            <label class="field field--has-placeholder">
+              <span class="field__label">Full name</span>
+              <input
+                type="text"
+                placeholder="Full name"
+                value="Danâi 祝绪丹"
+                class="field__input"
+                />
+            </label>
+          </li>
+          <li class="profile-form__field-list__item">
+            <label class="field field--has-placeholder field--has-icon field--readonly">
+              <span class="field__label">Email address</span>
+              <input
+                type="text"
+                value="danai@example.com"
+                placeholder="Email address"
+                disabled
+                class="field__input"
+                />
+              <svg class="icon field__icon"><use xlink:href="#icon-lock"></use></svg>
+            </label>
+          </li>
+        </ol>
+      </fieldset>
 
-    <fieldset>
-      <legend class="body-1">Work</legend>
-      <ol>
-        <li>
-          <label class="field field--has-placeholder">
-            <span class="field__label">Organization</span>
-            <input
-              type="text"
-              placeholder="Organization"
-              class="field__input"
-              />
-          </label>
-        </li>
-        <li>
-          <label class="field field--has-placeholder">
-            <span class="field__label">Job title</span>
-            <input
-              type="text"
-              placeholder="Job title"
-              class="field__input"
-              />
-          </label>
-        </li>
-      </ol>
-    </fieldset>
+      <fieldset class="profile-form__fieldset">
+        <legend class="body-1 profile-form__legend">Work</legend>
+        <ol class="profile-form__field-list">
+          <li class="profile-form__field-list__item">
+            <label class="field field--has-placeholder">
+              <span class="field__label">Organization</span>
+              <input
+                type="text"
+                placeholder="Organization"
+                class="field__input"
+                />
+            </label>
+          </li>
+          <li class="profile-form__field-list__item">
+            <label class="field field--has-placeholder">
+              <span class="field__label">Job title</span>
+              <input
+                type="text"
+                placeholder="Job title"
+                class="field__input"
+                />
+            </label>
+          </li>
+        </ol>
+      </fieldset>
 
-    <fieldset>
-      <legend class="body-1">Bio</legend>
-      <label class="field field--has-placeholder">
-        <span class="field__label">Biography</span>
-        <textarea
-          placeholder="Add brief description for your bio"
-          class="field__input"
-          >
-        </textarea>
-      </label>
-      <span class="label-1" style="color: var(--color-pelagic-gray)">1024</span>
-    </fieldset>
+      <div class="profile-form__fieldset">
+        <div class="body-1 profile-form__legend" aria-hidden="true">Bio</div>
+        <p class="profile-form__field-single">
+          <spa class="field field--has-placeholder field--has-character-count profile-form__field-single-label">
+            <label>
+            <span class="field__label">Biography</span>
+            <textarea
+              placeholder="Add brief description for your bio"
+              class="field__input field__input--textarea"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus lacus viverra, laoreet nibh eu, tristique nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec leo magna, consequat sit amet malesuada ac, facilisis a magna. Nam interdum arcu quis libero accumsan auctor. Integer malesuada ullamcorper nunc, et convallis ipsum rutrum a. Maecenas eu justo id ex elementum efficitur non a augue. Aliquam erat volutpat. Mauris dolor velit, blandit nec consectetur id, consectetur vel nibh. Sed non ante iaculis dui dapibus pulvinar. Quisque pretium a velit vitae euismod. Nulla tempus facilisis nisl vel facilisis. Cras sit amet libero vitae elit vestibulum consequat.
 
-    <p>
-      <button type="submit" class="button">Save</button>
-    </p>
+Proin molestie nisl libero, eu vulputate lectus facilisis vel. Vivamus a condimentum ipsum. Vestibulum posuere, nulla a rhoncus dapibus, orci turpis scelerisque dolor, eu aliquet lorem ligula et leo. Mauris et sollicitudin dolor, vitae bibendum lorem. Praesent a commodo ex. Suspendisse finibus nulla eget quam tristique vulputate. Fusce consectetur pretium tincidunt. Phasellus sed purus vitae sem fermentum congue. Integer a diam sed neque euismod dignissim. In tristique nunc vitae suscipit dignissim. Vivamus et gravida risus.
 
-  </form>
+Fusce vulputate velit tellus, ut maximus neque efficitur ac. Sed malesuada lacus vel bibendum fermentum. Nam lobortis vestibulum tellus, sit amet scelerisque turpis egestas a. Donec in lacinia turpis. Aenean in placerat nunc. Aenean venenatis nisl sed viverra pretium. Praesent viverra vel lacus ac elementum. Proin commodo pretium odio non finibus. Nulla facilisis, lorem non blandit suscipit, urna mauris posuere felis, non pulvinar odio sem at ipsum. In sodales volutpat elementum. Duis nunc arcu, blandit in nulla non, pellentesque vulputate erat. Mauris ac est aliquet, iaculis justo et, euismod erat. Etiam eleifend rutrum molestie. Integer dui tortor, luctus at erat ut, tristique ullamcorper eros. Etiam dictum tincidunt urna, quis sagittis felis ornare eget. Nullam maximus consequat turpis. </textarea>
+            </label>
+            <span class="label-1 field__character-count">1024</span>
+          </spann>
+        </p>
+      </div>
+
+      <p class="profile-form__submit">
+        <button type="submit" class="button">Save</button>
+      </p>
+
+    </form>
+
+  </section>
 
 </main>

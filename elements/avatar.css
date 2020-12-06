@@ -5,11 +5,16 @@
 .avatar__image {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  width: 2em;
-  height: 2em;
+  width: calc(32 * var(--font-size-basis));
+  height: calc(32 * var(--font-size-basis));
   object-fit: cover;
   border-radius: 100%;
   display: block;
+}
+
+.avatar__image--large {
+  width: calc(104 * var(--font-size-basis));
+  height: calc(104 * var(--font-size-basis));
 }
 
 .avatar--alert::after {
@@ -19,8 +24,8 @@
   justify-self: end;
   content: "";
   display: block;
-  width: 0.375em;
-  height: 0.375em;
+  width: calc(8 * var(--font-size-basis));
+  height: calc(8 * var(--font-size-basis));
   border-radius: 100%;
   background-color: var(--color-snapper-red);
 }
