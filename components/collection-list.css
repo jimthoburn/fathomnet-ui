@@ -53,6 +53,7 @@
 }
 
 .collection-list__meta {
+  grid-row: 2 / 3;
 }
 
 .collection-list__meta > * {
@@ -64,6 +65,7 @@
 }
 
 .collection-list__heading {
+  grid-row: 1 / 2;
   align-self: end;
   display: flex;
   align-items: center;

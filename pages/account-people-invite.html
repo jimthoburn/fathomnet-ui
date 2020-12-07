@@ -409,4 +409,30 @@ title: Account
 
   </section>
 
+  <div class="modal__backdrop overlay"></div>
+
+  <dialog open class="modal modal--dialog dropshadow--dark">
+    <h4 class="h4">Invite people</h4>
+
+    <p>
+      <label class="field field--has-placeholder">
+        <span class="field__label">Email address(es)</span>
+        <input
+          type="email"
+          placeholder="Email address(es)"
+          class="field__input" />
+      </label>
+    </p>
+
+    <ul class="button-list modal__option-list">
+      <li class="button-list__item modal__option-list-item">
+        <button type="button" class="button button--primary">Send invites</button>
+      </li>
+      <li class="button-list__item modal__option-list-item">
+        <button type="button" class="link link--primary modal__option-link">Cancel</button>
+      </li>
+    </ul>
+    
+  </dialog>
+
 </main>

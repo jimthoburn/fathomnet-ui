@@ -50,6 +50,13 @@
   overflow-y: auto;
 }
 
+.modal__content {
+  --modal-header-and-footer-height: calc(300 * var(--font-size-basis));
+  max-height: calc(100vh - var(--modal-header-and-footer-height));
+  box-sizing: content-box;
+  overflow: auto;
+}
+
 .modal--dialog {
   text-align: center;
   padding-left: calc(36 * var(--font-size-basis));

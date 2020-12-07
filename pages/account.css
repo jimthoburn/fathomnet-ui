@@ -46,6 +46,7 @@
   background-color: var(--background-color);
   min-height: calc(640 * var(--font-size-basis));
   box-sizing: content-box;
+  border-radius: calc(8 * var(--font-size-basis));
 }
 
 
