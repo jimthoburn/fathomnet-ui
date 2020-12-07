@@ -47,6 +47,10 @@
   grid-row-gap: calc(7 * var(--font-size-basis));
 }
 
+.collection-list__description--inactive  {
+  opacity: 50%;
+}
+
 .collection-list__description > * {
   margin-top: 0;
   margin-bottom: 0;

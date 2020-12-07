@@ -411,16 +411,16 @@ title: Account
 
   <div class="modal__backdrop overlay"></div>
 
-  <dialog open class="modal modal--dialog dropshadow--dark" style="padding-bottom: calc(48 * var(--font-size-basis)); min-width: calc(352 * var(--font-size-basis));">
+  <dialog open class="modal modal--dialog modal--details dropshadow--dark">
 
-    <p>
-      <button type="button" class="link link--primary" style="width: max-content; margin-left: auto;">Edit</button>
+    <p class="modal__aside-button">
+      <button type="button" class="link link--primary">Edit</button>
     </p>
 
     <div class="modal__content">
 
       <span
-        class="avatar" style="margin: 0 auto; display: block; width: max-content;">
+        class="avatar modal__avatar">
         <img
           class="avatar__image avatar__image--large"
           src="/images/unsplash/eye-for-ebony-OeXcIHFwtsM-unsplash.webp"
@@ -429,10 +429,17 @@ title: Account
           />
       </span>
 
-      <h4 class="body-1" style="margin-top: calc(12 * var(--font-size-basis)); margin-bottom: 0;">Janice Cho</h4>
-      <p class="body-5 text-meta" style="margin-top: calc(4 * var(--font-size-basis));"><a class="link link--medium" href="mailto:janice@natgeo.org" style="width: max-content; margin: 0 auto;">janice@natgeo.org</a></p>
+      <h4 class="body-1 modal__headline">Janice Cho</h4>
+      <p class="body-5 text-meta modal__meta">
+        <a
+          class="link link--medium modal__meta-link"
+          href="mailto:janice@natgeo.org"
+          >
+          janice@natgeo.org
+        </a>
+      </p>
 
-      <dl class="description-list" style="text-align: left; margin-top: calc(40 * var(--font-size-basis));">
+      <dl class="description-list modal__description-list">
         <dt class="description-title">Organization</dt>
         <dd class="description-data">National Geographic</dd>
         <dt class="description-title">Job title</dt>

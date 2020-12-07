@@ -50,13 +50,6 @@
   overflow-y: auto;
 }
 
-.modal__content {
-  --modal-header-and-footer-height: calc(300 * var(--font-size-basis));
-  max-height: calc(100vh - var(--modal-header-and-footer-height));
-  box-sizing: content-box;
-  overflow: auto;
-}
-
 .modal--dialog {
   text-align: center;
   padding-left: calc(36 * var(--font-size-basis));
@@ -66,6 +59,13 @@
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.modal__content {
+  --modal-header-and-footer-height: calc(300 * var(--font-size-basis));
+  max-height: calc(100vh - var(--modal-header-and-footer-height));
+  box-sizing: content-box;
+  overflow: auto;
 }
 
 .modal__option-list {
@@ -107,6 +107,41 @@
   margin-bottom: 0;
 }
 
+.modal--details {
+  padding-bottom: calc(48 * var(--font-size-basis));
+  min-width: calc(352 * var(--font-size-basis));
+}
+
+.modal__aside-button {
+  width: max-content;
+  margin-left: auto;
+}
+
+.modal__avatar {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__headline {
+  margin-top: calc(12 * var(--font-size-basis));
+  margin-bottom: 0;
+}
+
+.modal__meta {
+  margin-top: calc(4 * var(--font-size-basis));
+}
+
+.modal__meta-link {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.modal__description-list {
+  text-align: left;
+  margin-top: calc(40 * var(--font-size-basis));
+}
+
 .modal__field {
   margin: calc(24 * var(--font-size-basis));
 }
@@ -138,3 +173,12 @@
   /* SHIM: Same z-index as the modal */
   z-index: 2;
 }
+
+
+
+.modal .profile-form__fieldset {
+  /* SHIM: Reset the effect of .modal--dialog */
+  text-align: start;
+}
+
+

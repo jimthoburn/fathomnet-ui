@@ -109,8 +109,19 @@
   padding-left: 0;
 }
 
+.profile-form__checkbox-list,
+.profile-form__checkbox-list__item {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.profile-form__checkbox-list {
+  margin: 0;
+}
+
 .profile-form__field-list {
-  margin-top: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: calc(332 * var(--font-size-basis)) calc(332 * var(--font-size-basis));
   grid-column-gap: calc(8 * var(--font-size-basis))

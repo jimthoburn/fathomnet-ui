@@ -7,6 +7,17 @@
   --color-brightness: 0;
 }
 
+.dark-mode {
+  --pattern-library-background-color: var(--color-aphotic-blue);
+  --pattern-library-text-color: var(--color-white);
+  --border-color: var(--color-aphotic-blue);
+  --text-color: var(--color-white);
+}
+
+.dark-mode .components-preview {
+  background-color: var(--color-abyss-gray);
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --text-color-color: var(--color-aphotic-blue);
