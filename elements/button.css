@@ -28,7 +28,7 @@
   line-height: var(--line-height-1);
   font-weight: var(--font-weight-bold);
 
-  padding: calc(16 * var(--font-size-basis)) calc(31 * var(--font-size-basis));
+  padding: calc(16 * var(--font-size-basis)) calc(40 * var(--font-size-basis));
   --button-height: calc(56 * var(--font-size-basis));
 
   border-radius: calc(var(--button-height) / 2);
