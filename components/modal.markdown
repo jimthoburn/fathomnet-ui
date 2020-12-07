@@ -273,7 +273,7 @@ title: Modal
           </span>
         </label>
       </li>
-      <li>
+      <li class="field-list__item">
         <label class="field field--has-container modal__field">
           <span class="field__label">End</span>
           <span class="field__container">
@@ -325,7 +325,7 @@ title: Modal
           </span>
         </label>
       </li>
-      <li>
+      <li class="field-list__item">
         <label class="field field--has-container modal__field">
           <span class="field__label">End</span>
           <span class="field__container">

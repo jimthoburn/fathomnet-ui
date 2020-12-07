@@ -1,0 +1,175 @@
+---
+layout: none
+title: FathomNet
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}{% unless page.title contains "FathomNet" %} / FathomNet{% endunless %}</title>
+    <style>
+    {% include fonts.css %}
+    </style>
+    <link rel="stylesheet" href="/css/ui.css" />
+    {% include noindex.html %}
+  </head>
+  <body class="standard-layout">
+    {% include icons.svg %}
+
+    <header class="header standard-layout__header">
+      <h2 class="logotype">
+        <a href="/pages/">FathomNet</a>
+      </h2>
+      <ul class="nav">
+        <li>
+          <a
+            href="/pages/explore/"
+            class="
+              nav__link
+            "
+          >
+            Explore
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contributors/"
+            class="nav__link"
+          >
+            Contributors
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about-us/"
+            class="nav__link"
+            >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+            class="nav__link"
+            >
+            <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="/sign-in/"
+            class="button"
+            >
+            Sign in
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+
+    <section class="hero">
+      <img
+        alt="A blue-green ocean wave curling up as it reaches shore"
+        src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+      />
+      <h1>Explore our ocean</h1>
+      <p>
+        FathomNet is an open sourced database that will allow us to better
+        understand our ocean and its inhabitants
+      </p>
+
+      <!-- <form class="search">
+        <ol>
+          <li>
+            <label>
+              What
+              <input type="text" placeholder="Animal, mineral, substrait, etc" />
+            </label>
+          </li>
+          <li>
+            <label>
+              Where
+              <input type="text" placeholder="Longitude &amp; latitude, country, etc" />
+            </label>
+          </li>
+          <li>
+            <label>
+              Taxonomy Register
+              <select multiple>
+                <option>All</option>
+                <option>ARMS</option>
+                <option>BeRMS</option>
+                <option>ERMS</option>
+                <option>IMIS</option>
+              </select>
+            </label>
+          </li>
+        </ol>
+      </form>
+
+      <p>Or explore by <a href="">label tree</a></p> -->
+
+    </section>
+
+    <div class="modal__backdrop overlay"></div>
+
+    <dialog open class="modal modal--dialog dropshadow--dark">
+      <h4 class="heading-4">Create account</h4>
+
+      <ul class="field-list modal__field-list">
+        <li class="field-list__item">
+          <label class="field field--social">
+            <input class="field__input-radio" type="radio" name="log_in_with" value="google" />
+            <span class="field__label  field__label--social">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.214 9.92169C18.214 9.29008 18.1628 8.65506 18.0535 8.03369H9.28955V11.6117H14.3083C14.1 12.7656 13.4309 13.7864 12.451 14.4351V16.7567H15.4452C17.2034 15.1384 18.214 12.7486 18.214 9.92169Z" fill="#4285F4"/>
+                <path d="M9.28966 18.9998C11.7956 18.9998 13.9089 18.177 15.4487 16.7567L12.4545 14.4351C11.6215 15.0019 10.5461 15.3228 9.29308 15.3228C6.86907 15.3228 4.81378 13.6874 4.07633 11.4888H0.986572V13.8821C2.56389 17.0196 5.77655 18.9998 9.28966 18.9998Z" fill="#34A853"/>
+                <path d="M4.07351 11.4889C3.6843 10.3349 3.6843 9.08534 4.07351 7.93137V5.53809H0.987161C-0.330681 8.16353 -0.330681 11.2567 0.987161 13.8821L4.07351 11.4889Z" fill="#FBBC04"/>
+                <path d="M9.28966 4.09412C10.6143 4.07363 11.8946 4.57209 12.854 5.48707L15.5067 2.83431C13.827 1.257 11.5976 0.389817 9.28966 0.41713C5.77655 0.41713 2.56389 2.39731 0.986572 5.53828L4.07292 7.93156C4.80695 5.72947 6.86565 4.09412 9.28966 4.09412Z" fill="#EA4335"/>
+              </svg>
+              <span>Log in with Google</span>
+            </span>
+          </label>
+        </li>
+        <li class="field-list__item">
+          <label class="field field--social">
+            <input class="field__input-radio" type="radio" name="log_in_with" value="twitter" />
+            <span class="field__label  field__label--social">
+              <span>Log in with Apple</span>
+            </span>
+          </label>
+        </li>
+        <li class="field-list__item">
+          <label class="field field--social">
+            <input class="field__input-radio" type="radio" name="log_in_with" value="apple" />
+            <span class="field__label  field__label--social">
+              <span>Log in with Bitbucket</span>
+            </span>
+          </label>
+        </li>
+      </ul>
+
+      <p class="modal__footnote modal__mt-16">
+        Already have an account? <a href="">Log in</a>
+      </p>
+
+      <p class="modal__mt-48">
+        <button type="submit" class="button button--primary">Create account</button>
+      </p>
+
+      <p class="modal__footnote">
+        This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.
+      </p>
+    </dialog>
+
+    </main>
+
+    <footer></footer>
+
+  </body>
+</html>
+

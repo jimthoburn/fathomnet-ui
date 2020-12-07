@@ -1,0 +1,183 @@
+---
+layout: none
+title: FathomNet
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}{% unless page.title contains "FathomNet" %} / FathomNet{% endunless %}</title>
+    <style>
+    {% include fonts.css %}
+    </style>
+    <link rel="stylesheet" href="/css/ui.css" />
+    {% include noindex.html %}
+  </head>
+  <body class="standard-layout">
+    {% include icons.svg %}
+
+    <header class="header standard-layout__header">
+      <h2 class="logotype">
+        <a href="/pages/">FathomNet</a>
+      </h2>
+      <ul class="nav">
+        <li>
+          <a
+            href="/pages/explore/"
+            class="
+              nav__link
+            "
+          >
+            Explore
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contributors/"
+            class="nav__link"
+          >
+            Contributors
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about-us/"
+            class="nav__link"
+            >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            href="/"
+            class="nav__link"
+            >
+            <svg aria-label="Search" class="icon icon--large" width="24" height="24">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="/sign-in/"
+            class="button"
+            >
+            Sign in
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+
+    <section class="hero">
+      <img
+        alt="A blue-green ocean wave curling up as it reaches shore"
+        src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+      />
+      <h1>Explore our ocean</h1>
+      <p>
+        FathomNet is an open sourced database that will allow us to better
+        understand our ocean and its inhabitants
+      </p>
+
+      <!-- <form class="search">
+        <ol>
+          <li>
+            <label>
+              What
+              <input type="text" placeholder="Animal, mineral, substrait, etc" />
+            </label>
+          </li>
+          <li>
+            <label>
+              Where
+              <input type="text" placeholder="Longitude &amp; latitude, country, etc" />
+            </label>
+          </li>
+          <li>
+            <label>
+              Taxonomy Register
+              <select multiple>
+                <option>All</option>
+                <option>ARMS</option>
+                <option>BeRMS</option>
+                <option>ERMS</option>
+                <option>IMIS</option>
+              </select>
+            </label>
+          </li>
+        </ol>
+      </form>
+
+      <p>Or explore by <a href="">label tree</a></p> -->
+
+    </section>
+
+    <div class="modal__backdrop overlay"></div>
+
+    <dialog open class="modal modal--dialog dropshadow--dark">
+      <h4 class="h4">Tell us about yourself</h4>
+
+      <p class="body-4 text-meta modal__text">
+        This helps us better provide you with the best data in the oceanic game.
+      </p>
+
+      <form>
+
+        <ol class="field-list">
+          <li class="field-list__item">
+            <label class="field field--has-placeholder">
+              <span class="field__label">Organization</span>
+              <input
+                type="text"
+                placeholder="Organization"
+                class="field__input"
+                />
+            </label>
+          </li>
+          <li class="field-list__item">
+            <label class="field field--has-placeholder">
+              <span class="field__label">Job title</span>
+              <input
+                type="text"
+                placeholder="Job title"
+                class="field__input"
+                />
+            </label>
+          </li>
+          <li class="field-list__item">
+            <span class="field field--has-placeholder field--has-character-count profile-form__field-single-label">
+              <label>
+                <span class="field__label">Biography</span>
+                <textarea
+                  placeholder="Add brief description for your bio"
+                  class="field__input field__input--textarea"
+                  ></textarea>
+              </label>
+              <span class="label-1 field__character-count">1024</span>
+            </span>
+          </li>
+        </ol>
+
+        <p class="modal__footnote">
+          By clicking "Create Account" you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.
+        </p>
+        <p class="modal__footnote modal__mt-16">
+          Already have an account? <a href="">Log in</a>
+        </p>
+        
+        <p class="modal__mt-32">
+          <button type="submit" class="button button--primary">Create account</button>
+        </p>
+      </form>
+    </dialog>
+
+    </main>
+
+    <footer></footer>
+
+  </body>
+</html>
+

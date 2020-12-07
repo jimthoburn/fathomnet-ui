@@ -20,10 +20,36 @@
   margin-bottom: calc(24 * var(--font-size-basis));
 }
 
+.modal__field-list {
+  margin-top: calc(64 * var(--font-size-basis));
+}
+
 .modal__text {
   margin: 0 auto calc(24 * var(--font-size-basis));
   line-height: calc(24 * var(--font-size-basis));
+
+  /* max-width: calc(20 * 16 * var(--font-size-basis)); */
   max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__footnote {
+  /* .label-1 */
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-base-14);
+  font-weight: var(--font-weight-bold);
+
+  line-height: var(--line-height-base);
+
+  /* max-width: calc(20 * 16 * var(--font-size-basis)); */
+  max-width: 25em;
+  margin-top: calc(40 * var(--font-size-basis));
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal__footnote a {
+  display: inline-block;
 }
 
 .modal--justify-end {
@@ -182,3 +208,20 @@
 }
 
 
+
+
+.modal__mt-16 {
+  margin-top: calc(16 * var(--font-size-basis));
+}
+
+.modal__mt-24 {
+  margin-top: calc(24 * var(--font-size-basis));
+}
+
+.modal__mt-32 {
+  margin-top: calc(32 * var(--font-size-basis));
+}
+
+.modal__mt-48 {
+  margin-top: calc(48 * var(--font-size-basis));
+}

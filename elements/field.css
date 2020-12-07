@@ -6,6 +6,10 @@
   padding-left: 0;
 }
 
+.field-list__item + .field-list__item {
+  margin-top: calc(8 * var(--font-size-basis));
+}
+
 
 .field {
   display: block;
@@ -118,5 +122,32 @@
   position: absolute;
   opacity: 0;
   font-size: 0;
+}
+
+
+
+
+
+.field--social:not(.field--has-container) {
+  grid-template-columns: 3em 1fr 3em;
+  padding: calc(14 * var(--font-size-basis)) calc(24 * var(--font-size-basis));
+}
+.field--social:not(.field--has-container) > * {
+  align-self: center;
+  margin: 0;
+}
+.field__label--social {
+  /* .body-3 */
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+}
+.field__label--social > * + * {
+  margin-left: calc(12 * var(--font-size-basis));
 }
 
