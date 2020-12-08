@@ -147,7 +147,133 @@ title: Account
         <h1 class="heading-4">Submissions</h1>
         <p>48 total</p>
       </div>
+      <form class="account-page__content-filters">
+        <p class="account-page__content-search">
+          <label class="field field--has-placeholder field--has-icon account-page__content-filters-field">
+            <span class="field__label">Search</span>
+            <input
+              type="search"
+              value=""
+              placeholder="Search…"
+              class="field__input"
+              />
+            <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+          </label>
+        </p>
+        <ul class="button-list">
+          <li class="button-list__item">
+            <details>
+              <summary type="button" class="button button--small">
+                Organization
+              </summary>
+              <div class="modal modal--data-list dropshadow--dark">
+                <label class="field field--has-placeholder field--has-icon modal__field">
+                  <span class="field__label">Search</span>
+                  <input
+                    type="search"
+                    value=""
+                    placeholder="Search…"
+                    class="field__input"
+                    />
+                  <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+                </label>
+                <ul class="data-list modal__data-list">
+                  {% for index in (1..20) %}
+                  <li class="data-list__item">
+                    <label class="data-list__field">
+                      <input type="checkbox" class="data-list__field-checkbox" />
+                      Organization name
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li class="button-list__item">
+            <details>
+              <summary type="button" class="button button--small filter-list-button--active">
+                Expertise
+              </summary>
+              <div class="modal modal--data-list dropshadow--dark">
+                <ul class="data-list modal__data-list">
+                  <li class="data-list__item">
+                    <label class="data-list__field">
+                      <input type="checkbox" class="data-list__field-checkbox" checked />
+                      Expert
+                    </label>
+                  </li>
+                  <li class="data-list__item">
+                    <label class="data-list__field">
+                      <input type="checkbox" class="data-list__field-checkbox" />
+                      Intermediate
+                    </label>
+                  </li>
+                  <li class="data-list__item">
+                    <label class="data-list__field">
+                      <input type="checkbox" class="data-list__field-checkbox" />
+                      Novice
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </li>
+        </ul>
+        <p>
+          <button type="reset" class="link link--medium link--primary">Clear</button>
+        </p>
+      </form>
     </header>
+    <ul class="nav nav--horizontal nav--medium">
+      <li>
+        <a
+          href=""
+          class="
+            nav__link
+            nav__link--horizontal
+            nav__link--active
+            nav__link--alert
+          "
+        >
+          Unverified <em class="text-meta nav__text-meta">12</em>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          class="
+            nav__link
+            nav__link--horizontal
+          "
+        >
+          Rejected <em class="text-meta nav__text-meta">12</em>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          class="
+            nav__link
+            nav__link--horizontal
+            nav__link--alert
+          "
+        >
+          Verified <em class="text-meta nav__text-meta">68</em>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          class="
+            nav__link
+            nav__link--horizontal
+          "
+        >
+          All <em class="text-meta nav__text-meta">138</em>
+        </a>
+      </li>
+    </ul>
     <ul class="collection-list">
       <li class="collection-list__item collection-list__item--alert">
         <a href="" class="collection-list__description link-hit-area">

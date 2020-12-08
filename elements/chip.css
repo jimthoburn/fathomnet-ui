@@ -39,3 +39,7 @@
 .chip > * {
   margin-left: calc(6 * var(--font-size-basis));
 }
+
+.chip + .chip {
+  margin-left: calc(8 * var(--font-size-basis));
+}

@@ -261,7 +261,9 @@ body {
 
   color: var(--color-demersal-gray);
   font-weight: normal;
+
 }
+
 .description-data + .description-title { 
   margin-top: calc(24 * var(--font-size-basis));
 }
@@ -271,4 +273,15 @@ body {
 .description-data + .description-data { 
   margin-top: calc(4 * var(--font-size-basis));
 }
+
+
+/* .visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+} */
+
+
 

@@ -11,6 +11,10 @@
   background-repeat: repeat-x; */
 }
 
+.account-page__toast {
+  margin: 0 auto calc(48 * var(--font-size-basis) * 1);
+}
+
 .account-page__background {
   /* height: calc(513 * var(--font-size-basis)); */
   height: calc(384 * var(--font-size-basis));
@@ -52,8 +56,15 @@
 
 .account-page__content-description {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  /* SHIM: Make description full-width */
+  margin-left: calc(-64 * var(--font-size-basis));
+  margin-right: calc(-64 * var(--font-size-basis));
+  padding-left: calc(64 * var(--font-size-basis));
+  padding-right: calc(64 * var(--font-size-basis));
 
   padding-bottom: calc(23 * var(--font-size-basis));
   border-bottom: 1px solid var(--color-salt-marsh-gray);
@@ -76,6 +87,32 @@
 }
 .account-page__content-heading > * + * {
   margin-left: calc(16 * var(--font-size-basis));
+}
+
+.account-page__content-filters {
+  margin: calc(24 * var(--font-size-basis)) 0 0;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+}
+.account-page__content-filters > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.account-page__content-filters > * + * {
+  margin-left: calc(16 * var(--font-size-basis));
+}
+
+.account-page__content-search {
+  width: calc(300/16 * 1em);
+  position: relative;
+}
+
+.account-page__content-search > .button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .profile-form__avatar {

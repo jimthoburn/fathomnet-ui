@@ -77,6 +77,11 @@
   position: absolute;
 }
 
+.toast__background--small {
+  width: calc(12 * var(--font-size-basis));
+  height: calc(12 * var(--font-size-basis));
+}
+
 .toast__background,
 .toast__background * {
   fill: var(--toast-text-color);

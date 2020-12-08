@@ -92,6 +92,10 @@
   max-height: calc(100vh - var(--modal-header-and-footer-height));
   box-sizing: content-box;
   overflow: auto;
+  padding-left: calc(36 * var(--font-size-basis));
+  padding-right: calc(36 * var(--font-size-basis));
+  margin-left: calc(-36 * var(--font-size-basis));
+  margin-right: calc(-36 * var(--font-size-basis));
 }
 
 .modal__option-list {
@@ -120,7 +124,7 @@
   flex-direction: row-reverse;
 }
 
-.modal--dialog > .modal__option-list {
+.modal--dialog .modal__option-list {
   justify-content: center;
   flex-direction: row-reverse;
 }
@@ -166,6 +170,7 @@
 .modal__description-list {
   text-align: left;
   margin-top: calc(40 * var(--font-size-basis));
+  max-width: 33em;
 }
 
 .modal__field {

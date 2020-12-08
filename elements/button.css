@@ -180,3 +180,10 @@
 
 
 
+
+
+.filter-list-button--active {
+  background-color: var(--color-littoral-blue);
+  color: var(--color-ultramarine-blue);
+}
+

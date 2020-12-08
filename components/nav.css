@@ -21,6 +21,27 @@
   font-weight: var(--font-weight-bold);
 }
 
+.nav--horizontal {
+  /* SHIM: Override default .nav style, intended for the header */
+  justify-content: unset;
+}
+
+.nav--medium {
+  /* .body-1 */
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.nav__text-meta {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.nav__link:not(.nav__link--active) > .nav__text-meta {
+  color: inherit;
+}
+
 .nav > li + li {
   margin-left: calc(50 * var(--font-size-basis));
 }
@@ -62,6 +83,9 @@
   transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
 }
 
+.nav__link--horizontal {
+  color: var(--color-pelagic-gray);
+}
 .nav__link--vertical {
   width: max-content;
   color: var(--color-pelagic-gray);
