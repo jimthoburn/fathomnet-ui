@@ -69,55 +69,435 @@ title: FathomNet
       </ul>
     </header>
 
-    <main>
+    <main class="home-page">
 
-    <section class="hero">
-      <img
-        alt="A blue-green ocean wave curling up as it reaches shore"
-        src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
-      />
-      <h1>Explore our ocean</h1>
-      <p>
-        FathomNet is an open sourced database that will allow us to better
-        understand our ocean and its inhabitants
-      </p>
+      <section class="home-page__search">
+        <img
+          class="home-page__search-background"
+          src="/images/FathomNet-Hero_Image.jpg"
+          width="1"
+          height="1"
+          alt="Jellyfish"
+          />
 
-      <!-- <form class="search">
-        <ol>
-          <li>
-            <label>
-              What
-              <input type="text" placeholder="Animal, mineral, substrait, etc" />
-            </label>
+        <div class="home-page__search-description">
+          <h1 class="heading-1 home-page__heading home-page__search-heading">Explore our <strong>ocean</strong></h1>
+          <p class="home-page__search-paragraph">
+            FathomNet is an open sourced database that will allow us to better
+            understand our ocean and its inhabitants
+          </p>
+        </div>
+
+        <!-- <form class="search">
+          <ol>
+            <li>
+              <label>
+                What
+                <input type="text" placeholder="Animal, mineral, substrait, etc" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Where
+                <input type="text" placeholder="Longitude &amp; latitude, country, etc" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Taxonomy Register
+                <select multiple>
+                  <option>All</option>
+                  <option>ARMS</option>
+                  <option>BeRMS</option>
+                  <option>ERMS</option>
+                  <option>IMIS</option>
+                </select>
+              </label>
+            </li>
+          </ol>
+        </form> -->
+
+        <div class="home-page__search-box">
+          <p class="home-page__search-form">
+            <a href="">
+              <svg aria-label="Search by animal, mineral, substrate, longitude &amp; latitude, basin, etc" enable-background="new 0 0 1250 138" viewBox="0 0 1250 138" xmlns="http://www.w3.org/2000/svg"><path d="m69 1.5h1112c37.3 0 67.5 30.2 67.5 67.5 0 37.3-30.2 67.5-67.5 67.5h-1112c-37.3 0-67.5-30.2-67.5-67.5 0-37.3 30.2-67.5 67.5-67.5z" fill="none" stroke="#557aff"/><g fill="#88a2ff"><path d="m107.2 46h-2.5l-2.7 9.4-2.7-9.4h-2.2l-2.8 9.4-2.6-9.4h-2.6l4 13h2.3l2.7-9.4 2.7 9.4h2.3zm6.1 3.3c-1.3 0-2.2.6-2.7 1.3v-4.9h-2.2v13.3h2.2v-5.4c0-1.4.9-2.4 2.2-2.4 1 0 1.6.7 1.6 2.2v5.6h2.2v-5.8c-.1-2.8-1.6-3.9-3.3-3.9zm13.4 8.4v-4.6c0-2.3-1.5-3.8-4.1-3.8-2.5 0-4 1.4-4.2 3.3h2.2c.1-.9.8-1.6 1.9-1.6 1.2 0 2 .7 2 1.8v.4l-3.2.2c-1.7.1-3.1 1-3.1 2.9 0 1.8 1.2 2.9 3.3 2.9 1.2 0 2.4-.5 3.1-1.6 0 .5 0 1.1.1 1.4h2.1c-.1-.6-.1-1-.1-1.3zm-2.2-2.8v.5c0 1.5-1.3 2.1-2.4 2.1-1 0-1.6-.4-1.6-1.2s.6-1.2 1.6-1.2zm8.8 4.1v-1.9c-.2.1-.4.1-.6.1-.6 0-1.4-.2-1.4-1.5v-4.3h2.1v-1.9h-2.1v-3.2l-2.2.8v2.4h-1.6v1.9h1.6v4.2c0 2.6 1.5 3.5 3.3 3.5.4 0 .6 0 .9-.1z"/><path d="m521.2 46h-2.5l-2.7 9.4-2.8-9.4h-2.2l-2.8 9.4-2.6-9.4h-2.6l4 13h2.3l2.7-9.4 2.7 9.4h2.3zm6.1 3.3c-1.3 0-2.2.6-2.7 1.3v-4.9h-2.2v13.3h2.2v-5.4c0-1.4.9-2.4 2.2-2.4 1 0 1.6.7 1.6 2.2v5.6h2.2v-5.8c-.1-2.8-1.6-3.9-3.3-3.9zm9.9 8c-1.2 0-2.3-.8-2.5-2.3h7.1c0-3.9-2.2-5.7-4.8-5.7s-4.6 2-4.6 5 2 4.9 4.8 4.9c1.9 0 3.5-.8 4.4-2.9l-2.2-.3c-.4.8-1.2 1.3-2.2 1.3zm-.1-6.1c1.1 0 2.1.9 2.3 2.1h-4.7c.3-1.2 1.3-2.1 2.4-2.1zm6.5-1.7v9.5h2.2v-5.3c0-1.3.9-2.2 2.2-2.2.2 0 .5 0 .8.1v-2.1c-.3-.1-.5-.1-.8-.1-1.1 0-1.8.5-2.2 1.1v-1zm10.7 7.8c-1.2 0-2.3-.8-2.5-2.3h7.1c0-3.9-2.2-5.7-4.8-5.7s-4.6 2-4.6 5 2 4.9 4.8 4.9c1.9 0 3.5-.8 4.4-2.9l-2.2-.3c-.4.8-1.2 1.3-2.2 1.3zm-.1-6.1c1.1 0 2.1.9 2.3 2.1h-4.7c.3-1.2 1.2-2.1 2.4-2.1z"/><path d="m959 57c-2.5 0-4.1-1.8-4.1-4.5s1.6-4.5 4.1-4.5c1.5 0 2.8.8 3.5 2.4l2.3-.3c-.8-2.6-3-4.2-5.8-4.2-3.8 0-6.4 2.7-6.4 6.7 0 3.9 2.7 6.7 6.4 6.7 2.9 0 5.1-1.7 5.8-4.2l-2.3-.3c-.7 1.4-2 2.2-3.5 2.2zm11.9 2.2c2.8 0 4.9-2.1 4.9-4.9s-2.1-4.9-4.9-4.9-4.9 2.1-4.9 4.9 2.2 4.9 4.9 4.9zm0-2c-1.5 0-2.6-1.2-2.6-2.9s1.1-2.9 2.6-2.9 2.6 1.2 2.6 2.9-1.1 2.9-2.6 2.9zm6.7-7.7v9.5h2.2v-5.4c0-1.4.9-2.4 2.2-2.4 1 0 1.6.7 1.6 2.2v5.6h2.2v-5.8c0-2.7-1.5-3.9-3.3-3.9-1.3 0-2.2.6-2.7 1.3v-1.2h-2.2zm14.7 7.7c-1.5 0-2.5-1.2-2.5-3s1-3 2.5-3c1 0 1.9.6 2.3 1.8l2.2-.3c-.5-2.1-2.2-3.5-4.4-3.5-2.8 0-4.8 2-4.8 5s2 4.9 4.8 4.9c2.2 0 3.9-1.4 4.4-3.5l-2.2-.3c-.4 1.3-1.2 1.9-2.3 1.9zm10.6.1c-1.2 0-2.3-.8-2.5-2.3h7c0-3.9-2.2-5.7-4.8-5.7s-4.6 2-4.6 5 2 4.9 4.8 4.9c1.9 0 3.5-.8 4.4-2.9l-2.2-.3c-.3.8-1.1 1.3-2.1 1.3zm-.1-6.1c1.1 0 2.1.9 2.3 2.1h-4.7c.2-1.2 1.2-2.1 2.4-2.1zm11.7 8c2.5 0 4.4-2 4.4-4.9 0-3-1.9-5-4.4-5-1.4 0-2.4.6-3 1.3v-1.1h-2.2v13.1h2.2v-4.6c.6.5 1.5 1.2 3 1.2zm-.5-7.9c1.5 0 2.6 1.2 2.6 2.9s-1.2 2.9-2.6 2.9c-1.5 0-2.6-1.2-2.6-2.9s1.2-2.9 2.6-2.9zm11.1 7.7v-1.9c-.2.1-.4.1-.6.1-.6 0-1.4-.2-1.4-1.5v-4.3h2v-1.9h-2v-3.2l-2.2.8v2.4h-1.6v1.9h1.6v4.2c0 2.6 1.5 3.5 3.3 3.5.3 0 .6 0 .9-.1zm10.7 0v-1.9c-.2.1-.4.1-.6.1-.6 0-1.4-.2-1.4-1.5v-4.3h2.1v-1.9h-2.1v-3.2l-2.2.8v2.4h-1.6v1.9h1.6v4.2c0 2.6 1.5 3.5 3.4 3.5.2 0 .5 0 .8-.1zm1.6-9.5v9.5h2.2v-5.3c0-1.3.9-2.2 2.2-2.2.2 0 .5 0 .8.1v-2.1c-.2-.1-.5-.1-.8-.1-1.1 0-1.8.5-2.2 1.1v-1zm10.7 7.8c-1.2 0-2.3-.8-2.5-2.3h7c0-3.9-2.2-5.7-4.8-5.7s-4.6 2-4.6 5 2 4.9 4.8 4.9c1.9 0 3.5-.8 4.4-2.9l-2.2-.3c-.3.8-1.1 1.3-2.1 1.3zm-.1-6.1c1.1 0 2.1.9 2.3 2.1h-4.7c.2-1.2 1.2-2.1 2.4-2.1zm10.9 6.1c-1.2 0-2.3-.8-2.5-2.3h7.1c0-3.9-2.2-5.7-4.8-5.7s-4.6 2-4.6 5 2 4.9 4.8 4.9c1.9 0 3.5-.8 4.4-2.9l-2.2-.3c-.4.8-1.2 1.3-2.2 1.3zm-.1-6.1c1.1 0 2.1.9 2.3 2.1h-4.7c.3-1.2 1.3-2.1 2.4-2.1z"/></g><path d="m99.7 93h1.7l-5.3-13h-1.7l-5.3 13h1.6l1.3-3.4h6.3zm-7-4.9 2.6-6.6 2.5 6.6zm10.2-4.5v9.4h1.4v-5.3c0-1.6 1.1-2.8 2.7-2.8 1.3 0 2.2.7 2.2 2.8v5.3h1.4v-5.7c0-2.5-1.4-3.8-3.3-3.8-.9 0-2.2.5-3 1.4v-1.2h-1.4zm11.1-1.6c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1-1.1.5-1.1 1.1c0 .7.5 1.1 1.1 1.1zm-.7 1.6v9.4h1.4v-9.4zm14.1-.1c-1.2 0-2.4.6-3.1 1.6-.5-1-1.5-1.6-2.7-1.6-1.1 0-1.9.4-2.7 1.4v-1.2h-1.4v9.3h1.4v-5.3c0-1.6 1-2.9 2.4-2.9 1.1 0 2 .7 2 2.2v6h1.4v-5.4c0-1.6 1-2.8 2.4-2.8 1.1 0 2 .7 2 2.2v6h1.4v-6.2c0-1.9-1.3-3.3-3.1-3.3zm12.8 7.9v-4.4c0-2.1-1.4-3.5-3.8-3.5-2.3 0-3.7 1.3-3.8 3.1h1.5c.1-1.1.9-1.9 2.3-1.9s2.4.8 2.4 2.2v.6l-3.2.2c-1.7.1-3.1.9-3.1 2.7s1.2 2.8 3.3 2.8c1 0 2.2-.4 3-1.5 0 .4 0 1 .1 1.4h1.4c-.1-.4-.1-1.1-.1-1.7zm-1.4-2.7v.6c0 1.8-1.5 2.5-2.9 2.5-1.2 0-1.9-.6-1.9-1.5 0-1 .7-1.5 2-1.5zm3.4-9v13.3h1.4v-13.3zm3.2 15.3h1.2l1.1-3.7h-1.7zm18.6-11.5c-1.2 0-2.4.6-3.2 1.6-.5-1-1.5-1.6-2.7-1.6-1.1 0-1.9.4-2.7 1.4v-1.2h-1.4v9.3h1.4v-5.3c0-1.6 1-2.9 2.4-2.9 1.1 0 2 .7 2 2.2v6h1.4v-5.4c0-1.6 1-2.8 2.4-2.8 1.1 0 2 .7 2 2.2v6h1.4v-6.2c.1-1.9-1.2-3.3-3-3.3zm6.5-1.5c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1-1.1.5-1.1 1.1c0 .7.4 1.1 1.1 1.1zm-.8 1.6v9.4h1.4v-9.4zm4.2 0v9.4h1.4v-5.3c0-1.6 1.1-2.8 2.7-2.8 1.3 0 2.2.7 2.2 2.8v5.3h1.4v-5.7c0-2.5-1.4-3.8-3.3-3.8-.9 0-2.2.5-3 1.4v-1.2h-1.4zm14.4 8.2c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.3.8-1.2 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.2-1.1 1.1-2.7 2.9-2.7zm6.5-1.2v9.4h1.4v-5.6c0-1.5.9-2.4 2.4-2.4.2 0 .3 0 .5.1v-1.5c-.2 0-.4-.1-.5-.1-1.2 0-2 .5-2.4 1.4v-1.3zm13.2 7.8v-4.4c0-2.1-1.4-3.5-3.8-3.5-2.3 0-3.7 1.3-3.8 3.1h1.5c.1-1.1.9-1.9 2.3-1.9s2.4.8 2.4 2.2v.6l-3.2.2c-1.7.1-3.1.9-3.1 2.7s1.2 2.8 3.3 2.8c1 0 2.2-.4 3-1.5 0 .4 0 1 .1 1.4h1.4c-.1-.4-.1-1.1-.1-1.7zm-1.5-2.7v.6c0 1.8-1.5 2.5-2.9 2.5-1.2 0-1.9-.6-1.9-1.5 0-1 .7-1.5 2-1.5zm3.4-9v13.3h1.4v-13.3zm3.3 15.3h1.2l1.1-3.7h-1.7zm15.5-4.6c0-2-1.8-2.3-3.1-2.7-1.4-.4-2.7-.6-2.7-1.7 0-.8.9-1.4 2-1.4 1.3 0 2 .7 2.2 1.7h1.5c-.2-1.7-1.6-2.9-3.6-2.9-1.9 0-3.5 1.3-3.5 2.8 0 2 1.8 2.3 3.1 2.7 1.4.4 2.7.6 2.7 1.7 0 .9-1.1 1.3-2.2 1.3-1.3 0-2.2-.5-2.4-1.8h-1.5c.3 1.8 1.7 3 3.9 3 2 .1 3.6-1 3.6-2.7zm5.1 2.8c.9 0 2.1-.4 2.8-1.4v1.2h1.4v-9.4h-1.4v5.4c0 1.6-1 2.8-2.6 2.8-1.3 0-2.1-.8-2.1-2.5v-5.6h-1.4v5.7c0 2.3 1.2 3.8 3.3 3.8zm6.8-13.5h1.4v5.4c.8-1.1 1.9-1.6 3.1-1.6 2.6 0 4.3 1.9 4.3 4.9 0 2.9-1.7 4.9-4.3 4.9-1.2 0-2.4-.5-3.1-1.6v1.3h-1.4zm4.4 5.1c-2 0-3 1.6-3 3.5s1 3.5 3 3.5c1.8 0 3-1.4 3-3.5s-1.2-3.5-3-3.5zm13.5 5.6c0-2-1.8-2.3-3.1-2.7-1.4-.4-2.7-.6-2.7-1.7 0-.8.9-1.4 2-1.4 1.3 0 2 .7 2.2 1.7h1.5c-.2-1.7-1.6-2.9-3.6-2.9-1.9 0-3.5 1.3-3.5 2.8 0 2 1.8 2.3 3.1 2.7 1.4.4 2.7.6 2.7 1.7 0 .9-1.1 1.3-2.2 1.3-1.3 0-2.2-.5-2.4-1.8h-1.5c.3 1.8 1.7 3 3.9 3 2 .1 3.6-1 3.6-2.7zm6.2 2.6v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm1.8-9.4v9.4h1.4v-5.6c0-1.5.9-2.4 2.4-2.4.2 0 .3 0 .5.1v-1.5c-.2 0-.4-.1-.5-.1-1.2 0-2 .5-2.4 1.4v-1.3zm13.2 7.8v-4.4c0-2.1-1.4-3.5-3.8-3.5-2.3 0-3.7 1.3-3.8 3.1h1.5c.1-1.1.9-1.9 2.3-1.9s2.4.8 2.4 2.2v.6l-3.2.2c-1.7.1-3.1.9-3.1 2.7s1.2 2.8 3.3 2.8c1 0 2.2-.4 3-1.5 0 .4 0 1 .1 1.4h1.4c-.1-.4-.1-1.1-.1-1.7zm-1.4-2.7v.6c0 1.8-1.5 2.5-2.9 2.5-1.2 0-1.9-.6-1.9-1.5 0-1 .7-1.5 2-1.5zm7.9 4.3v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm5.9-1.2c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.4.8-1.2 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.1-1.1 1-2.7 2.9-2.7zm5.7 10.2h1.2l1.1-3.7h-1.7zm12.7-3.2c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.3.8-1.1 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.2-1.1 1.1-2.7 2.9-2.7zm10.7 8.2v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm5.8-1.2c-1.9 0-3-1.5-3-3.5s1.1-3.5 3-3.5c1.2 0 2.2.6 2.6 2.1l1.5-.2c-.6-2.2-2.2-3.2-4.1-3.2-2.8 0-4.5 2.1-4.5 4.9s1.7 4.9 4.5 4.9c2 0 3.5-1 4.1-3.2l-1.5-.2c-.4 1.3-1.4 1.9-2.6 1.9z" fill="#fff"/><path d="m512 91.6h-6.2v-11.6h-1.5v13h7.8v-1.4zm5.8 1.6c2.7 0 4.7-2.2 4.7-4.9s-2-4.9-4.7-4.9-4.7 2.2-4.7 4.9 2 4.9 4.7 4.9zm0-1.4c-2 0-3.2-1.6-3.2-3.5s1.2-3.5 3.2-3.5 3.2 1.6 3.2 3.5c.1 2-1.2 3.5-3.2 3.5zm6.8-8.2v9.4h1.4v-5.3c0-1.6 1.1-2.8 2.7-2.8 1.3 0 2.2.7 2.2 2.8v5.3h1.4v-5.7c0-2.5-1.3-3.8-3.3-3.8-.9 0-2.2.5-3 1.4v-1.2h-1.4zm18.7 0h-1.4v1.4c-.9-1.1-2-1.5-3.2-1.5-2.6 0-4.3 2-4.3 4.6s1.7 4.6 4.3 4.6c1.2 0 2.3-.4 3.2-1.5v1c0 2-1 3.3-2.9 3.3-1.4 0-2.5-.7-2.9-2.1l-1.5.2c.5 1.9 2.1 3.2 4.4 3.2 2.6 0 4.3-1.7 4.3-4.8zm-4.4 7.7c-1.9 0-3-1.6-3-3.2 0-1.7 1.1-3.2 3-3.2s3 1.6 3 3.2c-.1 1.6-1.2 3.2-3 3.2zm7.7-9.3c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1-1.1.5-1.1 1.1c0 .7.4 1.1 1.1 1.1zm-.8 1.6v9.4h1.4v-9.4zm8.8 9.4v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.1.2.4.2.6.1zm5 .2c.9 0 2.1-.4 2.8-1.4v1.2h1.4v-9.4h-1.4v5.4c0 1.6-1 2.8-2.6 2.8-1.3 0-2.1-.8-2.1-2.5v-5.6h-1.4v5.7c0 2.3 1.1 3.8 3.3 3.8zm15-13.5h-1.4v5.4c-.8-1.1-1.9-1.6-3.1-1.6-2.6 0-4.3 1.9-4.3 4.9 0 2.9 1.7 4.9 4.3 4.9 1.2 0 2.4-.5 3.1-1.6v1.3h1.4zm-4.4 5.1c2 0 3 1.6 3 3.5s-1 3.5-3 3.5c-1.8 0-3-1.4-3-3.5s1.2-3.5 3-3.5zm10.8 7c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.3.8-1.2 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.2-1.1 1.1-2.7 2.9-2.7zm13.2-2.1c0 .4.1.8.3 1.1.2.4.6.8 1 1.3.7-.4 1.2-.8 1.5-1.2s.4-.8.4-1.3c0-.4-.1-.8-.4-1.1s-.7-.4-1.2-.4-.9.1-1.2.4c-.2.4-.4.8-.4 1.2zm1.4 9.1c1.3 0 2.5-.4 3.4-1.3l-3.7-3.6c-.8.5-1.4.9-1.6 1.3-.3.4-.4.9-.4 1.4 0 .7.2 1.2.7 1.6.3.4.9.6 1.6.6zm-4.1-2.1c0-.8.2-1.4.6-2s1.1-1.2 2.2-1.8c-.5-.5-.8-.9-1-1.2s-.3-.6-.4-.9-.2-.6-.2-1c0-.9.3-1.6.9-2.1s1.4-.8 2.4-.8 1.7.2 2.3.7.8 1.2.8 2c0 .6-.2 1.2-.6 1.8-.4.5-1.1 1.1-2 1.6l3.5 3.3c.5-.6 1-1.6 1.3-2.9h1.6c-.4 1.7-1 3-1.8 3.9l2.6 2.6h-2.1l-1.6-1.5c-.7.6-1.4 1-2.1 1.3s-1.5.4-2.4.4c-1.3 0-2.2-.3-3-.9-.7-.6-1-1.4-1-2.5zm17.8-10v13.3h1.4v-13.3zm11.2 11.7v-4.4c0-2.1-1.4-3.5-3.8-3.5-2.3 0-3.7 1.3-3.8 3.1h1.5c.1-1.1.9-1.9 2.3-1.9s2.4.8 2.4 2.2v.6l-3.2.2c-1.7.1-3.1.9-3.1 2.7s1.2 2.8 3.3 2.8c1 0 2.2-.4 3-1.5 0 .4 0 1 .1 1.4h1.4c-.1-.4-.1-1.1-.1-1.7zm-1.4-2.7v.6c0 1.8-1.5 2.5-2.9 2.5-1.2 0-1.9-.6-1.9-1.5 0-1 .7-1.5 2-1.5zm7.9 4.3v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm2.7-11c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1-1.1.5-1.1 1.1c0 .7.5 1.1 1.1 1.1zm-.7 1.6v9.4h1.4v-9.4zm8.7 9.4v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm5 .2c.9 0 2.1-.4 2.8-1.4v1.2h1.4v-9.4h-1.4v5.4c0 1.6-1 2.8-2.6 2.8-1.3 0-2.1-.8-2.1-2.5v-5.6h-1.4v5.7c0 2.3 1.2 3.8 3.3 3.8zm15-13.5h-1.4v5.4c-.8-1.1-1.9-1.6-3.1-1.6-2.6 0-4.3 1.9-4.3 4.9 0 2.9 1.7 4.9 4.3 4.9 1.2 0 2.4-.5 3.1-1.6v1.3h1.4zm-4.4 5.1c2 0 3 1.6 3 3.5s-1 3.5-3 3.5c-1.8 0-3-1.4-3-3.5s1.2-3.5 3-3.5zm10.8 7c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.3.8-1.1 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.2-1.1 1.1-2.7 2.9-2.7zm5.8 10.2h1.2l1.1-3.7h-1.7zm8.6-15.3h1.4v5.4c.8-1.1 1.9-1.6 3.2-1.6 2.6 0 4.3 1.9 4.3 4.9 0 2.9-1.7 4.9-4.3 4.9-1.2 0-2.4-.5-3.2-1.6v1.3h-1.4zm4.4 5.1c-2 0-3 1.6-3 3.5s1 3.5 3 3.5c1.8 0 3-1.4 3-3.5s-1.2-3.5-3-3.5zm13.8 6.6v-4.4c0-2.1-1.4-3.5-3.8-3.5-2.3 0-3.7 1.3-3.8 3.1h1.5c.1-1.1.9-1.9 2.3-1.9s2.4.8 2.4 2.2v.6l-3.2.2c-1.7.1-3.1.9-3.1 2.7s1.2 2.8 3.3 2.8c1 0 2.2-.4 3-1.5 0 .4 0 1 .1 1.4h1.4c-.1-.4-.1-1.1-.1-1.7zm-1.5-2.7v.6c0 1.8-1.5 2.5-2.9 2.5-1.2 0-1.9-.6-1.9-1.5 0-1 .7-1.5 2-1.5zm10.7 1.7c0-2-1.8-2.3-3.1-2.7-1.4-.4-2.7-.6-2.7-1.7 0-.8.9-1.4 2-1.4 1.3 0 2 .7 2.2 1.7h1.5c-.2-1.7-1.6-2.9-3.6-2.9-1.9 0-3.5 1.3-3.5 2.8 0 2 1.8 2.3 3.1 2.7 1.4.4 2.7.6 2.7 1.7 0 .9-1.1 1.3-2.2 1.3-1.3 0-2.2-.5-2.4-1.8h-1.5c.3 1.8 1.7 3 3.9 3 2 .1 3.6-1 3.6-2.7zm2.7-8.4c.6 0 1.1-.5 1.1-1.1s-.5-1.1-1.1-1.1-1.1.5-1.1 1.1c.1.7.5 1.1 1.1 1.1zm-.7 1.6v9.4h1.4v-9.4zm4.2 0v9.4h1.4v-5.3c0-1.6 1.1-2.8 2.7-2.8 1.3 0 2.2.7 2.2 2.8v5.3h1.4v-5.7c0-2.5-1.4-3.8-3.3-3.8-.9 0-2.2.5-3 1.4v-1.2h-1.4zm9.4 11.4h1.2l1.1-3.7h-1.6zm12.7-3.2c-1.9 0-2.9-1.4-3.1-3.1h7.5c0-3.1-1.6-5.3-4.5-5.3-2.7 0-4.5 2.1-4.5 4.9s1.8 4.9 4.6 4.9c2.1 0 3.6-1.1 4.1-2.9l-1.5-.2c-.3.8-1.2 1.7-2.6 1.7zm-.1-7c1.8 0 2.7 1.6 2.9 2.7h-5.8c.2-1.1 1.1-2.7 2.9-2.7zm10.7 8.2v-1.4c-.2 0-.4.1-.5.1-1 0-1.7-.3-1.7-1.7v-5.1h2.2v-1.3h-2.2v-3.2l-1.4.5v2.6h-1.8v1.3h1.8v5c0 1.9.6 3.1 3 3.1.2.2.4.2.6.1zm5.8-1.2c-1.9 0-3-1.5-3-3.5s1.1-3.5 3-3.5c1.2 0 2.2.6 2.6 2.1l1.5-.2c-.6-2.2-2.2-3.2-4.1-3.2-2.8 0-4.5 2.1-4.5 4.9s1.7 4.9 4.5 4.9c2 0 3.5-1 4.1-3.2l-1.5-.2c-.4 1.3-1.4 1.9-2.6 1.9z" fill="#fff"/><path d="m962.8 93h1.7l-5.3-13h-1.7l-5.3 13h1.6l1.4-3.4h6.3zm-7.1-4.9 2.6-6.6 2.5 6.6zm10.2-8.4v13.3h1.4v-13.3zm3.9 0v13.3h1.4v-13.3z" fill="#fff"/><circle cx="1165" cy="69" fill="#557aff" r="36"/><path d="m1163.5 79.5c6.6 0 12-5.4 12-12s-5.4-12-12-12-12 5.4-12 12 5.4 12 12 12z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/><path d="m1178.5 82.5-6.5-6.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/><path d="m414 2h1v135h-1z" fill="#557aff"/><path d="m863 2h1v135h-1z" fill="#557aff"/><path d="m985 85 4 4 4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+            </a>
+          </p>
+          <p class="home-page__search-explore">Or explore via <a href="" class="link link--medium link--primary home-page__search-link" style="display: inline-block">concept tree</a></p>
+        </div>
+
+      </section>
+
+      <section class="home-page__together">
+
+        <h2 class="heading-2 home-page__together-header home-page__heading home-page__heading--centered">Together we can <strong>better understand</strong> our ocean and its inhabitants</h2>
+
+        <ul class="home-page__together-list">
+          <li class="home-page__together-list-item">
+            <svg class="home-page__together-list-icon" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M76.4333 43.8509C81.1918 47.5237 85.2432 52.9047 88.1527 59.6342C88.3702 60.145 88.3702 60.7423 88.1527 61.2287C82.3338 74.6878 71.974 82.7416 60.445 82.7416H60.4178C48.916 82.7416 38.5562 74.6878 32.7373 61.2287C32.5198 60.7423 32.5198 60.145 32.7373 59.6342C38.5562 46.1724 48.916 38.1483 60.4178 38.1483H60.445C66.2095 38.1483 71.6749 40.1483 76.4333 43.8509ZM49.5685 60.445C49.5685 66.3908 54.4357 71.2285 60.4449 71.2285C66.427 71.2285 71.2942 66.3908 71.2942 60.445C71.2942 54.4722 66.427 49.6345 60.4449 49.6345C54.4357 49.6345 49.5685 54.4722 49.5685 60.445Z" fill="#557AFF"/>
+              <path d="M67.2202 60.4363C67.2202 64.1389 64.1748 67.1659 60.4496 67.1659C56.6973 67.1659 53.6519 64.1389 53.6519 60.4363C53.6519 59.9769 53.7062 59.5472 53.7878 59.1147H53.9238C56.942 59.1147 59.3892 56.7364 59.4979 53.7608C59.797 53.7095 60.1233 53.6797 60.4496 53.6797C64.1748 53.6797 67.2202 56.7067 67.2202 60.4363Z" fill="#557AFF"/>
+            </svg>
+
+            <h4 class="heading-4 home-page__together-list-heading">Access years of data from our community of contributors</h4>
+            <p class="home-page__together-list-description">
+              We leverage video and image data from 30 years of work in the deep
+              sea we will be able to refine and rediscover taxa
+            </p>
+            <p class="body-1 home-page__together-list-cta">
+              <a href="" class="link link--has-active-indicator home-page__together-list-link">
+                <span class="link__active-indicator">Button label</span>
+                <svg class="icon"><use xlink:href="#icon-arrow-right"></use></svg>
+              </a>
+            </p>
           </li>
-          <li>
-            <label>
-              Where
-              <input type="text" placeholder="Longitude &amp; latitude, country, etc" />
-            </label>
-          </li>
-          <li>
-            <label>
-              Taxonomy Register
-              <select multiple>
-                <option>All</option>
-                <option>ARMS</option>
-                <option>BeRMS</option>
-                <option>ERMS</option>
-                <option>IMIS</option>
-              </select>
-            </label>
-          </li>
-        </ol>
-      </form>
+          <li class="home-page__together-list-item">
+            <svg class="home-page__together-list-icon" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path opacity="0.4" d="M88.3155 60.4447C88.3155 75.8377 75.8377 88.3155 60.4447 88.3155C45.0516 88.3155 32.5739 75.8377 32.5739 60.4447C32.5739 45.0544 45.0516 32.5739 60.4447 32.5739C75.8377 32.5739 88.3155 45.0544 88.3155 60.4447Z" fill="#557AFF"/>
+              <path d="M71.2026 51.2613L66.6875 65.5311C66.5203 66.1164 66.0465 66.5902 65.4612 66.7602L51.2471 71.2168C50.2994 71.5261 49.3797 70.6036 49.6863 69.656L54.1456 55.3583C54.3128 54.773 54.7867 54.327 55.3719 54.1319L69.6418 49.6726C70.6173 49.366 71.5092 50.2858 71.2026 51.2613Z" fill="#557AFF"/>
+            </svg>
 
-      <p>Or explore by <a href="">label tree</a></p> -->
+            <h4 class="heading-4 home-page__together-list-heading">Explore the ocean in detail with thorough annotations</h4>
+            <p class="home-page__together-list-description">
+              We leverage video and image data from 30 years of work in the deep
+              sea we will be able to refine and rediscover taxa
+            </p>
+            <p class="body-1 home-page__together-list-cta">
+              <a href="" class="link link--has-active-indicator home-page__together-list-link">
+                <span class="link__active-indicator">See our collections</span>
+                <svg class="icon"><use xlink:href="#icon-arrow-right"></use></svg>
+              </a>
+            </p>
+          </li>
+          <li class="home-page__together-list-item">
+            <svg class="home-page__together-list-icon" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path opacity="0.4" d="M79.422 52.1423C78.1637 52.1423 76.4969 52.1144 74.4218 52.1144C69.3609 52.1144 65.1996 47.9254 65.1996 42.8167V33.8534C65.1996 33.1483 64.6339 32.5742 63.9358 32.5742H49.1973C42.3179 32.5742 36.7548 38.2208 36.7548 45.1411V75.1719C36.7548 82.4323 42.5828 88.3158 49.7713 88.3158H71.7203C78.5776 88.3158 84.1352 82.7054 84.1352 75.7795V53.3965C84.1352 52.6885 83.5723 52.1172 82.8714 52.12C81.6931 52.1283 80.2802 52.1423 79.422 52.1423Z" fill="#557AFF"/>
+              <path opacity="0.4" d="M71.8283 34.1553C70.995 33.2885 69.5401 33.8849 69.5401 35.0862V42.4357C69.5401 45.5182 72.0763 48.0545 75.1589 48.0545C77.1042 48.0768 79.8021 48.0823 82.0931 48.0768C83.2665 48.074 83.8629 46.6721 83.0491 45.8248C80.1087 42.7674 74.8439 37.288 71.8283 34.1553Z" fill="#557AFF"/>
+              <path d="M69.0997 62.4207C68.2859 61.6153 66.976 61.6097 66.1621 62.4263L61.7335 66.8773V53.424C61.7335 52.2785 60.8026 51.3477 59.6571 51.3477C58.5116 51.3477 57.5807 52.2785 57.5807 53.424V66.8773L53.1492 62.4263C52.3382 61.6097 51.0255 61.6153 50.2144 62.4207C49.4006 63.229 49.4006 64.5417 50.2061 65.3555L58.1855 73.3712H58.1883C58.3778 73.5607 58.6036 73.714 58.8572 73.8199C59.108 73.923 59.3812 73.9788 59.6571 73.9788C59.9358 73.9788 60.2089 73.923 60.4598 73.8171C60.7078 73.714 60.9336 73.5607 61.1231 73.374L61.1287 73.3712L69.1053 65.3555C69.9135 64.5417 69.9135 63.229 69.0997 62.4207Z" fill="#557AFF"/>
+            </svg>
 
-    </section>
+            <h4 class="heading-4 home-page__together-list-heading">Download what you need to better explore our ocean</h4>
+            <p class="home-page__together-list-description">
+              We leverage video and image data from 30 years of work in the deep
+              sea we will be able to refine and rediscover taxa
+            </p>
+            <p class="body-1 home-page__together-list-cta">
+              <a href="" class="link link--has-active-indicator home-page__together-list-link">
+                <span class="link__active-indicator">Create an account</span>
+                <svg class="icon"><use xlink:href="#icon-arrow-right"></use></svg>
+              </a>
+            </p>
+          </li>
+        </ul>
+
+        <figure class="home-page__together-list-figure">
+          <a href="">
+            <img
+              class="home-page__together-list-image"
+              alt="A blue-green ocean wave curling up as it reaches shore"
+              src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+            />
+          </a>
+        </figure>
+      </section>
+
+      <section class="home-page__statistic home-page__section--dark-mode">
+        <h2 class="heading-2 home-page__heading home-page__heading--centered">All the data to support you and your <strong>research</strong></h2>
+
+        <ul class="home-page__statistic-list">
+          <li class="home-page__statistic-list-item dropshadow--extra-soft">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M50.3332 34.7418C56.4221 31.2038 63.9064 31.2657 69.9382 34.9038C75.9107 38.6159 79.5406 45.2411 79.5068 52.3679C79.3678 59.4479 75.4755 66.1032 70.6101 71.248C67.8019 74.2308 64.6605 76.8684 61.25 79.1068C60.8987 79.3099 60.514 79.4459 60.1147 79.508C59.7305 79.4917 59.3562 79.3781 59.0258 79.1776C53.819 75.8142 49.2511 71.5209 45.5417 66.5044C42.4378 62.3168 40.6744 57.2576 40.491 52.0139C40.4869 44.8734 44.2442 38.2797 50.3332 34.7418ZM53.8516 54.9689C54.8758 57.494 57.2934 59.141 59.9756 59.141C61.7327 59.1537 63.4218 58.4498 64.6665 57.1864C65.9112 55.923 66.608 54.2049 66.6018 52.415C66.6112 49.6829 65.0027 47.2145 62.5274 46.1623C60.0521 45.1102 57.1983 45.6818 55.2984 47.6103C53.3985 49.5388 52.8273 52.4438 53.8516 54.9689Z" fill="#557AFF"/>
+              <ellipse opacity="0.4" cx="59.9988" cy="85.0819" rx="13.9344" ry="2.78687" fill="#557AFF"/>
+            </svg>
+            <h3 class="heading-2 home-page__statistic-data">128,234,234</h3>
+            <p class="text-meta home-page__statistic-description">localizations</p>
+          </li>
+          <li class="home-page__statistic-list-item dropshadow--extra-soft">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path opacity="0.4" d="M71.2686 83.7502H50.0944C41.8138 83.7502 36.2509 77.9425 36.2509 69.297V49.3422C36.2509 40.6967 41.8138 34.8865 50.0944 34.8865H71.271C79.5517 34.8865 85.1145 40.6967 85.1145 49.3422V69.297C85.1145 77.9425 79.5517 83.7502 71.2686 83.7502Z" fill="#557AFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M58.8372 51.1947C58.8372 54.5418 56.113 57.266 52.7659 57.266C49.4163 57.266 46.6946 54.5418 46.6946 51.1947C46.6946 47.8475 49.4163 45.1209 52.7659 45.1209C56.113 45.1209 58.8372 47.8475 58.8372 51.1947ZM78.7624 64.4185C79.3316 64.9707 79.7396 65.601 80.0084 66.2729C80.822 68.3056 80.3993 70.7488 79.5295 72.762C78.4985 75.1587 76.5244 76.9691 74.0372 77.7607C72.9329 78.115 71.7749 78.2665 70.6192 78.2665H50.1429C48.1053 78.2665 46.3022 77.7925 44.8241 76.9032C43.8982 76.3461 43.7345 75.0635 44.421 74.2279C45.5693 72.8353 46.7029 71.4378 47.8463 70.0281C50.0257 67.3308 51.494 66.549 53.1261 67.2355C53.7882 67.5189 54.4527 67.9465 55.1368 68.396C56.9594 69.6029 59.493 71.2594 62.8304 69.4612C65.1116 68.2138 66.4358 66.0793 67.5885 64.2214L67.6117 64.184C67.6892 64.0596 67.7661 63.9354 67.8428 63.8115C68.2347 63.1782 68.6208 62.5544 69.058 61.9802C69.6004 61.2692 71.6136 59.046 74.2156 60.6291C75.8745 61.626 77.2696 62.9746 78.7624 64.4185Z" fill="#557AFF"/>
+            </svg>
+            <h3 class="heading-2 home-page__statistic-data">12,390,212</h3>
+            <p class="text-meta home-page__statistic-description">images</p>
+          </li>
+          <li class="home-page__statistic-list-item dropshadow--extra-soft">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="58" fill="#F0F3FF" stroke="#F0F3FF" stroke-width="4"/>
+              <path d="M60.3029 67.5239C50.6875 67.5239 42.5744 69.0951 42.5744 75.1591C42.5744 81.2256 50.7399 82.7416 60.3029 82.7416C69.9183 82.7416 78.0314 81.1704 78.0314 75.1064C78.0314 69.0399 69.8659 67.5239 60.3029 67.5239Z" fill="#557AFF"/>
+              <path opacity="0.4" d="M60.303 61.7466C66.8139 61.7466 72.0346 56.4959 72.0346 49.9475C72.0346 43.3966 66.8139 38.1483 60.303 38.1483C53.792 38.1483 48.5713 43.3966 48.5713 49.9475C48.5713 56.4959 53.792 61.7466 60.303 61.7466Z" fill="#557AFF"/>
+              <path opacity="0.4" d="M85.7739 52.6949C87.4584 46.0687 82.5197 40.1177 76.2308 40.1177C75.5471 40.1177 74.8932 40.193 74.2544 40.321C74.1695 40.3411 74.0747 40.3837 74.0248 40.459C73.9674 40.5544 74.0098 40.6824 74.0722 40.7652C75.9613 43.4308 77.0469 46.6761 77.0469 50.1599C77.0469 53.4981 76.0512 56.6104 74.3043 59.1931C74.1246 59.4592 74.2843 59.8181 74.6012 59.8733C75.0405 59.9511 75.4897 59.9913 75.9488 60.0038C80.5282 60.1243 84.6384 57.1601 85.7739 52.6949Z" fill="#557AFF"/>
+              <path d="M90.5714 68.2961C89.7329 66.499 87.709 65.2666 84.6319 64.6617C83.1795 64.3053 79.249 63.8033 75.593 63.8711C75.5381 63.8786 75.5082 63.9163 75.5032 63.9414C75.4957 63.9765 75.5107 64.0367 75.583 64.0744C77.2725 64.9152 83.8034 68.5722 82.9824 76.2852C82.9474 76.619 83.2145 76.9076 83.5464 76.8574C85.1535 76.6265 89.2887 75.733 90.5714 72.9495C91.2801 71.4787 91.2801 69.7694 90.5714 68.2961Z" fill="#557AFF"/>
+              <path opacity="0.4" d="M46.6345 40.3217C45.9981 40.1911 45.3418 40.1183 44.658 40.1183C38.3692 40.1183 33.4305 46.0694 35.1175 52.6956C36.2505 57.1607 40.3607 60.125 44.94 60.0045C45.3992 59.9919 45.8509 59.9493 46.2876 59.874C46.6046 59.8187 46.7643 59.4598 46.5846 59.1938C44.8377 56.6086 43.842 53.4988 43.842 50.1606C43.842 46.6743 44.93 43.4289 46.8192 40.7659C46.8791 40.6831 46.924 40.5551 46.8641 40.4597C46.8142 40.3819 46.7219 40.3417 46.6345 40.3217Z" fill="#557AFF"/>
+              <path d="M36.2574 64.6609C33.1804 65.2657 31.159 66.4981 30.3205 68.2952C29.6093 69.7686 29.6093 71.4778 30.3205 72.9511C31.6032 75.7321 35.7384 76.6282 37.3455 76.8566C37.6774 76.9068 37.942 76.6207 37.907 76.2843C37.086 68.5738 43.6169 64.9169 45.3088 64.076C45.3787 64.0359 45.3937 63.9782 45.3862 63.9405C45.3812 63.9154 45.3538 63.8778 45.2989 63.8727C41.6404 63.8025 37.7124 64.3044 36.2574 64.6609Z" fill="#557AFF"/>
+            </svg>
+            <h3 class="heading-2 home-page__statistic-data">1,897</h3>
+            <p class="text-meta home-page__statistic-description">contributors</p>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="home-page__popular">
+        <header class="home-page__popular-header">
+          <h2 class="heading-2 home-page__heading home-page__heading--centered">Popular searches</h2>
+          <p class="home-page__sub-heading">Explore what’s trending today</p>
+        </header>
+
+        <ul class="home-page__popular-list">
+          <li class="home-page__popular-list-item">
+            <a href="" class="home-page__popular-list-link">
+              <span class="home-page__popular-list-kind">Species</span>
+              <strong class="home-page__popular-list-name">A. atactus</strong>
+            </a>
+          </li>
+          <li class="home-page__popular-list-item">
+            <a href="" class="home-page__popular-list-link">
+              <span class="home-page__popular-list-kind">Order</span>
+              <strong class="home-page__popular-list-name">Forcipulatida</strong>
+            </a>
+          </li>
+          <li class="home-page__popular-list-item">
+            <a href="" class="home-page__popular-list-link">
+              <span class="home-page__popular-list-kind">Genus</span>
+              <strong class="home-page__popular-list-name">Aphanasterias</strong>
+            </a>
+          </li>
+          <li class="home-page__popular-list-item">
+            <a href="" class="home-page__popular-list-link">
+              <span class="home-page__popular-list-kind">Genus</span>
+              <strong class="home-page__popular-list-name">Ampheraster</strong>
+            </a>
+          </li>
+        </ul>
+
+        <figure class="home-page__popular-list-figure">
+          <a href="">
+            <img
+              class="home-page__popular-list-image"
+              alt="A blue-green ocean wave curling up as it reaches shore"
+              src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+            />
+          </a>
+        </figure>
+      </section>
+      
+      <section class="home-page__contributors home-page__section--dark-mode">
+        <header class="home-page__contributors-header">
+          <h2 class="heading-2 home-page__heading">We have lots of contributions from reputable institutions <strong>around the world</strong></h2>
+        </header>
+
+        <div class="home-page__contributors-body">
+          <p class="home-page__contributors-body-paragraph">
+            Whether you’re a data scientist who needs training data for machine
+            learning algorithms, a graduate student researching Mola mola, or
+            someone who just wants to learn more about oceans, FathomNet will
+            provide the data you need.
+          </p>
+          
+          <p class="home-page__contributors-body-button">
+            <a href="" class="button home-page__button--dark-mode">Meet our contributors</a>
+          </p>
+        </div>
+        
+        <figure class="home-page__contributors-figure">
+          <img
+            class="home-page__contributors-image"
+            alt="A blue-green ocean wave curling up as it reaches shore"
+            src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+          />
+        </figure>
+      </section>
+
+      <section class="home-page__data-organizations">
+        <h2 class="heading-2 home-page__heading home-page__heading--centered home-page__data-organizations-heading">Gold standard data from the <strong>best of the best</strong></h2>
+
+        <div class="home-page__data-organizations-list">
+          <ul class="visually-hidden">
+            <li>NOAA</li>
+            <li>National Geographic</li>
+            <li>Schmidt Ocean Institute</li>
+            <li>Scripps Institution of Oceanography</li>
+            <li>Woods Hole Oceanographic Institution</li>
+            <li>VIMS, William &amp; Mary, Virginia Institute of Marine Science</li>
+          </ul>
+
+          <img src="/images/home-data-organizations.svg" alt="" />
+        </div>
+      </section>
+      
+      <section class="home-page__quote">
+        <img
+          class="home-page__quote-background"
+          src="/images/net-original.png"
+          width="1"
+          height="1"
+          alt=""
+          />
+
+        <figure class="home-page__quote-figure">
+          <img
+            class="home-page__quote-image"
+            alt="A blue-green ocean wave curling up as it reaches shore"
+            src="/images/mbari/95365656_2474068226026772_5515976092030821430_n.jpg"
+          />
+        </figure>
+
+        <blockquote class="home-page__quote-block">
+          <p class="heading-2 home-page__quote-text">This is a quote from someone who uses FathomNet and loves it a lot. They’re so thankful to use it!</p>
+          <footer class="home-page__quote-footer">
+            <span class="body-1 home-page__quote-byline">Anna Brenner, NOAA</span>
+            <a href="" class="button home-page__quote-button">See profile</a>
+          </footer>
+        </blockquote>
+
+      </section>
+
+      <section class="home-page__subscribe">
+        <div class="home-page__subscribe-description">
+          <h2 class="heading-2 home-page__heading">Be a part of our growing <strong>community</strong></h2>
+          <p class="home-page__subscribe-paragraph">Sign up for our newsletter and stay up to date with the latest and greatest oceanic news.</p>
+        </div>
+
+        <form class="home-page__subscribe-form">
+          <ol class="field-list">
+            <li class="field-list__item">
+              <label class="field field--has-placeholder">
+                <span class="field__label">Name</span>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="field__input"
+                  />
+              </label>
+            </li>
+            <li class="field-list__item">
+              <label class="field field--has-placeholder">
+                <span class="field__label">Email</span>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  class="field__input"
+                  />
+              </label>
+            </li>
+          </ol>
+          <p>
+            <button type="submit" class="button home-page__button--dark-mode">Sign up</button>
+          </p>
+        </form>
+
+      </section>
 
     </main>
 
-    <footer></footer>
+    <footer>
+
+      <h2 class="logotype">FathomNet</h2>
+
+      <section>
+        <h3>FathomNet</h3>
+        <ul>
+          <li>
+            <a href="">
+              Explore
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Contributors
+            </a>
+          </li>
+          <li>
+            <a href="">
+              About us
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Science
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Technology
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Careers
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Contact us</h3>
+        <p>
+          7700 Sandholdt Road<br />
+          Moss Landing, CA 95039<br />
+          +1 831-775-1700
+        </p>
+      </section>
+
+      <section>
+        <h3>Follow us</h3>
+        <ul>
+          <li>
+            <a href="">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="">
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p>
+        <svg aria-label="Copyright" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.96953 9.7208C7.59358 9.7208 9.7208 7.59358 9.7208 4.96953C9.7208 2.34548 7.59358 0.218262 4.96953 0.218262C2.34548 0.218262 0.218262 2.34548 0.218262 4.96953C0.218262 7.59358 2.34548 9.7208 4.96953 9.7208Z" fill="white"/>
+          <path d="M4.9695 6.79691C5.97875 6.79691 6.79691 5.97875 6.79691 4.9695C6.79691 3.96025 5.97875 3.14209 4.9695 3.14209C3.96025 3.14209 3.14209 3.96025 3.14209 4.9695C3.14209 5.97875 3.96025 6.79691 4.9695 6.79691Z" fill="white"/>
+        </svg>
+        2020 MBARI
+      </p>
+
+      <ul>
+        <li>
+          <a href="">Terms of Service</a>
+        </li>
+        <li>
+          <a href="">Privacy Policy</a>
+        </li>
+      </ul>
+
+      <p>
+        FathomNet is part of the<br />
+        <a href="">Monterey Bay Aquarium Research Institute</a>
+      </p>
+
+    </footer>
 
   </body>
 </html>

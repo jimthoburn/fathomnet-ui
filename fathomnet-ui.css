@@ -39,3 +39,4 @@ permalink: /fathomnet-ui-v0.1.0-alpha/fathomnet-ui.css
 {% include_relative pages/explore.css %}
 {% include_relative pages/image-details.css %}
 {% include_relative pages/account.css %}
+{% include_relative pages/index.css %}

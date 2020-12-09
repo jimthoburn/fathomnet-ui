@@ -11,12 +11,17 @@
 
 a:focus,
 button:focus,
-summary:focus {
+input:focus,
+summary:focus,
+.tabs__item:focus-within :checked + .tabs__button {
   outline: 4px solid var(--focus-outline-color);
   outline-offset: 4px;
 }
 .data-list__button:focus {
   outline-offset: -4px;
+}
+.explore-tabs__button:focus {
+  outline-offset: calc(-16 * var(--font-size-basis));
 }
 .button:focus {
   outline: none;
@@ -275,13 +280,13 @@ body {
 }
 
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 0;
   height: 0;
   overflow: hidden;
   opacity: 0;
-} */
+}
 
 
 

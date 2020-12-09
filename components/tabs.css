@@ -78,6 +78,7 @@
   border-color: var(--color-lagoon-blue);
   box-shadow: 0px 0px calc(2/16 * 1em) rgba(85, 122, 255, 0.88);
   background-color: var(--color-sea-salt-gray);
+  color: var(--color-benthos-blue);
 }
 
 .tabs__radio {
