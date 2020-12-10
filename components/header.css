@@ -54,13 +54,13 @@
   width: 100%;
 }
 
-.header--home-page .button {
+.button--home-page {
   background-color: transparent;
   color: var(--color-white);
 }
-.header--home-page .button:hover,
-.header--home-page .button:active,
-.header--home-page .button:focus {
+.button--home-page:hover,
+.button--home-page:active,
+.button--home-page:focus {
   background-color: var(--color-white);
   color: var(--color-benthos-blue);
 }
