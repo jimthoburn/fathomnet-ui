@@ -43,3 +43,24 @@
 .header--explore > .header__nav {
   flex-grow: 1;
 }
+
+.header--home-page {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header--home-page .button {
+  background-color: transparent;
+  color: var(--color-white);
+}
+.header--home-page .button:hover,
+.header--home-page .button:active,
+.header--home-page .button:focus {
+  background-color: var(--color-white);
+  color: var(--color-benthos-blue);
+}

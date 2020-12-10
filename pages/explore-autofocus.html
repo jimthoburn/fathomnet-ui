@@ -1,0 +1,484 @@
+---
+layout: prototype-without-header
+title: Explore
+---
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+<header class="header header--explore">
+  <div class="header__title-group">
+    <h2 class="logotype">
+      <a href="/pages/">FathomNet</a>
+    </h2>
+    <h1 class="body-2">Explore</h1>
+  </div>
+
+  <div class="header__search-box">
+    <form class="search-box">
+      <ul class="search-box__list">
+        <li class="search-box__item">
+          <label class="search-box__label">
+            <span class="search-box__label-text">What</span>
+            <input autofocus type="text" class="search-box__field text-field" placeholder="Animal, mineral, substrate, etc" />
+          </label>
+        </li>
+        <li class="search-box__item">
+          <label class="search-box__label">
+            <span class="search-box__label-text">Where</span>
+            <input type="text" class="search-box__field text-field" placeholder="Longitude & latitude, basin, etc" />
+          </label>
+        </li>
+        <li class="search-box__item">
+          <label class="search-box__label">
+            <span class="search-box__label-text">Concept tree</span>
+            <details>
+              <summary class="search-box__dropdown-button dropdown-button">
+                WoRMS
+                <svg class="icon icon--small" width="24" height="24">
+                  <use xlink:href="#icon-chevron-down"></use>
+                </svg>
+              </summary>
+              <div class="modal modal--data-list dropshadow--dark">
+                <ul class="data-list modal__data-list">
+                  <li class="data-list__item">
+                    <button type="button" class="data-list__button">
+                      MBARI
+                    </button>
+                  </li>
+                  <li class="data-list__item">
+                    <button type="button" class="data-list__button">
+                      WoRMS
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </label>
+        </li>
+      </ul>
+      <p class="search-box__submit">
+        <button type="submit" class="button button--tertiary button--small button--round search-box__button">
+          <svg aria-label="Search" class="icon icon--small" width="24" height="24">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </button>
+      </p>
+    </form>
+  </div>
+
+  <ul class="nav header__nav">
+    <li>
+      <a
+        href="/sign-in/"
+        class="nav__link"
+        >
+        Sign in
+      </a>
+    </li>
+  </ul>
+
+</header>
+
+<main class="explore-page explore-page--map-tree-images">
+
+  <header class="explore-page__controls explore-page__controls--map">
+
+    <nav
+      class="explore-tabs explore-page__controls-nav dropshadow--soft"
+      >
+      <ul class="explore-tabs__list">
+        <li class="explore-tabs__item">
+          <a href="" class="explore-tabs__button explore-tabs__button--active">
+            <svg class="icon explore-tabs__icon" aria-label="Map"><use xlink:href="#icon-map"></use></svg>
+          </a>
+        </li>
+        <li class="explore-tabs__item">
+          <a href="" class="explore-tabs__button">
+            <svg class="icon explore-tabs__icon" aria-label="Tree"><use xlink:href="#icon-label-tree"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="button button--large button--round dropshadow--soft explore-page__controls-close">
+      <svg aria-label="Close" class="icon icon--large" width="24" height="24">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <button type="button" class="button button--large button--round dropshadow--soft explore-page__controls-expand">
+      <svg aria-label="Expand" class="icon icon--large" width="24" height="24">
+        <use xlink:href="#icon-expand"></use>
+      </svg>
+    </button>
+
+  </header>
+
+  <section class="explore-page__map">
+    <div class="map-box" id="mapbox"></div>
+    <script>
+    const MAP_ACCESS_TOKEN = ""
+
+    mapboxgl.accessToken = MAP_ACCESS_TOKEN; // replace this with your access token
+    var map = new mapboxgl.Map({
+      container: 'mapbox',
+      style: 'mapbox://styles/mapbox/basic-v9', // replace this with your style URL
+      center: [-122.846343, 37.8185472],
+      zoom: 8.75
+    });
+    // code from the next step will go here
+    </script>
+  </section>
+
+  <section class="explore-page__filters">
+    <ul class="button-list">
+      <li class="button-list__item">
+        <details>
+          <summary type="button" class="button button--small">
+            Dates
+          </summary>
+          <form class="modal modal--data-list dropshadow--dark">
+            <fieldset class="tabs modal__field">
+              <legend class="field__label">Timeframe</legend>
+              <ol class="tabs__list">
+                <li class="tabs__item">
+                  <label>
+                    <input type="radio" name="timeframe" value="day" class="tabs__radio" checked />
+                    <span class="tabs__button">
+                      Day
+                    </span>
+                  </label>
+                </li>
+                <li class="tabs__item">
+                  <label>
+                    <input type="radio" name="timeframe" value="month" class="tabs__radio" />
+                    <span class="tabs__button">
+                      Month
+                    </span>
+                  </label>
+                </li>
+                <li class="tabs__item">
+                  <label>
+                    <input type="radio" name="timeframe" value="year" class="tabs__radio" />
+                    <span class="tabs__button">
+                      Year
+                    </span>
+                  </label>
+                </li>
+              </ol>
+            </fieldset>
+            <ol class="field-list">
+              <li class="field-list__item">
+                <label class="field field--has-container modal__field">
+                  <span class="field__label">Start</span>
+                  <span class="field__container">
+                    <input
+                      type="date"
+                      class="field__input"
+                      />
+                  </span>
+                </label>
+              </li>
+              <li class="field-list__item">
+                <label class="field field--has-container modal__field">
+                  <span class="field__label">End</span>
+                  <span class="field__container">
+                    <input
+                      type="date"
+                      class="field__input"
+                      />
+                  </span>
+                </label>
+              </li>
+            </ol>
+            <ul class="button-list modal__mini-option-list">
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="submit" class="button button--medium button--primary">Save</button>
+              </li>
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="reset" class="link link--medium link--primary">Clear</button>
+              </li>
+            </ul>
+          </form>
+        </details>
+      </li>
+      <li class="button-list__item">
+        <details>
+          <summary type="button" class="button button--small">
+            Time
+          </summary>
+          <form class="modal modal--data-list dropshadow--dark">
+            <ol class="field-list">
+              <li class="field-list__item">
+                <label class="field field--has-container modal__field">
+                  <span class="field__label">Start</span>
+                  <span class="field__container">
+                    <input
+                      type="time"
+                      class="field__input"
+                      />
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="field field--has-container modal__field">
+                  <span class="field__label">End</span>
+                  <span class="field__container">
+                    <input
+                      type="time"
+                      class="field__input"
+                      />
+                  </span>
+                </label>
+              </li>
+            </ol>
+            <ul class="button-list modal__mini-option-list">
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="submit" class="button button--medium button--primary">Save</button>
+              </li>
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="reset" class="link link--medium link--primary">Clear</button>
+              </li>
+            </ul>
+          </form>
+        </details>
+      </li>
+      <li class="button-list__item">
+        <details>
+          <summary type="button" class="button button--small">
+            Contributor
+          </summary>
+          <form class="modal modal--data-list dropshadow--dark">
+            <label class="field field--has-placeholder field--has-icon modal__field">
+              <span class="field__label">Search</span>
+              <input
+                type="search"
+                value=""
+                placeholder="Search…"
+                class="field__input"
+                />
+              <svg class="icon field__icon"><use xlink:href="#icon-search"></use></svg>
+            </label>
+            <ul class="data-list modal__data-list">
+              {% for index in (1..20) %}
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Contributor name
+                </label>
+              </li>
+              {% endfor %}
+            </ul>
+            <ul class="button-list modal__mini-option-list">
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="submit" class="button button--medium button--primary">Save</button>
+              </li>
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="reset" class="link link--medium link--primary">Clear</button>
+              </li>
+            </ul>
+          </form>
+        </details>
+      </li>
+      <li class="button-list__item">
+        <details>
+          <summary type="button" class="button button--small">
+            Contributor Type
+          </summary>
+          <form class="modal modal--data-list dropshadow--dark">
+            <ul class="data-list modal__data-list">
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Expert
+                </label>
+              </li>
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Intermediate
+                </label>
+              </li>
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Novice
+                </label>
+              </li>
+            </ul>
+            <ul class="button-list modal__mini-option-list">
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="submit" class="button button--medium button--primary">Save</button>
+              </li>
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="reset" class="link link--medium link--primary">Clear</button>
+              </li>
+            </ul>
+          </form>
+        </details>
+      </li>
+      <li class="button-list__item">
+        <details>
+          <summary type="button" class="button button--small">
+            Verification Status
+          </summary>
+          <form class="modal modal--data-list dropshadow--dark">
+            <ul class="data-list modal__data-list">
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Verified
+                </label>
+              </li>
+              <li class="data-list__item">
+                <label class="data-list__field">
+                  <input type="checkbox" class="data-list__field-checkbox" />
+                  Unverified
+                </label>
+              </li>
+            </ul>
+            <ul class="button-list modal__mini-option-list">
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="submit" class="button button--medium button--primary">Save</button>
+              </li>
+              <li class="button-list__item modal__mini-option-list-item">
+                <button type="reset" class="link link--medium link--primary">Clear</button>
+              </li>
+            </ul>
+          </form>
+        </details>
+      </li>
+      <li class="button-list__item">
+        <button type="button" class="button button--small">
+          More…
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="explore-page__results">
+
+    <header class="explore-page__header">
+      <h2 class="explore-page__title heading-4">486 results</h2>
+
+      <p class="explore-page__select-all">
+        <label>
+          <input type="checkbox" checked onChange="if (event.target.checked) { document.querySelector(`.explore-page__download-button`).classList.remove('explore-page__download-button--inactive') } else { document.querySelector(`.explore-page__download-button`).classList.add('explore-page__download-button--inactive') }" />
+          Select all
+        </label>
+      </p>
+
+      <p class="explore-page__download-button">
+        <a
+          href="/"
+          class="button button--tertiary"
+          >
+          <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+          Download
+        </a>
+      </p>
+    </header>
+
+    <ul class="card-list">
+
+    {% for index in (1..15) %}
+
+    <li class="card-list__item">
+
+      <a href="/pages/image-details/" class="card">
+
+        <span class="card__image">
+          <img src="/images/mbari/827b8c03a21bebd5ac8cef5ad169ebfab9aafbc9.png" alt="Amphiprion ocellaris" />
+        </span>
+
+        <span class="card__text">
+          <span class="card__name">
+            <strong class="text-single-line">
+              Amphiprion ocellaris, also known as the false percula clownfish
+              or common clownfish, is a marine fish belonging to the family Pomacentridae
+            </strong>
+            <small>(+4 more)</small>
+          </span>
+          <br />
+          <span class="card__meta text-single-line">
+            Contributor name, collection name, other meta data about this item
+          </span>
+        </span>
+
+      </a>
+
+      <label class="card-list__item-select">
+        <input type="checkbox" checked class="card-list__item-checkbox" />
+        <span class="card-list__item-select-label">Select</span>
+      </label>
+
+      <p class="toast toast--small card__toast">
+        <span class="toast__status toast__status--small">
+          <span class="toast__glyph toast__glyph--small">
+            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.34646 7.48842V6.93801C2.34646 6.70626 2.36094 6.49866 2.38991 6.31519C2.42854 6.13172 2.48164 5.95791 2.54924 5.79375C2.62649 5.6296 2.72305 5.47027 2.83892 5.31577C2.96445 5.16127 3.11895 4.99712 3.30242 4.8233L3.95422 4.20048C4.13768 4.03632 4.29218 3.85286 4.41771 3.65008C4.5529 3.4473 4.62049 3.20106 4.62049 2.91138C4.62049 2.53478 4.49979 2.22096 4.25839 1.9699C4.02664 1.70918 3.6935 1.57882 3.25897 1.57882C3.03688 1.57882 2.8341 1.62227 2.65063 1.70918C2.47682 1.78643 2.32232 1.89747 2.18713 2.04232C2.0616 2.1775 1.96504 2.33683 1.89744 2.5203C1.82985 2.70377 1.79123 2.89206 1.78157 3.08519L0 2.92586C0.0579372 2.46236 0.17864 2.05197 0.362108 1.69469C0.555232 1.32776 0.801465 1.01876 1.10081 0.767698C1.40015 0.516637 1.74294 0.328341 2.12919 0.202811C2.51544 0.0676241 2.93066 3.05176e-05 3.37484 3.05176e-05C3.79006 3.05176e-05 4.18114 0.0627958 4.54807 0.188326C4.92466 0.304201 5.25297 0.48284 5.533 0.724245C5.82269 0.955994 6.04961 1.24568 6.21377 1.5933C6.37792 1.94093 6.46 2.34166 6.46 2.7955C6.46 3.1045 6.4262 3.37487 6.35861 3.60662C6.29102 3.83837 6.19445 4.05081 6.06892 4.24393C5.94339 4.43706 5.78889 4.62535 5.60543 4.80882C5.43161 4.98263 5.23366 5.1661 5.01157 5.35922C4.81845 5.52338 4.65912 5.66822 4.53359 5.79375C4.41771 5.91928 4.32115 6.04481 4.2439 6.17034C4.17631 6.29588 4.12803 6.43106 4.09906 6.57591C4.07009 6.72075 4.05561 6.89939 4.05561 7.11182V7.48842H2.34646ZM2.05677 9.50174C2.05677 9.19274 2.16782 8.92719 2.38991 8.7051C2.62166 8.48301 2.89686 8.37196 3.21552 8.37196C3.52451 8.37196 3.79489 8.47818 4.02664 8.69061C4.25839 8.90305 4.37426 9.16377 4.37426 9.47277C4.37426 9.78176 4.25839 10.0473 4.02664 10.2694C3.80454 10.4915 3.53417 10.6025 3.21552 10.6025C3.06102 10.6025 2.91135 10.5736 2.7665 10.5156C2.63132 10.4577 2.51061 10.3805 2.40439 10.2839C2.29818 10.1873 2.21127 10.0715 2.14368 9.93626C2.08574 9.80108 2.05677 9.65623 2.05677 9.50174Z" fill="white"/>
+            </svg>
+          </span>
+        </span>
+        <span class="toast__label toast__label--small">
+          Unverified
+        </span>
+      </p>
+
+    </li>
+
+    <li class="card-list__item">
+
+      <a href="/pages/image-details/" class="card">
+
+        <span class="card__image">
+          <img src="/images/mbari/ee2ec6e6c08e195cde7f8542286da55ab1648249.png" alt="Amphiprion ocellaris" />
+        </span>
+
+        <span class="card__text">
+          <span class="card__name">
+            <strong class="text-single-line">
+              Amphiprion ocellaris, also known as the false percula clownfish
+              or common clownfish, is a marine fish belonging to the family Pomacentridae
+            </strong>
+            <small>(+4 more)</small>
+          </span>
+          <br />
+          <span class="card__meta text-single-line">
+            Contributor name, collection name, other meta data about this item
+          </span>
+        </span>
+
+        <p class="toast toast--small card__toast">
+          <span class="toast__status toast__status--small">
+            <span class="toast__glyph toast__glyph--small">
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.34646 7.48842V6.93801C2.34646 6.70626 2.36094 6.49866 2.38991 6.31519C2.42854 6.13172 2.48164 5.95791 2.54924 5.79375C2.62649 5.6296 2.72305 5.47027 2.83892 5.31577C2.96445 5.16127 3.11895 4.99712 3.30242 4.8233L3.95422 4.20048C4.13768 4.03632 4.29218 3.85286 4.41771 3.65008C4.5529 3.4473 4.62049 3.20106 4.62049 2.91138C4.62049 2.53478 4.49979 2.22096 4.25839 1.9699C4.02664 1.70918 3.6935 1.57882 3.25897 1.57882C3.03688 1.57882 2.8341 1.62227 2.65063 1.70918C2.47682 1.78643 2.32232 1.89747 2.18713 2.04232C2.0616 2.1775 1.96504 2.33683 1.89744 2.5203C1.82985 2.70377 1.79123 2.89206 1.78157 3.08519L0 2.92586C0.0579372 2.46236 0.17864 2.05197 0.362108 1.69469C0.555232 1.32776 0.801465 1.01876 1.10081 0.767698C1.40015 0.516637 1.74294 0.328341 2.12919 0.202811C2.51544 0.0676241 2.93066 3.05176e-05 3.37484 3.05176e-05C3.79006 3.05176e-05 4.18114 0.0627958 4.54807 0.188326C4.92466 0.304201 5.25297 0.48284 5.533 0.724245C5.82269 0.955994 6.04961 1.24568 6.21377 1.5933C6.37792 1.94093 6.46 2.34166 6.46 2.7955C6.46 3.1045 6.4262 3.37487 6.35861 3.60662C6.29102 3.83837 6.19445 4.05081 6.06892 4.24393C5.94339 4.43706 5.78889 4.62535 5.60543 4.80882C5.43161 4.98263 5.23366 5.1661 5.01157 5.35922C4.81845 5.52338 4.65912 5.66822 4.53359 5.79375C4.41771 5.91928 4.32115 6.04481 4.2439 6.17034C4.17631 6.29588 4.12803 6.43106 4.09906 6.57591C4.07009 6.72075 4.05561 6.89939 4.05561 7.11182V7.48842H2.34646ZM2.05677 9.50174C2.05677 9.19274 2.16782 8.92719 2.38991 8.7051C2.62166 8.48301 2.89686 8.37196 3.21552 8.37196C3.52451 8.37196 3.79489 8.47818 4.02664 8.69061C4.25839 8.90305 4.37426 9.16377 4.37426 9.47277C4.37426 9.78176 4.25839 10.0473 4.02664 10.2694C3.80454 10.4915 3.53417 10.6025 3.21552 10.6025C3.06102 10.6025 2.91135 10.5736 2.7665 10.5156C2.63132 10.4577 2.51061 10.3805 2.40439 10.2839C2.29818 10.1873 2.21127 10.0715 2.14368 9.93626C2.08574 9.80108 2.05677 9.65623 2.05677 9.50174Z" fill="white"/>
+              </svg>
+            </span>
+          </span>
+          <span class="toast__label toast__label--small">
+            Unverified
+          </span>
+        </p>
+
+      </a>
+
+      <label class="card-list__item-select">
+        <input type="checkbox" class="card-list__item-checkbox" />
+        <span class="card-list__item-select-label">Select</span>
+      </label>
+
+    </li>
+
+    {% endfor %}
+
+    </ul>
+
+  </section>
+
+
+
+
+</main>
