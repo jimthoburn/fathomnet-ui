@@ -620,3 +620,12 @@
   color: var(--color-bay-blue);
 }
 
+
+
+.home-page__subscribe-form .field-list__item + .field-list__item {
+  margin-top: calc(20 * var(--font-size-basis));
+}
+
+.home-page__subscribe-form-button {
+  margin-top: calc(32 * var(--font-size-basis));
+}

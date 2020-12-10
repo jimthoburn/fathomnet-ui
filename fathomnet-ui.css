@@ -29,6 +29,7 @@ permalink: /fathomnet-ui-v0.1.0-alpha/fathomnet-ui.css
 {% include_relative components/logotype.css %}
 {% include_relative components/nav.css %}
 {% include_relative components/header.css %}
+{% include_relative components/footer.css %}
 {% include_relative components/hero.css %}
 {% include_relative components/tabs.css %}
 {% include_relative components/toast.css %}
