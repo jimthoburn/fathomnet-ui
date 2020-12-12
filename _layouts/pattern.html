@@ -104,19 +104,32 @@
           </a>
         </li>
         <li>
+          <a class="nav__link" href="/fathomnet-ui-{{ site.version }}/fathomnet-ui.css" download="fathomnet-ui.css">
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+            Download CSS ({{ site.version }})
+          </a>
+        </li>
+        {% comment %}
+        <li>
+          <a class="nav__link" href="/fathomnet-ui-{{ site.version }}/fathomnet-ui.svg" download="fathomnet-ui.svg">
+            <svg class="icon" width="24" height="24">
+              <use xlink:href="#icon-download"></use>
+            </svg>
+            Download Icons
+          </a>
+        </li>
+        <li>
           <a class="nav__link" href="https://github.com/jimthoburn/fathomnet-ui/releases/download/{{ site.version }}/fathomnet-ui-{{ site.version }}.zip" download="fathomnet-ui-{{ site.version }}.zip">
             <svg class="icon" width="24" height="24">
               <use xlink:href="#icon-download"></use>
             </svg>
             Download starter kit
           </a>
-        <!-- <a href="http://localhost:4000/fathomnet-ui.svg" download="fathomnet-ui.svg">
-          fathomnet-ui.svg
-        </a>
-        <a href="http://localhost:4000/fathomnet-ui.css" download="fathomnet-ui.css">
-          fathomnet-ui.css
-        </a> -->
-      </li>
+        </li>
+        {% endcomment %}
+      </ul>
     </footer>
   </body>
 </html>
