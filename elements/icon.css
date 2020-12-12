@@ -1,15 +1,12 @@
 .icon {
-  fill: currentColor;
-  stroke: currentColor;
-
   /* Default size */
   /* .icon--large */
   width: calc(24 * var(--font-size-basis));
   height: calc(24 * var(--font-size-basis));
-  stroke-width: 2;
 }
 
-.icon * {
+.icon:not(.icon--multicolor),
+.icon:not(.icon--multicolor) * {
   fill: currentColor;
   stroke: currentColor;
   

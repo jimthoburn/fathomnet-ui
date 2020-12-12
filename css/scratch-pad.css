@@ -27,6 +27,11 @@ summary:focus,
   outline: none;
   box-shadow: 0 0 0 0.2rem var(--focus-outline-color);
 }
+/* For radio buttons */
+.field:not(.field--has-container):focus-within input:focus,
+.field__container:focus-within input:focus {
+  outline: none;
+}
 
 .dark-mode {
   --background-color: var(--color-abyss-gray);
@@ -289,4 +294,10 @@ body {
 }
 
 
+.form-message--error {
+  color: var(--color-lobster-red);
+}
+.form-message--success {
+  color: var(--color-photic-green);
+}
 
