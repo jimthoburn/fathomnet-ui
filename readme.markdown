@@ -18,7 +18,7 @@ https://github.com/jimthoburn/fathomnet-ui/deployments
 
 ## How to download the latest CSS
 
-The individual CSS files for the project are combined into a single, downloadable file:
+The individual CSS files for the project are combined into a single, downloadable file:  
 https://fathomnet-ui.tobbi.co/fathomnet-ui-v0.2.0-beta/fathomnet-ui.css
 
 ## How to make changes
@@ -58,7 +58,7 @@ git clone https://github.com/jimthoburn/fathomnet-ui.git
 And then start running the Jekyll application like this...
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 ## Handy guides
