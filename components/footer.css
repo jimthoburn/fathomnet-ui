@@ -103,12 +103,25 @@
 }
 
 .footer__nav-list--columns {
+  /*
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-rows: max-content max-content max-content;
   grid-auto-flow: column;
   grid-column-gap: calc(40 * var(--font-size-basis));
   grid-row-gap: calc(16 * var(--font-size-basis));
+  */
+
+  columns: 2;
+  width: max-content;
+  column-gap: calc(40 * var(--font-size-basis));
+  margin-bottom: calc(-16 * var(--font-size-basis));
+}
+
+.footer__nav-list--columns .footer__nav-list-item {
+  margin: 0;
+  margin-bottom: calc(16 * var(--font-size-basis));
+  break-inside: avoid;
 }
 
 .footer__nav-list--horizontal,

@@ -6,4 +6,4 @@ defaults:
     values:
       layout: pattern
 
-version: v0.1.0-alpha
+version: v0.2.0-beta
