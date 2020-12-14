@@ -102,6 +102,17 @@
   top: var(--explore-header-height);
 }
 
+.explore-page__controls--map {
+  grid-template-rows: max-content 1fr max-content;
+  height: calc(100vh - var(--explore-header-height));
+}
+.explore-page__controls-map-zoom {
+  grid-column: -2 / -1;
+  grid-row: -2 / -1;
+  justify-self: end;
+  align-self: end;
+}
+
 .explore-page__controls--tree {
   height: calc(180 * var(--font-size-basis));
   background-image:

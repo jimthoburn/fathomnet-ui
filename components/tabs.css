@@ -145,15 +145,20 @@
   font-family: inherit;
   line-height: inherit;
   cursor: pointer;
+  border-width: 0;
 
   background-color: var(--color-white);
-  color: var(--color-lagoon-blue);
+  color: var(--color-ultramarine-blue);
   padding: calc(14 * var(--font-size-basis)) calc(21 * var(--font-size-basis));
   display: block;
   text-align: center;
 
   transition-property: color, background-color, border-color;
   transition-duration: var(--transition-duration), var(--transition-duration), var(--transition-duration);
+}
+
+.explore-tabs__button--has-active-state {
+  color: var(--color-lagoon-blue);
 }
 
 .explore-tabs--vertical .explore-tabs__list {
@@ -165,7 +170,7 @@
 }
 
 .explore-tabs--vertical .explore-tabs__button {
-  padding: calc(21 * var(--font-size-basis)) calc(14 * var(--font-size-basis));
+  padding: calc(16 * var(--font-size-basis)) calc(14 * var(--font-size-basis));
 }
 
 .explore-tabs__button:hover,

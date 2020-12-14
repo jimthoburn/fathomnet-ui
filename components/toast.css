@@ -59,6 +59,7 @@
   padding: calc(7 * var(--font-size-basis));
   width: calc(24 * var(--font-size-basis));
   height: calc(24 * var(--font-size-basis));
+  position: relative;
 }
 
 .toast__status--small {
@@ -100,13 +101,20 @@
 
 .toast__glyph--small {
   /* .label-3 */
+  /*
   font-size: calc(10 * var(--font-size-basis));
   line-height: var(--line-height-base-12);
   font-weight: var(--font-weight-bold);
-  
+  */
+
+  /*
   line-height: 1;
+  */
   transform-origin: center;
-  transform: scale(0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.75);
 }
 
 .toast__icon {

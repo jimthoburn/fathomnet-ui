@@ -208,7 +208,9 @@
 .details-footer > * {
   grid-row: 1 / 2;
 }
-.details-footer * {
+.details-footer__nav-list,
+.details-footer__nav-meta,
+.details-footer__toast {
   margin: 0;
 }
 
@@ -295,4 +297,16 @@
 
 .details-footer__nav-meta {
   color: var(--color-pelagic-gray);
+}
+
+/* Make transitions between images feel smoother */
+.annotation-details[data-state]:not([data-state="loading"]) .annotation-details__header-title,
+.annotation-details[data-state]:not([data-state="loading"]) .annotation-details__header-action,
+.annotation-details[data-state]:not([data-state="loading"]) .concepts-figure__image {
+  transition: opacity 1s;
+}
+.annotation-details[data-state="loading"] .annotation-details__header-title,
+.annotation-details[data-state="loading"] .annotation-details__header-action,
+.annotation-details[data-state="loading"] .concepts-figure__image {
+  opacity: 0;
 }

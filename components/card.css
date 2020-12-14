@@ -24,7 +24,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1em;
+  padding: calc(12 * var(--font-size-basis));
 }
 .card-list__item-select-label {
   opacity: 0;
@@ -33,12 +33,13 @@
 }
 .card-list__item-checkbox {
   font-size: inherit;
+  display: block;
 }
 
 .card__toast {
   position: absolute;
-  top: calc(16 * var(--font-size-basis));;
-  left: calc(24 * var(--font-size-basis));;
+  top: calc(10 * var(--font-size-basis));
+  left: calc(16 * var(--font-size-basis));
   margin: 0;
 }
 
@@ -49,6 +50,9 @@
   display: block;
   text-decoration: none;
 }
+
+
+
 :hover > .card__text > .card__name,
 :active > .card__text > .card__name,
 :focus > .card__text > .card__name {

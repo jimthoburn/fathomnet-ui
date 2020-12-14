@@ -15,12 +15,12 @@ title: Explore
       >
       <ul class="explore-tabs__list">
         <li class="explore-tabs__item">
-          <a href="" class="explore-tabs__button explore-tabs__button--active">
+          <a href="" class="explore-tabs__button explore-tabs__button--has-active-state explore-tabs__button--active">
             <svg class="icon explore-tabs__icon" aria-label="Map"><use xlink:href="#icon-map"></use></svg>
           </a>
         </li>
         <li class="explore-tabs__item">
-          <a href="" class="explore-tabs__button">
+          <a href="" class="explore-tabs__button explore-tabs__button--has-active-state">
             <svg class="icon explore-tabs__icon" aria-label="Tree"><use xlink:href="#icon-label-tree"></use></svg>
           </a>
         </li>
@@ -38,6 +38,23 @@ title: Explore
         <use xlink:href="#icon-expand"></use>
       </svg>
     </button>
+
+    <div
+      class="explore-tabs explore-tabs--vertical dropshadow--soft explore-page__controls-map-zoom"
+      >
+      <ul class="explore-tabs__list">
+        <li class="explore-tabs__item">
+          <button type="button" class="explore-tabs__button">
+            <svg class="icon explore-tabs__icon" aria-label="Zoom in"><use xlink:href="#icon-plus"></use></svg>
+          </button>
+        </li>
+        <li class="explore-tabs__item">
+          <button type="button" class="explore-tabs__button">
+            <svg class="icon explore-tabs__icon" aria-label="Zoom out"><use xlink:href="#icon-minus"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
 
   </header>
 

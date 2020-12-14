@@ -28,7 +28,7 @@
 
 .image-details__label {
   align-self: start;
-  justify-self: start;
+  justify-self: end;
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
@@ -39,6 +39,9 @@
 
 .image-details__meta {
   margin: 0;
+
+  /* Same line height as .image-details__title */
+  line-height: var(--line-height-2);
 }
 
 /* .image-details__title {
@@ -102,4 +105,12 @@
   grid-column: 1 / -1;
   position: sticky;
   bottom: 0;
+}
+
+/* Make transitions between images feel smoother */
+.image-details[data-state]:not([data-state="loading"]) {
+  transition: opacity 1s;
+}
+.image-details[data-state="loading"] {
+  opacity: 0;
 }
