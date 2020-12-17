@@ -17,8 +17,8 @@
   justify-content: space-between;
   align-items: center;
 
-  max-width: 100%;
-  width: calc(915 * var(--font-size-basis));
+  max-width: calc(915 * var(--font-size-basis));
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -114,6 +114,7 @@
 
 .home-page__search-box .search-box {
   width: 100%;
+  max-width: initial;
   /* opacity: 0.5;
   filter: invert(100%); */
 }

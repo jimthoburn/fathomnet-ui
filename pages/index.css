@@ -261,7 +261,7 @@
 
 
 .home-page__together-list-item details:not([open]) {
-  opacity: 50%;
+  opacity: 0.5;
 }
 /* .home-page__together-list-item:not(.home-page__together-list-item--active) .home-page__together-list-description,
 .home-page__together-list-item:not(.home-page__together-list-item--active) .home-page__together-list-cta {
@@ -396,7 +396,7 @@
   grid-column-gap: calc(16 * var(--font-size-basis));
   text-decoration: none;
   color: inherit;
-  width: calc(342 * var(--font-size-basis));
+  /* width: calc(342 * var(--font-size-basis)); */
   padding: calc(18 * var(--font-size-basis)) calc(32 * var(--font-size-basis));
 
   border-radius: calc(8 * var(--font-size-basis));
@@ -660,7 +660,7 @@
 }
 
 .home-page__quote-background {
-  opacity: 8%;
+  opacity: 0.08;
   grid-row: 1 / -1;
   grid-column: 1 / -1;
   width: 100%;

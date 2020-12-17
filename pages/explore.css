@@ -261,6 +261,16 @@
   margin-left: calc(40 * var(--font-size-basis));
 }
 
+.tree__description {
+  border-radius: calc(8 * var(--font-size-basis));
+  padding: calc(17 * var(--font-size-basis)) calc(64 * var(--font-size-basis)) calc(17 * var(--font-size-basis)) calc(48 * var(--font-size-basis));
+  margin: calc(-17 * var(--font-size-basis)) calc(-64 * var(--font-size-basis)) calc(-17 * var(--font-size-basis)) calc(-48 * var(--font-size-basis))
+}
+
+.tree__description--active {
+  background-color: hsla(180, 100%, 100%, 12%);
+}
+
 .tree__field {
   position: absolute;
   transform: translateX(-100%);

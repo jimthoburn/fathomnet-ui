@@ -46,7 +46,8 @@
   color: var(--text-color);
 }
 
-.field > * {
+.field:not(.field--has-container) > *,
+.field__container > * {
   align-self: center;
 }
 .field__input {
@@ -86,7 +87,8 @@
   font-weight: var(--font-weight-bold);
 }
 
-.field--has-icon {
+.field--has-icon:not(.field--has-container),
+.field__container--has-icon {
   padding-right: calc(24 * var(--font-size-basis));
 }
 
