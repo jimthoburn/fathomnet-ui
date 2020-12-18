@@ -70,6 +70,10 @@
 
 .footer__logomark-svg {
   display: block;
+  --width: 402;
+  --height: 356;
+  width: calc(calc(var(--width) / var(--height)) * 136 * var(--font-size-basis));
+  height: calc(136 * var(--font-size-basis));
 }
 
 .footer__heading {

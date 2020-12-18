@@ -9,6 +9,7 @@
 }
 
 .logotype > a {
+  position: relative;
   text-decoration: none;
   color: inherit;
   padding-bottom: 1px;
@@ -21,4 +22,24 @@
 .logotype > a:active,
 .logotype > a:focus {
   border-bottom-color: initial;
+}
+
+.logotype__svg {
+  display: block;
+  --width: 393;
+  --height: 42;
+  height: calc(calc(var(--height) / var(--width)) * 140 * var(--font-size-basis));
+  width: calc(140 * var(--font-size-basis));
+}
+
+.logomark__svg {
+  display: block;
+  --width: 402;
+  --height: 356;
+  height: calc(calc(var(--height) / var(--width)) * 140 * var(--font-size-basis));
+  width: calc(140 * var(--font-size-basis));
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
