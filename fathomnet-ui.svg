@@ -1,5 +1,5 @@
 ---
 layout: null
-permalink: /fathomnet-ui-v0.2.2-beta/fathomnet-ui.svg
+permalink: /fathomnet-ui-v0.2.3-beta/fathomnet-ui.svg
 ---
 {% include_relative _includes/icons.svg %}
